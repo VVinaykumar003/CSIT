@@ -1,0 +1,138 @@
+import React from "react";
+
+const Society = () => {
+  return (
+    <div className="bg-white shadow-md rounded-md overflow-hidden">
+      {/* Header */}
+      <div className="h-40 bg-gradient-to-r from-[#0d173b] to-[#1e305f] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full transform rotate-12 scale-150 translate-y-10">
+            <div className="w-20 h-60 bg-white/10 rounded-full blur-xl absolute -left-10"></div>
+            <div className="w-20 h-40 bg-white/10 rounded-full blur-xl absolute right-20 top-10"></div>
+          </div>
+        </div>
+        <div className="absolute inset-0 flex items-center px-6">
+          <div>
+           <h2 className="text-2xl md:text-3xl font-bold text-white">
+                The Society
+              </h2>
+              <p className="text-gray-200 text-sm mt-2">
+                Shivnath Shikshan & Seva Samiti
+              </p>
+            <div className="h-0.5 w-12 bg-white mt-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-6">
+        <div className="prose max-w-none text-gray-700">
+          {/* Top content section */}
+          <div className="flex flex-col md:flex-row gap-8 mb-8">
+            <div className="flex-1">
+              <p className="mb-4">
+                          Rapid advancements in technology are creating unprecedented opportunities
+                          for innovation across every field of engineering. Today, opportunities
+                          to benefit society through engineering advancements are unparalleled in
+                          history.
+                        </p>
+
+                        <p className="mb-4">
+                          CSIT pushes the frontiers of modern science and engineering through
+                          teaching and research. With this perspective in mind, eminent
+                          academicians, educationalists, administrators, and enthusiastic people
+                          of Chhattisgarh initiated the formation of a society under the aegis of {" "}
+                          <strong>Shivnath Shikshan & Seva Samiti</strong>, registered under the
+                          provisions of Statute 44 of M.P. Vishwavidyalaya Adhiniyam 1973.
+                        </p>
+
+                        <p className="mb-6">
+                          CSIT was thus established at Durg with the following objectives:
+                        </p>
+
+             <div className="space-y-3">
+                      {[
+                        "The overall development of Chhattisgarh in the fields of education, economy, and social upliftment.",
+                        "Development of rural technology, infrastructure, and environmental conservation.",
+                        "Deliver world-class research-based education to students and broad-based training to leaders in academia, industry, and society.",
+                        "Expand engineering knowledge through original research and technology development to serve societal needs.",
+                      ].map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start gap-3 p-4 border border-gray-200 rounded-lg"
+                        >
+                          <span className="text-[#0d173b] font-bold">
+                            {index + 1}.
+                          </span>
+                          <p className="text-gray-700">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+            </div>
+            <div className="md:w-1/3 bg-gray-50 rounded-md border border-gray-200 flex-shrink-0">
+              <div className="p-6 text-center h-full flex flex-col justify-center">
+                <div className="text-4xl font-bold mb-2 text-[#0d173b]">
+                  CSIT
+                </div>
+                <div className="h-0.5 w-12 bg-[#0d173b] mx-auto my-2"></div>
+                <p className="text-gray-500 italic">Guiding Light</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Members List */}
+          <div className="grid md:grid-cols-2 gap-4 my-8">
+            {[
+              {
+                name: "Late D. K. Verma",
+                role: "Ex-President",
+                detail: "(Retd. Deputy Director Mining)",
+              },
+              {
+                name: "Late R. N. Deshmukh",
+                role: "Patron",
+                detail: "(Ex. Member MPPSC, Retd. IFS)",
+              },
+              {
+                name: "Mrs. S. Deshmukh",
+                role: "President",
+                detail: "(Social Worker)",
+              },
+              {
+                name: "Mrs. S. Verma",
+                role: "Executive Member",
+                detail: "(Social Worker)",
+              },
+              {
+                name: "Er. Ajay Prakash Verma",
+                role: "Secretary",
+                detail: "(Educationist)",
+              },
+              {
+                name: "Mrs. N. Verma",
+                role: "Treasurer",
+                detail: "(Professional Artist, Painting)",
+              },
+              {
+                name: "Mr. R. Deshmukh",
+                role: "Executive Member",
+                detail: "(Businessman)",
+              },
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-200 rounded-md p-4 shadow-sm hover:shadow transition-shadow duration-200 border-l-4"
+                style={{ borderLeftColor: "#0d173b" }}
+              >
+                <h3 className="font-medium text-[#0d173b]">{member.name}</h3>
+                <p className="text-gray-600 text-sm">{member.role}</p>
+                <p className="text-gray-500 text-xs">{member.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Society;
