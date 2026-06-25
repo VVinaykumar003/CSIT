@@ -152,23 +152,30 @@ export default function Navbar() {
                       >
                         Computer Science and Engineering
                       </Link>
-                      <Link
-                        to="/academics/electrical-and-electronics-engineering"
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                      >
-                        Electrical and Electronics Engineering
-                      </Link>
-                      <Link
+                       <Link
                         to="/academics/mechanical-engineering"
                         className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                       >
                         Mechanical Engineering
                       </Link>
                       <Link
+                        to="/academics/electrical-and-electronics-engineering"
+                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                      >
+                        Electrical and Electronics Engineering
+                      </Link>
+                     
+                      <Link
                         to="/academics/information-technology-engineering"
                         className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                       >
                         Information Technology Engineering
+                      </Link>
+                      <Link
+                        to="/academics/mechatronics"
+                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                      >
+                        Mechatronics Engineering
                       </Link>
                       <Link
                         to="/academics/civil-engineering"
@@ -182,12 +189,13 @@ export default function Navbar() {
                       >
                         Artificial Intelligence & Data Science Engineering
                       </Link>
-                      <Link
-                        to="/academics/mechatronics"
+                       <Link
+                        to="/academics/science-and-humanities"
                         className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                       >
-                        Mechatronics Engineering
+                       Science & Humanities - Maths , Physics , Chemistry , Communication Skill
                       </Link>
+                      
                     </div>
                   </div>
                 </div>
@@ -759,14 +767,7 @@ export default function Navbar() {
                   >
                     Computer Science and Engineering
                   </Link>
-                  <Link
-                    to="/academics/electrical-and-electronics-engineering"
-                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Electrical and Electronics Engineering
-                  </Link>
-                  <Link
+                   <Link
                     to="/academics/mechanical-engineering"
                     className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
@@ -774,11 +775,26 @@ export default function Navbar() {
                     Mechanical Engineering
                   </Link>
                   <Link
+                    to="/academics/electrical-and-electronics-engineering"
+                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Electrical and Electronics Engineering
+                  </Link>
+                 
+                  <Link
                     to="/academics/information-technology-engineering"
                     className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Information Technology Engineering
+                  </Link>
+                  <Link
+                    to="/academics/mechatronics"
+                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Mechatronics Engineering
                   </Link>
                   <Link
                     to="/academics/civil-engineering"
@@ -795,12 +811,13 @@ export default function Navbar() {
                     Artificial Intelligence & Data Science Engineering
                   </Link>
                   <Link
-                    to="/academics/mechatronics"
+                    to="/academics/science-and-humanities"
                     className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Mechatronics
+                    Science & Humanities - Maths, Physics, Chemistry, Communication Skill
                   </Link>
+                  
                 </div>
               )}
             </div>

@@ -128,6 +128,7 @@ function App() {
             <Route path="/electrical-and-electronics-engineering" element={<Navigate to="/academics/electrical-and-electronics-engineering" replace />} />
             <Route path="/mechatronics" element={<Navigate to="/academics/mechatronics" replace />} />
             <Route path="/mechanical-engineering" element={<Navigate to="/academics/mechanical-engineering" replace />} />
+            <Route path="/science-and-humanities" element={<Navigate to="/academics/science-and-humanities" replace />} /> 
             <Route path="/information-technology-engineering" element={<Navigate to="/academics/information-technology-engineering" replace />} />
             <Route path="/R&D Cells" element={<Navigate to="/R&D cells/R&D Cells" replace />} />
             <Route path="/courses-offered" element={<Navigate to="/admission/courses-offered" replace />} />

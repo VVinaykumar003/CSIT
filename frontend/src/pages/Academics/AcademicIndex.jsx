@@ -10,15 +10,21 @@ import Eee from "./EEE/EEEIndex";
 import It from "./IT/ITIndex";
 import Mec from "./ME/MEIndex";
 import Mechatronics from "./MECHATRONICS/MechatronicsIndex";
+import ScienceHumanities from "./SH/Science&HumanitiesIndex";
 
 const sidebarLinks = [
   { name: "Computer Science and Engineering", path: "computer-science-and-engineering" },
-  { name: "Artificial Intelligence & Data Science", path: "artificial-intelligence-and-data-science-engineering" },
+   { name: "Mechanical Engineering", path: "mechanical-engineering" },
+    { name: "Electrical and Electronics Engineering", path: "electrical-and-electronics-engineering" },
+    { name: "Information Technology", path: "information-technology-engineering" },
+     { name: "Mechatronics Engineering", path: "mechatronics" },
+
   { name: "Civil Engineering", path: "civil-engineering" },
-  { name: "Electrical and Electronics Engineering", path: "electrical-and-electronics-engineering" },
-  { name: "Mechatronics Engineering", path: "mechatronics" },
-  { name: "Mechanical Engineering", path: "mechanical-engineering" },
-  { name: "Information Technology", path: "information-technology-engineering" },
+    { name: "Artificial Intelligence & Data Science", path: "artificial-intelligence-and-data-science-engineering" },
+ {name:"Science & Humanities - Maths, Physics , Chemistry ,Communication Skill", path : "science-and-humanities"},
+ 
+ 
+  
 ];
 
 export default function AcademicPage() {
@@ -73,6 +79,7 @@ export default function AcademicPage() {
                 <Route path="mechatronics" element={<Mechatronics />} />
                 <Route path="mechanical-engineering" element={<Mec />} />
                 <Route path="information-technology-engineering" element={<It />} />
+                <Route path="science-and-humanities" element={<ScienceHumanities />} />
                 <Route path="/" element={<Navigate to="computer-science-and-engineering" replace />} />
                 <Route path="*" element={<Navigate to="computer-science-and-engineering" replace />} />
               </Routes>
