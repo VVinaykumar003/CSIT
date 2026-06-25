@@ -220,35 +220,34 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Placement / T&P Cell */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
-              <button
-                onClick={() => toggleDesktopDropdown(6)}
-                onMouseEnter={() => openDesktopDropdown(6)}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-              >
-                T&P Cell
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+           {/* Placement / T&P Cell */}
+<div className="group relative" onMouseLeave={closeDesktopDropdown}>
+  <button
+    onClick={() => toggleDesktopDropdown(6)}
+    onMouseEnter={() => openDesktopDropdown(6)}
+    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+  >
+    T&P Cell
+    <ChevronDown className="ml-1 h-4 w-4" />
+  </button>
 
-              {activeDropdownDesktop === 6 && (
-                <div className="absolute z-20 top-full pt-2 w-56">
-                  <div className="absolute h-2 -top-2 inset-x-0"></div>
-                  <div className="rounded-md shadow-lg bg-white">
-                    <div className="py-1">
-                      <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
-                      <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">VT & Internship</Link>
-                      <Link to="/placement/training-programme" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Training Programme</Link>
-                      <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
-                      <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
-                      <Link to="/placement/mous" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">MOUs</Link>
-                      <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
-                      <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+  {activeDropdownDesktop === 6 && (
+    <div className="absolute z-20 top-full pt-2 w-64">
+      <div className="absolute h-2 -top-2 inset-x-0"></div>
+      <div className="rounded-md shadow-lg bg-white">
+        <div className="py-1">
+          <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
+          <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
+          <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
+          {/* <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link> */}
+          <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
+          <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
+          <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
 
             {/* Alumni */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
