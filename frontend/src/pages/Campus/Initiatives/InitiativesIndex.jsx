@@ -8,7 +8,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Header from '../../../components/Header';
 import Navbar from '../../../components/Navbar';
 import NSS from './NSS';
-import OtherClubs from './OtherClubs';
+// import OtherClubs from './OtherClubs';
 import SWAR from './SWAR';
 import Startups from './Startups';
 import CentreOfExcellence from './CentreOfExcellence';
@@ -28,7 +28,7 @@ const tabMapping = {
   nss: "NSS",
   swar: "SWAR",
   startups: "Startups",
-  clubs: "OtherClubs",
+  // clubs: "OtherClubs",
   coe: "Centre of Excellence",
   incubation: "Incubation Centre",
   nptel: "NPTEL",
@@ -59,7 +59,7 @@ const NAAC_SUB_TABS = [
   "AQAR"
 ];
 
-const BOTTOM_TABS = ["NSS", "SWAR", "OtherClubs"];
+const BOTTOM_TABS = ["NSS", "SWAR"];
 
 export default function ModernDepartmentPage() {
   const location = useLocation();
@@ -121,11 +121,11 @@ export default function ModernDepartmentPage() {
         "CSR": {
       title: "CSR",
       content: <CSR />,
-    },
-    OtherClubs: {
-      title: "Other Clubs",
-      content: <OtherClubs />,
     }
+    // OtherClubs: {
+    //   title: "Other Clubs",
+    //   content: <OtherClubs />,
+    // }
   };
 
   useEffect(() => {
