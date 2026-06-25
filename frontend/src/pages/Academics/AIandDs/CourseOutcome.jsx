@@ -2,8 +2,8 @@ import third from "../../../assets/Ai&Ds/AIDS3rdsem.pdf";
 import fourth from "../../../assets/Ai&Ds/AIDS4thsem.pdf";
 import fifth from "../../../assets/Ai&Ds/AIDS5thsem.pdf";
 import sixth from "../../../assets/Ai&Ds/AIDS6thsem.pdf";
-import seventh from "../../../assets/Ai&Ds/AIDS7thsem.pdf";
-import eighth from "../../../assets/Ai&Ds/AIDS8thsem.pdf";
+import seventh from "../../../assets/Ai&Ds/AIDS7thSem.pdf";
+import eighth from "../../../assets/Ai&Ds/AIDS8thSem.pdf";
 
 const CSECourseOutcomes = () => {
   // Data for semesters with syllabus paths
