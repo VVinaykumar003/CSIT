@@ -7,7 +7,7 @@ import Gallery from './Gallery';
 import Grievances from './Grievances';
 import RTI from './RTI';
 import Feedback from './Feedback';
-import IQAC from './IQAC';
+// import IQAC from './IQAC';
 import Calendar from './Calendar';
 import StudentAffairsIndex from './Student affairs/StudentAffairsIndex';
 import RnD from './RnD';
@@ -21,7 +21,7 @@ const sidebarLinks = [
   { name: 'Feedback', path: 'feedback' },
   { name: 'Gallery', path: 'gallery' },
   { name: 'Grievances', path: 'grievances' },
-  { name: 'IQAC', path: 'iqac' },
+  // { name: 'IQAC', path: 'iqac' },
   { name: 'RTI', path: 'rti' },
   { name: 'Achievement', path: 'achievement' },
     { name: 'Celebration', path: 'celebration' },
@@ -81,7 +81,7 @@ export default function MorePage() {
                 <Route path="feedback" element={<Feedback />} />
                 <Route path="gallery" element={<Gallery />} />
                 <Route path="grievances" element={<Grievances />} />
-                <Route path="iqac" element={<IQAC />} />
+                {/* <Route path="iqac" element={<IQAC />} /> */}
                 <Route path="rti" element={<RTI />} />
                 <Route path="achievement" element={<Achievement />} />
                 <Route path="celebration" element={<Celebration />} />

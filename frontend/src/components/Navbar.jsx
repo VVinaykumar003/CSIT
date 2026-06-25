@@ -264,40 +264,52 @@ export default function Navbar() {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
 
-              {/* Dropdown */}
-              {activeDropdownDesktop === 4 && (
-                <div className="absolute z-20 top-full pt-2 w-56">
-                  <div className="absolute h-2 -top-2 inset-x-0"></div>
-                  <div className="rounded-md shadow-lg bg-white">
-                    <div className="py-1">
-                      <Link
-                        to="/admission/courses-offered"
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                      >
-                        Courses Offered
-                      </Link>
-                      <Link
-                        to="/admission/admission-process"
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                      >
-                        Admission Process
-                      </Link>
-                      <Link
-                        to="/admission/leaflet"
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                      >
-                        Leaflet
-                      </Link>
-                      <Link
-                        to="/admission/help-desk"
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                      >
-                        Help Desk
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
+            {/* Dropdown */}
+{activeDropdownDesktop === 4 && (
+  <div className="absolute z-20 top-full pt-2 w-56">
+    <div className="absolute h-2 -top-2 inset-x-0"></div>
+    <div className="rounded-md shadow-lg bg-white">
+      <div className="py-1">
+        <Link
+          to="/admission/why-choose"
+          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          Why Choose CSIT?
+        </Link>
+        <Link
+          to="/admission/courses-offered"
+          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          Courses Offered
+        </Link>
+        <Link
+          to="/admission/admission-process"
+          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          Admission Process
+        </Link>
+        <Link
+          to="/admission/scholarships"
+          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          Scholarships
+        </Link>
+        <Link
+          to="/admission/leaflet"
+          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          Leaflet
+        </Link>
+        <Link
+          to="/admission/help-desk"
+          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          Help Desk
+        </Link>
+      </div>
+    </div>
+  </div>
+)}
             </div>
 
             {/* Campus */}
@@ -847,60 +859,67 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Admission */}
-            <div>
-              <button
-                onClick={() => toggleMobileDropdown(4)}
-                className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
-              >
-                Admission
-                <ChevronDown
-                  className={`ml-1 h-4 w-4 transition-transform ${
-                    activeDropdownMobile === 4 ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+           {/* Admission */}
+<div>
+  <button
+    onClick={() => toggleMobileDropdown(4)}
+    className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
+  >
+    Admission
+    <ChevronDown
+      className={`ml-1 h-4 w-4 transition-transform ${
+        activeDropdownMobile === 4 ? "rotate-180" : ""
+      }`}
+    />
+  </button>
 
-              {activeDropdownMobile === 4 && (
-                <div className="pl-4 space-y-1 mt-1">
-                  <Link
-                    to="/courses-offered"
-                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Courses Offered
-                  </Link>
-                  <Link
-                    to="/admission-process"
-                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Admission Process
-                  </Link>
-                  <Link
-                    to="/help-desk"
-                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Help Desk
-                  </Link>
-                  <Link
-                    to="/leaflet"
-                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Leaflet
-                  </Link>
-                  <Link
-                    to="/admission/enquiry-form"
-                    className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Admission Form
-                  </Link>
-                </div>
-              )}
-            </div>
+  {activeDropdownMobile === 4 && (
+    <div className="pl-4 space-y-1 mt-1">
+      <Link
+        to="/admission/why-choose"
+        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Why Choose CSIT?
+      </Link>
+      <Link
+        to="/admission/courses-offered"
+        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Courses Offered
+      </Link>
+      <Link
+        to="/admission/admission-process"
+        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Admission Process
+      </Link>
+      <Link
+        to="/admission/scholarships"
+        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Scholarships
+      </Link>
+      <Link
+        to="/admission/leaflet"
+        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Leaflet
+      </Link>
+      <Link
+        to="/admission/help-desk"
+        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Help Desk
+      </Link>
+    </div>
+  )}
+</div>
 
             {/* Campus */}
             <div>

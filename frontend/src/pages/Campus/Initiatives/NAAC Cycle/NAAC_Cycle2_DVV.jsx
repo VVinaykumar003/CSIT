@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../../components/Header";
-import Navbar from "../../components/Navbar";
+// import Header from "../../../../components/Header";
+// import Navbar from "../../../../components/Navbar";
 
 const dvvData = [
   {
@@ -383,10 +383,10 @@ const NaacCycle2DVV = () => {
 
   return (
     <>
-      <Header />
-      <div className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100 w-full">
+      {/* <Header /> */}
+      {/* <div className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100 w-full">
         <Navbar />
-      </div>
+      </div> */}
 
       <div className="min-h-screen bg-white p-4 md:p-8 w-full overflow-x-hidden">
         {/* Header */}

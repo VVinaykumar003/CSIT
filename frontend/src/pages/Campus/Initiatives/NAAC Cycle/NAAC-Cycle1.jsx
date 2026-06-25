@@ -1,7 +1,8 @@
 import React from "react";
-import pdf1 from "../../assets/NAAC_CYCLE_1/NAAC Self-Study-Report.pdf";
-import pdf2 from "../../assets/NAAC_CYCLE_1/Cycle1_Certificate.pdf";
-import pdf3 from "../../assets/NAAC_CYCLE_1/Peer_Team_Report_Cycle1.pdf";
+import pdf1 from "../../../../assets/NAAC_CYCLE_1/NAAC Self-Study-Report.pdf";
+import pdf2 from "../../../../assets/NAAC_CYCLE_1/Cycle1_Certificate.pdf";
+import pdf3 from "../../../../assets/NAAC_CYCLE_1/Peer_Team_Report_Cycle1.pdf";
+
 
 const NaacCycle1 = () => {
   const handleViewPdf = (pdfUrl) => {
