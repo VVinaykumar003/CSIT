@@ -95,8 +95,8 @@ function NotificationForm({ onClose, onSuccess, editData }) {
               className="w-full rounded-lg border border-gray-200 p-3 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#0d173b] text-black shadow-sm"
             >
               <option value="">Select Routing Type</option>
-              <option value="announcement">Announcement</option>
-              <option value="tender">Tender Document</option>
+              {/* <option value="announcement">Announcement</option>
+              <option value="tender">Tender Document</option> */}
               <option value="notice">Official Notice</option>
               <option value="event">Campus Event</option>
             </select>
