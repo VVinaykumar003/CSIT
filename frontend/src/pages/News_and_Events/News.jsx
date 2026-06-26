@@ -1,58 +1,32 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
-  MdCampaign,
-  MdAssignment,
   MdNotifications,
   MdGroups,
   MdCalendarToday,
   MdAccessTime,
   MdArrowForward,
+  MdClose,
 } from "react-icons/md";
-
+import { motion } from "framer-motion";
 import api from "../../../services/api";
 
-/* ── Category config ─────────────────────────────────────────── */
-
-const CATEGORY_CONFIG = [
-  {
-    id: "announcement",
-    title: "Announcement",
-    icon: <MdCampaign size={16} />,
-    headerBg: "#0d173b",
-    headerText: "#fff",
-    accentColor: "#378ADD",
-    borderColor: "#0d173b",
-  },
-  {
-    id: "tender",
-    title: "Tender",
-    icon: <MdAssignment size={16} />,
-    headerBg: "#0d173b",
-    headerText: "#fff",
-    accentColor: "#BA7517",
-    borderColor: "#0d173b",
-  },
+/* ── Government Layout Scheme Config ────────────────── */
+const COLUMN_CONFIG = [
   {
     id: "notice",
-    title: "Notice",
-    icon: <MdNotifications size={16} />,
-    headerBg: "#0d173b",
-    headerText: "#fff",
+    title: "Latest Notices & Circulars",
+    icon: <MdNotifications size={18} />,
     accentColor: "#D85A30",
-    borderColor: "#0d173b",
+    urgentColor: "#EF4444",
   },
   {
     id: "event",
-    title: "Events",
-    icon: <MdGroups size={16} />,
-    headerBg: "#0d173b",
-    headerText: "#fff",
+    title: "Upcoming Campus Events",
+    icon: <MdGroups size={18} />,
     accentColor: "#3B6D11",
-    borderColor: "#0d173b",
+    urgentColor: "#EF4444",
   },
 ];
-
-/* ── Helpers ─────────────────────────────────────────────────── */
 
 const formatDate = (date) =>
   new Date(date).toLocaleDateString("en-GB", {
@@ -61,58 +35,100 @@ const formatDate = (date) =>
     year: "numeric",
   });
 
-/* ── Infinite vertical scroll track ─────────────────────────── */
-/*
-  FIX 1 — overflow-hidden is set on the wrapper div below.
-  FIX 4 — genuine infinite loop: duplicate items are appended so
-           when the track reaches the halfway point it snaps back
-           to 0 seamlessly. Pauses on hover.
-*/
-const AutoScrollTrack = ({ items, speed = 0.4 }) => {
+// Check if item is new (within 7 days)
+const isNew = (date) => {
+  const diff = new Date() - new Date(date);
+  return diff < 7 * 24 * 60 * 60 * 1000;
+};
+
+// Get category badge color
+const getCategoryColor = (category) => {
+  switch (category) {
+    case "notice":
+      return "bg-orange-100 text-orange-700";
+    case "tender":
+      return "bg-purple-100 text-purple-700";
+    case "announcement":
+      return "bg-blue-100 text-blue-700";
+    case "event":
+      return "bg-emerald-100 text-emerald-700";
+    default:
+      return "bg-gray-100 text-gray-700";
+  }
+};
+
+/* ── Infinite Circular Scroll Effect ──────────────────────────── */
+const AutoScrollTrack = ({ items, speed = 0.5, onProgressUpdate }) => {
   const wrapperRef = useRef(null);
-  const trackRef   = useRef(null);
-  const frameRef   = useRef(null);
-  const yRef       = useRef(0);
-  const pausedRef  = useRef(false);
+  const trackRef = useRef(null);
+  const frameRef = useRef(null);
+  const yRef = useRef(0);
+  const pausedRef = useRef(false);
+  const [itemHeight, setItemHeight] = useState(0);
+  const [totalHeight, setTotalHeight] = useState(0);
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
-    const track   = trackRef.current;
-    if (!track || !wrapper) return;
+    const track = trackRef.current;
+    if (!track || !wrapper || items.length === 0) return;
 
-    // Only scroll if there are enough items to overflow the card
-    const needsScroll = track.scrollHeight / 2 > wrapper.clientHeight;
-    if (!needsScroll) return;
+    // Calculate height of one item
+    const firstChild = track.children[0];
+    if (!firstChild) return;
+    const height = firstChild.offsetHeight || 60;
+    setItemHeight(height);
+    const total = items.length * height;
+    setTotalHeight(total);
+
+    // Set initial position
+    track.style.transform = "translateY(0px)";
 
     const animate = () => {
       if (!pausedRef.current) {
-        const half = track.scrollHeight / 2;
         yRef.current -= speed;
-        if (Math.abs(yRef.current) >= half) yRef.current = 0;
+        // Reset when we've scrolled past one full set
+        if (Math.abs(yRef.current) >= total) {
+          yRef.current = 0;
+        }
         track.style.transform = `translateY(${yRef.current}px)`;
+
+        // Update progress
+        if (onProgressUpdate && total > 0) {
+          const progress = (Math.abs(yRef.current) / total) * 100;
+          onProgressUpdate(Math.min(progress, 100));
+        }
       }
       frameRef.current = requestAnimationFrame(animate);
     };
 
     frameRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameRef.current);
-  }, [items, speed]);
 
-  const doubled = [...items, ...items]; // duplicate for seamless loop
+    return () => {
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
+      }
+    };
+  }, [items, speed, onProgressUpdate]);
+
+  if (items.length === 0) {
+    return (
+      <div className="flex-1 flex flex-col items-center justify-center text-sm text-gray-400 bg-gray-50/50 select-none p-4">
+        <div className="text-4xl mb-3 opacity-30">📭</div>
+        <p className="font-medium">No active records</p>
+        <p className="text-xs">Check back later for updates</p>
+      </div>
+    );
+  }
 
   return (
-    /* FIX 1 — overflow-hidden lives here so nothing bleeds out */
     <div
       ref={wrapperRef}
-      className="flex-1 overflow-hidden relative"
+      className="flex-1 overflow-hidden relative h-[320px]"
       onMouseEnter={() => (pausedRef.current = true)}
       onMouseLeave={() => (pausedRef.current = false)}
     >
-      <div
-        ref={trackRef}
-        className="absolute inset-x-0 top-0 will-change-transform"
-      >
-        {doubled.map((item, idx) => (
+      <div ref={trackRef} className="absolute inset-x-0 top-0 will-change-transform w-full">
+        {items.map((item, idx) => (
           <NoticeRow key={`${item._id}-${idx}`} item={item} />
         ))}
       </div>
@@ -120,143 +136,209 @@ const AutoScrollTrack = ({ items, speed = 0.4 }) => {
   );
 };
 
-/* ── Single notice row ───────────────────────────────────────── */
-
+/* ── Single Broadcast Element Node ──────────────────────────── */
 const NoticeRow = ({ item }) => {
   const hasLink = item.link && item.link.trim() !== "";
-
   const handleClick = () => {
     if (hasLink) window.open(item.link, "_blank", "noopener,noreferrer");
   };
+  const isNewItem = isNew(item.createdAt);
+  const categoryColor = getCategoryColor(item.category);
 
   return (
     <div
       onClick={handleClick}
-      className={[
-        "border-b border-base-200 px-4 py-3 last:border-b-0 transition-colors duration-150",
-        hasLink
-          ? "cursor-pointer hover:bg-base-200/60 group"
-          : "cursor-default",
-      ].join(" ")}
+      className={`border-b border-gray-100 p-4 transition-all duration-150 bg-white ${
+        hasLink ? "cursor-pointer hover:bg-gray-50 group" : "cursor-default"
+      } ${isNewItem ? "hover:bg-emerald-50/30" : ""}`}
     >
-      <div className="flex items-center justify-between gap-2">
-        <span className="inline-flex items-center gap-1 rounded-full bg-base-200 px-2 py-1 text-[11px] font-semibold text-base-content/60">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <span className="inline-flex items-center gap-1 rounded bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-500">
           <MdCalendarToday size={11} />
-          {formatDate(item.createdAt)}
+          {formatDate(item.publishDate || item.createdAt)}
         </span>
-
-        {/* External link icon — only shown when link exists */}
-        {hasLink && (
-          <MdArrowForward
-            size={13}
-            className="shrink-0 text-base-content/30 group-hover:text-primary transition-colors"
-          />
-        )}
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {/* Category Badge */}
+          <span className={`text-[9px] font-medium px-2 py-0.5 rounded-full ${categoryColor}`}>
+            {item.category || "General"}
+          </span>
+          {/* NEW Badge */}
+          {isNewItem && (
+            <span className="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200 animate-pulse">
+              NEW
+            </span>
+          )}
+          {item.urgent && (
+            <span className="text-[9px] font-bold text-red-600 bg-red-50 px-1.5 py-0.5 rounded-full border border-red-200 animate-pulse">
+              URGENT
+            </span>
+          )}
+        </div>
       </div>
 
       <h4
-        className={[
-          "mt-2 text-sm font-semibold leading-snug",
-          hasLink
-            ? "text-base-content group-hover:text-primary transition-colors"
-            : "text-base-content",
-        ].join(" ")}
+        className={`mt-2 text-sm font-bold leading-snug relative group ${
+          hasLink ? "text-gray-800 group-hover:text-[#0d173b]" : "text-gray-800"
+        }`}
       >
         {item.title}
+        {item.title && item.title.length > 50 && (
+          <span className="absolute hidden group-hover:block bg-gray-800 text-white text-xs rounded-lg p-2 -top-8 left-0 whitespace-nowrap z-10 shadow-lg">
+            {item.title}
+          </span>
+        )}
       </h4>
 
-      <p className="mt-1 text-xs text-base-content/60 leading-relaxed line-clamp-2">
-        {item.message}
-      </p>
+      <p className="mt-1 text-xs text-gray-500 leading-relaxed line-clamp-2">{item.message}</p>
 
       {item.lastDate && (
-        <p className="mt-2 flex items-center gap-1 text-xs font-medium text-error">
+        <p className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-rose-600">
           <MdAccessTime size={12} />
-          Last Date: {formatDate(item.lastDate)}
+          Deadline: {formatDate(item.lastDate)}
         </p>
       )}
     </div>
   );
 };
 
-/* ── Category card ───────────────────────────────────────────── */
+/* ── Split Dual Category Board Matrix ────────────────────────── */
+const CategoryCard = ({ config, items, index }) => {
+  const [showAllModal, setShowAllModal] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [speed, setSpeed] = useState(0.5);
 
-const CategoryCard = ({ category, items }) => (
-  /* FIX 1 — overflow-hidden on the card itself */
-  <div
-    className="flex h-[380px] flex-col rounded-2xl border-2 bg-base-100 shadow-sm overflow-hidden"
-    style={{ borderColor: category.borderColor }}
-  >
-    {/* Header */}
-    <div
-      className="flex shrink-0 items-center gap-2 px-4 py-3"
-      style={{ background: category.headerBg, color: category.headerText }}
-    >
-      {category.icon}
-      <h2 className="font-bold text-sm">{category.title}</h2>
-      <span
-        className="badge badge-sm ml-auto font-semibold px-2 py-1 rounded-full text-xs"
-        style={{ background: category.accentColor, color: "#fff", border: "none" }}
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.15 }}
+        className="flex h-[460px] flex-col rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden hover:shadow-xl hover:border-[#0d173b]/20 transition-all duration-300 group"
       >
-        {items.length}
-      </span>
-    </div>
+        {/* Header with Gradient */}
+        <div className="flex shrink-0 items-center gap-2 px-5 py-4 bg-gradient-to-r from-[#0d173b] to-[#1e305f] text-white">
+          <span style={{ color: config.accentColor }} className="flex items-center">
+            {config.icon}
+          </span>
+          <h2 className="font-bold text-sm tracking-wide flex-1">{config.title}</h2>
+          <span className="font-bold px-2.5 py-0.5 rounded-full text-[10px] bg-white/20 text-white border border-white/20">
+            {items.length}
+          </span>
+        </div>
 
-    {/* Body */}
-    {items.length === 0 ? (
-      <div className="flex flex-1 items-center justify-center text-sm text-base-content/40">
-        No records found
-      </div>
-    ) : (
-      <AutoScrollTrack items={items} />
-    )}
+        {/* Speed Control - Hidden on small screens */}
+        {items.length > 1 && (
+          <div className="flex items-center justify-end gap-2 px-4 py-1 bg-gray-50/50 border-b border-gray-100">
+            <span className="text-[9px] text-gray-400 font-medium">Speed</span>
+            <button
+              onClick={() => setSpeed(Math.max(0.2, speed - 0.1))}
+              className="text-gray-400 hover:text-[#0d173b] text-xs font-bold w-5 h-5 rounded-full hover:bg-gray-200 flex items-center justify-center transition-colors"
+            >
+              −
+            </button>
+            <span className="text-[10px] text-gray-600 font-medium w-8 text-center">
+              {speed.toFixed(1)}x
+            </span>
+            <button
+              onClick={() => setSpeed(Math.min(1, speed + 0.1))}
+              className="text-gray-400 hover:text-[#0d173b] text-xs font-bold w-5 h-5 rounded-full hover:bg-gray-200 flex items-center justify-center transition-colors"
+            >
+              +
+            </button>
+          </div>
+        )}
 
-    {/* FIX 2 — proper DaisyUI button, no rounded-none hack */}
-    <button
-      className="btn btn-neutral w-full rounded-none rounded-b-2xl shrink-0 gap-1 flex items-center justify-center p-3"
-    >
-      View All <MdArrowForward />
-    </button>
-  </div>
-);
+        {/* Rolling Body */}
+        <AutoScrollTrack items={items} speed={speed} onProgressUpdate={setProgress} />
 
-/* ── Loading skeleton ────────────────────────────────────────── */
+        {/* Progress Bar */}
+        {items.length > 1 && (
+          <div className="h-0.5 bg-gray-100 w-full shrink-0">
+            <div
+              className="h-full bg-gradient-to-r from-[#0d173b] to-[#1e305f] transition-all duration-300"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        )}
 
+        {/* Footer - View All */}
+        {items.length > 0 && (
+          <button
+            onClick={() => setShowAllModal(true)}
+            className="w-full shrink-0 flex items-center justify-center gap-1 py-3 text-xs font-bold bg-gray-50 border-t border-gray-100 text-[#0d173b] hover:bg-gray-100/80 transition-colors uppercase tracking-wider"
+          >
+            View All <MdArrowForward size={14} />
+          </button>
+        )}
+      </motion.div>
+
+      {/* View All Modal */}
+      {showAllModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2 }}
+            className="bg-white rounded-xl max-w-3xl w-full max-h-[80vh] overflow-hidden shadow-2xl"
+          >
+            <div className="p-4 border-b flex justify-between items-center bg-gradient-to-r from-[#0d173b] to-[#1e305f] text-white">
+              <h3 className="font-bold text-lg flex items-center gap-2">
+                <span style={{ color: config.accentColor }}>{config.icon}</span>
+                {config.title}
+              </h3>
+              <button
+                onClick={() => setShowAllModal(false)}
+                className="text-white/50 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10"
+              >
+                <MdClose size={22} />
+              </button>
+            </div>
+            <div className="p-2 overflow-y-auto max-h-[60vh]">
+              {items.map((item) => (
+                <NoticeRow key={item._id} item={item} />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </>
+  );
+};
+
+/* ── Loader Buffer Skeleton ──────────────────────────────────── */
 const LoadingSkeleton = () => (
-  <section className="bg-base-200 py-10 px-5">
-    <div className="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-6">
-      {CATEGORY_CONFIG.map((c) => (
+  <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      {COLUMN_CONFIG.map((c, i) => (
         <div
           key={c.id}
-          className="h-[380px] rounded-2xl border-2 bg-base-100 overflow-hidden flex flex-col"
-          style={{ borderColor: c.borderColor }}
+          className="h-[460px] rounded-xl border border-gray-200 bg-white overflow-hidden flex flex-col"
         >
-          <div
-            className="px-4 py-3 shrink-0"
-            style={{ background: c.headerBg }}
-          >
-            <div className="h-4 w-24 rounded bg-white/20 animate-pulse" />
+          <div className="px-5 py-4 bg-[#0d173b]">
+            <div className="h-4 w-32 rounded bg-white/20 animate-pulse" />
           </div>
-          <div className="flex-1 p-4 space-y-3">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="space-y-1.5">
-                <div className="h-2.5 w-20 rounded bg-base-300 animate-pulse" />
-                <div className="h-3 w-full rounded bg-base-300 animate-pulse" />
-                <div className="h-3 w-4/5 rounded bg-base-300 animate-pulse" />
+          <div className="flex-1 p-4 space-y-4">
+            {[1, 2, 3].map((j) => (
+              <div key={j} className="space-y-2 border-b border-gray-50 pb-3">
+                <div className="flex justify-between">
+                  <div className="h-3 w-16 rounded bg-gray-200 animate-pulse" />
+                  <div className="h-3 w-12 rounded bg-gray-200 animate-pulse" />
+                </div>
+                <div className="h-4 w-full rounded bg-gray-200 animate-pulse" />
+                <div className="h-3 w-4/5 rounded bg-gray-100 animate-pulse" />
               </div>
             ))}
           </div>
-          <div className="h-10 bg-base-300 animate-pulse shrink-0 rounded-b-2xl" />
+          <div className="h-10 bg-gray-50 animate-pulse shrink-0" />
         </div>
       ))}
     </div>
   </section>
 );
 
-/* ── Main component ──────────────────────────────────────────── */
-
+/* ── Main Workspace Renderer Entry point ─────────────────────── */
 export default function NoticeBoard() {
-  const [notifications, setNotifications] = useState([]); // FIX 3 — no dummy data
+  const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -266,12 +348,10 @@ export default function NoticeBoard() {
   const fetchNotifications = async () => {
     try {
       const response = await api.get("/notifications");
-      const list =
-        response.data.notifications ??
-        response.data.data ??
-        response.data ??
-        [];
-      setNotifications(Array.isArray(list) ? list : []);
+      const list = response.data.notifications ?? response.data.data ?? response.data ?? [];
+
+      const activeItems = Array.isArray(list) ? list.filter((item) => item.isActive !== false) : [];
+      setNotifications(activeItems);
     } catch (err) {
       console.error(err);
       setNotifications([]);
@@ -283,22 +363,27 @@ export default function NoticeBoard() {
   if (loading) return <LoadingSkeleton />;
 
   const grouped = {
-    announcement: notifications.filter((x) => x.category === "announcement"),
-    tender:       notifications.filter((x) => x.category === "tender"),
-    notice:       notifications.filter((x) => x.category === "notice"),
-    event:        notifications.filter((x) => x.category === "event"),
+    notice: notifications.filter(
+      (x) => x.category === "notice" || x.category === "announcement" || x.category === "tender"
+    ),
+    event: notifications.filter((x) => x.category === "event"),
   };
 
   return (
-    <section className="bg-base-200 py-10 px-5">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-6">
-        {CATEGORY_CONFIG.map((category) => (
-          <CategoryCard
-            key={category.id}
-            category={category}
-            items={grouped[category.id] ?? []}
-          />
-        ))}
+    <section className="bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8 border-y border-gray-200/60">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0d173b]">Notice Board</h2>
+          <p className="text-gray-500 text-sm mt-1">Stay updated with the latest announcements and events</p>
+          <div className="h-0.5 w-16 bg-[#0d173b] mx-auto mt-3 rounded"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          {COLUMN_CONFIG.map((col, index) => (
+            <CategoryCard key={col.id} config={col} items={grouped[col.id] ?? []} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
