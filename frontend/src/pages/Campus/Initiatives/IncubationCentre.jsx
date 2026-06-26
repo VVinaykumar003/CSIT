@@ -85,9 +85,9 @@ export default function IncubationCentre() {
       <div className="bg-gradient-to-r from-[#0d173b] to-[#1e305f] text-white p-6 md:p-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold">Incubation Centre</h1>
-          <p className="text-sm md:text-base mt-1 text-blue-100">
+          {/* <p className="text-sm md:text-base mt-1 text-blue-100">
             Chhatrapati Shivaji Institute of Technology (CSIT), Durg
-          </p>
+          </p> */}
           <p className="text-sm md:text-base text-blue-200 mt-2">
             Transforming Ideas into Successful Ventures
           </p>
@@ -95,9 +95,18 @@ export default function IncubationCentre() {
         </div>
       </div>
 
-      {/* About Section */}
+      {/* About Section - Header Description */}
       <div className="p-5 md:p-6">
         <div className="bg-blue-50 p-5 md:p-6 rounded-lg shadow-sm mb-6">
+          <p className="text-gray-700 text-sm md:text-base mb-4">
+            The Incubation Centre at Chhatrapati Shivaji Institute of Technology is established to foster a culture of innovation, entrepreneurship, and technology-driven problem solving among students, faculty members, researchers, and aspiring entrepreneurs. The Centre serves as a dynamic platform where innovative ideas are nurtured, refined, and transformed into sustainable start-ups and impactful solutions for society and industry.
+          </p>
+        </div>
+      </div>
+
+      {/* About the Incubation Centre */}
+      <div className="px-5 md:px-6 mb-6">
+        <div className="bg-gray-50 p-5 md:p-6 rounded-lg shadow-sm">
           <h3 className="text-lg font-semibold text-[#0d173b] mb-3">About the Incubation Centre</h3>
           <p className="text-gray-700 text-sm md:text-base mb-4">
             Chhatrapati Shivaji Institute of Technology (CSIT), Durg has established the Incubation Centre as a significant step towards building a strong innovation and entrepreneurship ecosystem within the institute. Initiated under the visionary leadership of <strong>Ajay Prakash Verma</strong> (Chairman, CSIT), the Centre is dedicated to nurturing innovative ideas and transforming them into scalable and sustainable ventures that contribute to society and industry.
@@ -111,7 +120,13 @@ export default function IncubationCentre() {
             </p>
           </div>
           <p className="text-gray-700 text-sm md:text-base">
-            <span className="font-bold text-[#0d173b]">💡 MSME Innovative Scheme:</span> Selected ideas and start-ups incubated at CSIT can receive financial assistance of up to <strong>₹15 lakh</strong> for prototype development and commercialization, providing a strong foundation for transforming innovative concepts into successful ventures.
+            <span className="font-bold text-[#0d173b]">💡Under The  MSME Innovative Scheme:</span> Selected ideas and start-ups incubated at CSIT can receive financial assistance of up to <strong>₹15 lakh</strong> for prototype development and commercialization, providing a strong foundation for transforming innovative concepts into successful ventures.
+          </p>
+          <p className="text-gray-700 text-sm md:text-base mt-4">
+            The Incubation Centre is committed to creating a dynamic environment where start-ups can ideate, develop, and grow their businesses from conception to commercialization. It provides a supportive ecosystem with access to mentorship, technical resources, infrastructure, and industry collaboration, enabling entrepreneurs to establish their ventures with strong ethical and professional foundations.
+          </p>
+          <p className="text-gray-700 text-sm md:text-base mt-3">
+            CSIT Incubation Centre actively contributes to enhancing competitiveness, generating employment opportunities, and supporting start-ups and SMEs with high growth potential. It fosters strong linkages between academia, research institutions, and industry, facilitating knowledge transfer, innovation, and effective utilization of intellectual property.
           </p>
         </div>
       </div>
@@ -120,13 +135,13 @@ export default function IncubationCentre() {
       <div className="px-5 md:px-6 mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gradient-to-r from-[#0d173b] to-[#1a2b5f] text-white p-5 rounded-lg">
-            <h4 className="text-lg font-bold mb-2">Our Vision</h4>
+            <h4 className="text-lg font-bold mb-2">Vision</h4>
             <p className="text-sm text-blue-100">
               To become a leading hub of innovation and entrepreneurship by empowering young innovators to create impactful, sustainable, and technology-driven enterprises that contribute to economic growth and societal development.
             </p>
           </div>
           <div className="bg-gradient-to-r from-[#1e305f] to-[#0d173b] text-white p-5 rounded-lg">
-            <h4 className="text-lg font-bold mb-2">Our Mission</h4>
+            <h4 className="text-lg font-bold mb-2">Mission</h4>
             <ul className="text-sm text-blue-100 space-y-1">
               <li>• To promote a culture of creativity, innovation, and entrepreneurial thinking among students and faculty.</li>
               <li>• To provide incubation support for transforming innovative ideas into viable business ventures.</li>
@@ -138,7 +153,7 @@ export default function IncubationCentre() {
         </div>
       </div>
 
-      {/* Motto */}
+      {/* Our Motto */}
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-[#0d173b] border-opacity-20 p-5 rounded-lg text-center">
           <h4 className="text-xl font-bold text-[#0d173b] mb-2">Our Motto</h4>
@@ -241,19 +256,19 @@ export default function IncubationCentre() {
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <p className="text-sm text-blue-200">Centre</p>
+              <p className="text-sm text-blue-200">Name of the Centre:</p>
               <p className="text-sm font-medium">Chhatrapati Shivaji Institute of Technology</p>
               <p className="text-sm text-blue-200 mt-1">📞 9826199557 / 8966000102</p>
               <p className="text-sm text-blue-200">✉️ registrar@csitdurg.in</p>
             </div>
             <div>
-              <p className="text-sm text-blue-200">Manager</p>
+              <p className="text-sm text-blue-200">Name of Manager:</p>
               <p className="text-sm font-medium">Mr. Anil Kumar</p>
               <p className="text-sm text-blue-200 mt-1">📞 8770196674</p>
               <p className="text-sm text-blue-200">✉️ anilray926@gmail.com</p>
             </div>
             <div>
-              <p className="text-sm text-blue-200">Deputy Manager</p>
+              <p className="text-sm text-blue-200">Name of Deputy Manager:</p>
               <p className="text-sm font-medium">Mr. Anmol Bhardwaj</p>
               <p className="text-sm text-blue-200 mt-1">📞 7898310486</p>
               <p className="text-sm text-blue-200">✉️ anmolbhardwaj@csitdurg.in</p>
