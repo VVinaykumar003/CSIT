@@ -220,32 +220,34 @@ export default function Navbar() {
             </div>
 
             {/* T&P Cell */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
-              <button
-                onClick={() => toggleDesktopDropdown(6)}
-                onMouseEnter={() => openDesktopDropdown(6)}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-              >
-                T&P Cell
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+<div className="group relative" onMouseLeave={closeDesktopDropdown}>
+  <button
+    onClick={() => toggleDesktopDropdown(6)}
+    onMouseEnter={() => openDesktopDropdown(6)}
+    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+  >
+    T&P Cell
+    <ChevronDown className="ml-1 h-4 w-4" />
+  </button>
 
-              {activeDropdownDesktop === 6 && (
-                <div className="absolute z-20 top-full pt-2 w-64">
-                  <div className="absolute h-2 -top-2 inset-x-0"></div>
-                  <div className="rounded-md shadow-lg bg-white">
-                    <div className="py-1">
-                      <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
-                      <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
-                      <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
-                      <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
-                      <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
-                      <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+  {activeDropdownDesktop === 6 && (
+    <div className="absolute z-20 top-full pt-2 w-64">
+      <div className="absolute h-2 -top-2 inset-x-0"></div>
+      <div className="rounded-md shadow-lg bg-white">
+        <div className="py-1">
+          <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
+          <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
+          <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
+          <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link>  {/* ✅ NEW */}
+          <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
+          <Link to="/placement/training-programme" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Training Programme</Link>
+          <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
+          <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
 
             {/* Alumni */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
@@ -522,30 +524,32 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* ✅ FIXED: T&P Cell - Same as Desktop */}
-            <div>
-              <button
-                onClick={() => toggleMobileDropdown(6)}
-                className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
-              >
-                T&P Cell
-                <ChevronDown
-                  className={`ml-1 h-4 w-4 transition-transform ${
-                    activeDropdownMobile === 6 ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {activeDropdownMobile === 6 && (
-                <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/placement/about-tnp-cell" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Cell</Link>
-                  <Link to="/placement/placement-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Policies</Link>
-                  <Link to="/placement/internship" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Vocational Training & Internship</Link>
-                  <Link to="/placement/placement-statistics" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Statistics</Link>
-                  <Link to="/placement/our-recruiters" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Our Recruiters</Link>
-                  <Link to="/placement/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
-                </div>
-              )}
-            </div>
+           {/* T&P Cell */}
+<div>
+  <button
+    onClick={() => toggleMobileDropdown(6)}
+    className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
+  >
+    T&P Cell
+    <ChevronDown
+      className={`ml-1 h-4 w-4 transition-transform ${
+        activeDropdownMobile === 6 ? "rotate-180" : ""
+      }`}
+    />
+  </button>
+  {activeDropdownMobile === 6 && (
+    <div className="pl-4 space-y-1 mt-1">
+      <Link to="/placement/about-tnp-cell" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Cell</Link>
+      <Link to="/placement/placement-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Policies</Link>
+      <Link to="/placement/internship" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Vocational Training & Internship</Link>
+      <Link to="/placement/capacity-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Capacity Development Program</Link>  {/* ✅ NEW */}
+      <Link to="/placement/placement-statistics" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Statistics</Link>
+      <Link to="/placement/training-programme" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Training Programme</Link>
+      <Link to="/placement/our-recruiters" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Our Recruiters</Link>
+      <Link to="/placement/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
+    </div>
+  )}
+</div>
 
             {/* ✅ FIXED: Alumni - Same as Desktop */}
             <div>
