@@ -57,7 +57,6 @@ export default function Navbar() {
     { name: "NAAC Cycle", path: "/campus/initiatives?tab=naac-1" },
     { name: "NSS", path: "/campus/initiatives?tab=nss" },
     { name: "SWAR", path: "/campus/initiatives?tab=swar" },
-    // { name: "Other Clubs", path: "/campus/initiatives?tab=clubs" },
   ];
 
   return (
@@ -189,7 +188,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* ✅ CHANGED: Campus → Initiatives */}
+            {/* Initiatives */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
               <button
                 onClick={() => toggleDesktopDropdown(5)}
@@ -220,34 +219,33 @@ export default function Navbar() {
               )}
             </div>
 
-           {/* Placement / T&P Cell */}
-<div className="group relative" onMouseLeave={closeDesktopDropdown}>
-  <button
-    onClick={() => toggleDesktopDropdown(6)}
-    onMouseEnter={() => openDesktopDropdown(6)}
-    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-  >
-    T&P Cell
-    <ChevronDown className="ml-1 h-4 w-4" />
-  </button>
+            {/* T&P Cell */}
+            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+              <button
+                onClick={() => toggleDesktopDropdown(6)}
+                onMouseEnter={() => openDesktopDropdown(6)}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+              >
+                T&P Cell
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
 
-  {activeDropdownDesktop === 6 && (
-    <div className="absolute z-20 top-full pt-2 w-64">
-      <div className="absolute h-2 -top-2 inset-x-0"></div>
-      <div className="rounded-md shadow-lg bg-white">
-        <div className="py-1">
-          <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
-          <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
-          <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
-          {/* <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link> */}
-          <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
-          <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
-          <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
-        </div>
-      </div>
-    </div>
-  )}
-</div>
+              {activeDropdownDesktop === 6 && (
+                <div className="absolute z-20 top-full pt-2 w-64">
+                  <div className="absolute h-2 -top-2 inset-x-0"></div>
+                  <div className="rounded-md shadow-lg bg-white">
+                    <div className="py-1">
+                      <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
+                      <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
+                      <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
+                      <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
+                      <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
+                      <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Alumni */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
@@ -276,30 +274,32 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* NAAC Cycle */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
-              <button
-                onClick={() => toggleDesktopDropdown(8)}
-                onMouseEnter={() => openDesktopDropdown(8)}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-              >
-                NAAC Cycle
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+           {/* Students Clubs */}
+<div className="group relative" onMouseLeave={closeDesktopDropdown}>
+  <button
+    onClick={() => toggleDesktopDropdown(8)}
+    onMouseEnter={() => openDesktopDropdown(8)}
+    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+  >
+    Students Clubs
+    <ChevronDown className="ml-1 h-4 w-4" />
+  </button>
 
-              {activeDropdownDesktop === 8 && (
-                <div className="absolute z-20 top-full pt-2 w-56">
-                  <div className="absolute h-2 -top-2 inset-x-0"></div>
-                  <div className="rounded-md shadow-lg bg-white">
-                    <div className="py-1">
-                      <Link to="/naac-cycle/naac-cycle-1" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">NAAC Cycle 1</Link>
-                      <Link to="/naac-cycle/naac-cycle-2" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">NAAC Cycle 2</Link>
-                      <Link to="/naac-cycle/AQAR" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">AQAR</Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+  {activeDropdownDesktop === 8 && (
+    <div className="absolute z-20 top-full pt-2 w-56">
+      <div className="absolute h-2 -top-2 inset-x-0"></div>
+      <div className="rounded-md shadow-lg bg-white">
+        <div className="py-1">
+          <Link to="/students-clubs/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
+          <Link to="/students-clubs/various-clubs" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Various Clubs</Link>
+          <Link to="/students-clubs/development-program" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Development Program</Link>
+          <Link to="/students-clubs/industry-interaction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Industry Interaction</Link>
+          <Link to="/students-clubs/extracurricular-activities" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Extracurricular Activities</Link>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
 
             {/* More */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
@@ -493,7 +493,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* ✅ CHANGED: Initiatives */}
+            {/* Initiatives */}
             <div>
               <button
                 onClick={() => toggleMobileDropdown(5)}
@@ -573,27 +573,30 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* NAAC Cycle */}
-            <div>
-              <button
-                onClick={() => toggleMobileDropdown(8)}
-                className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
-              >
-                NAAC Cycle
-                <ChevronDown
-                  className={`ml-1 h-4 w-4 transition-transform ${
-                    activeDropdownMobile === 8 ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {activeDropdownMobile === 8 && (
-                <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/naac-cycle/naac-cycle-1" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>NAAC Cycle 1</Link>
-                  <Link to="/naac-cycle/naac-cycle-2" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>NAAC Cycle 2</Link>
-                  <Link to="/naac-cycle/AQAR" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>AQAR</Link>
-                </div>
-              )}
-            </div>
+           {/* Students Clubs */}
+<div>
+  <button
+    onClick={() => toggleMobileDropdown(8)}
+    className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
+  >
+    Students Clubs
+    <ChevronDown
+      className={`ml-1 h-4 w-4 transition-transform ${
+        activeDropdownMobile === 8 ? "rotate-180" : ""
+      }`}
+    />
+  </button>
+
+  {activeDropdownMobile === 8 && (
+    <div className="pl-4 space-y-1 mt-1">
+      <Link to="/students-clubs/introduction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introduction</Link>
+      <Link to="/students-clubs/various-clubs" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Various Clubs</Link>
+      <Link to="/students-clubs/development-program" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Development Program</Link>
+      <Link to="/students-clubs/industry-interaction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Industry Interaction</Link>
+      <Link to="/students-clubs/extracurricular-activities" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Extracurricular Activities</Link>
+    </div>
+  )}
+</div>
 
             {/* More */}
             <div>

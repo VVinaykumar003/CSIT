@@ -1,35 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const OurRecruiters = () => {
-  // Companies with their official domain for Clearbit logo fetching
-  // Corrected domains for better logo display
-  const companies = [
-    { name: "LTI", domain: "larsentoubro.com" }, // Updated domain for LTI
-    { name: "HCL", domain: "hcltech.com" },
-    { name: "Cummins", domain: "cummins.com" },
-    { name: "BOSCH", domain: "bosch.com" },
-    { name: "Accenture", domain: "accenture.com" },
-    { name: "Cognizant", domain: "cognizant.com" },
-    { name: "HEXAWARE", domain: "hexaware.com" },
-    { name: "Capgemini", domain: "capgemini.com" },
-    { name: "SYNAPSE", domain: "synapse.com" }, // Changed to simpler domain
-    { name: "Mahindra", domain: "mahindra.com" },
-    { name: "Tech Mahindra", domain: "techmahindra.com" },
-    { name: "INDIAN ARMY", domain: "indianarmy.gov.in" }, // Changed to more standard domain
-    { name: "GlobalLogic", domain: "globallogic.com" }
-  ];
-
-  // For tracking images that failed to load
-  const [failedImages, setFailedImages] = useState({});
-
-  // Handle image load error
-  const handleImageError = (companyName, domain) => {
-    setFailedImages(prev => ({
-      ...prev,
-      [companyName]: true
-    }));
-  };
-
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden">
       {/* Header */}
@@ -46,7 +17,7 @@ const OurRecruiters = () => {
               Our Recruiters
             </h2>
             <p className="text-gray-200 text-xs sm:text-sm mt-1 sm:mt-2">
-              CSIT | Industry Partners
+              Trusted by Industry Leaders – Empowering Students with Career Opportunities.
             </p>
             <div className="h-0.5 w-8 sm:w-12 bg-white mt-2 sm:mt-3"></div>
           </div>
@@ -54,54 +25,126 @@ const OurRecruiters = () => {
       </div>
 
       <div className="p-4 sm:p-6">
-        <div className="prose max-w-none text-gray-700">
-          {/* Introduction */}
-          <div className="mb-6 sm:mb-8">
-            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-              CSIT has established strong relationships with leading companies across various industries. Our placement cell works closely with these organizations to provide excellent career opportunities for our students.
-            </p>
-            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-              The following companies have recruited our students, offering them promising career paths and professional growth opportunities.
-            </p>
-          </div>
+        {/* Introduction */}
+        <div className="mb-6">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+            CSIT has built strong and long-standing relationships with leading organizations across diverse industry sectors. The Training &amp; Placement Cell actively collaborates with these companies to create meaningful career opportunities for students and ensure successful campus recruitment outcomes.
+          </p>
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-3">
+            With a focus on quality placements and industry alignment, the institute continues to strengthen its network of recruiters year after year.
+          </p>
+        </div>
 
-          {/* Companies Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {companies.map((company, index) => (
-              <div 
-                key={index}
-                className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center justify-center"
-              >
-                <div className="h-24 flex items-center justify-center mb-4">
-                  {failedImages[company.name] ? (
-                    <div className="flex items-center justify-center w-full h-full bg-gray-100 rounded-md">
-                      <span className="text-lg font-medium text-gray-500">{company.name}</span>
-                    </div>
-                  ) : (
-                    <img 
-                      src={`https://logo.clearbit.com/${company.domain}`} 
-                      alt={`${company.name} logo`} 
-                      className="max-h-full max-w-full object-contain"
-                      onError={() => handleImageError(company.name, company.domain)}
-                    />
-                  )}
-                </div>
-                <h4 className="text-base font-medium text-[#0d173b] text-center">
-                  {company.name}
-                </h4>
-              </div>
-            ))}
-          </div>
+        {/* Our Recruiting Partners - Sectors */}
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">
+            Our Recruiting Partners
+          </h3>
+          <p className="text-sm text-gray-600 mb-3">
+            A wide range of reputed companies regularly participate in our campus recruitment drives, representing sectors such as:
+          </p>
+          <ul className="space-y-1.5 mb-3">
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Core Engineering Industries
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              IT &amp; IT-Enabled Services
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Manufacturing &amp; Production
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Consultancy Firms
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Finance &amp; Banking
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Pharmaceutical &amp; Healthcare
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Research &amp; Development Organizations
+            </li>
+          </ul>
+          <p className="text-sm text-gray-600">
+            These organizations provide students with excellent platforms to begin their professional journeys and achieve long-term career growth.
+          </p>
+        </div>
 
-          {/* Additional Information */}
-          <div className="mt-8 p-4 bg-blue-50 border border-blue-100 rounded-md">
-            <h3 className="text-base sm:text-lg font-medium text-[#0d173b] mb-2">Recruitment Process</h3>
-            <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base text-gray-700">
-              <li>Companies visit our campus for recruitment drives</li>
-              <li>Students undergo rigorous training to prepare for interviews</li>
-              <li>Placement cell facilitates the entire recruitment process</li>
-              <li>Regular feedback sessions help improve placement outcomes</li>
-            </ul>
+        {/* Our Commitment */}
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">
+            Our Commitment
+          </h3>
+          <ul className="space-y-1.5">
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Maintaining strong industry relationships
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Understanding recruiter expectations and requirements
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Preparing students as per current industry standards
+            </li>
+            <li className="flex items-start gap-3 text-sm text-gray-700">
+              <span className="text-[#0d173b] font-bold mt-0.5"></span>
+              Ensuring smooth and professional recruitment processes
+            </li>
+          </ul>
+        </div>
+
+        {/* Recruitment Process */}
+        <div>
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-2">
+            Recruitment Process
+          </h3>
+          <p className="text-sm text-gray-600 mb-2 italic">
+            "Prepare – Perform – Get Placed: A structured pathway to career success."
+          </p>
+          <p className="text-sm text-gray-600 mb-4">
+            The Recruitment Process at CSIT is designed to ensure a smooth, transparent, and efficient interaction between recruiters and students. The Training &amp; Placement Cell coordinates every stage of the process, enabling companies to identify and recruit the most suitable candidates while providing students with the best career opportunities.
+          </p>
+          <div className="space-y-3">
+            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#0d173b]">
+              <h4 className="font-semibold text-[#0d173b] text-sm">1. Company Engagement</h4>
+              <p className="text-sm text-gray-600 mt-1">Reputed companies are invited to the campus for recruitment drives. The T&amp;P Cell maintains continuous interaction with recruiters to understand their requirements and expectations.</p>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#1e305f]">
+              <h4 className="font-semibold text-[#0d173b] text-sm">2. Student Preparation</h4>
+              <p className="text-sm text-gray-600 mt-1">Students undergo structured pre-placement training, including aptitude tests, technical sessions, group discussions, and mock interviews to enhance their readiness for the selection process.</p>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#0d173b]">
+              <h4 className="font-semibold text-[#0d173b] text-sm">3. Pre-Placement Activities</h4>
+              <p className="text-sm text-gray-600 mt-1">Companies may conduct:</p>
+              <ul className="list-disc pl-5 mt-1 text-sm text-gray-600">
+                <li>Pre-Placement Talks (PPTs)</li>
+                <li>Written/Aptitude Tests</li>
+                <li>Group Discussions</li>
+                <li>Technical &amp; HR Interviews</li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#1e305f]">
+              <h4 className="font-semibold text-[#0d173b] text-sm">4. Recruitment Drive Execution</h4>
+              <p className="text-sm text-gray-600 mt-1">The Placement Cell provides complete logistical and infrastructural support to ensure smooth conduct of all recruitment activities on campus.</p>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#0d173b]">
+              <h4 className="font-semibold text-[#0d173b] text-sm">5. Selection &amp; Offer</h4>
+              <p className="text-sm text-gray-600 mt-1">Based on performance, shortlisted candidates receive offer letters from the recruiting organizations.</p>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#1e305f]">
+              <h4 className="font-semibold text-[#0d173b] text-sm">6. Feedback &amp; Improvement</h4>
+              <p className="text-sm text-gray-600 mt-1">Regular feedback from recruiters and students is collected to continuously improve training programs and placement outcomes.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -14,13 +14,14 @@ import TrainingProgramme from './TrainingProgramme';
 
 const sidebarLinks = [
   { name: 'About Cell', path: 'about-tnp-cell' },
+   { name: 'Placement Policies', path: 'placement-policies' },
   { name: 'VT & Internship', path: 'internship' },
-  { name: 'Training Programme', path: 'training-programme' },
   { name: 'Placement Statistics', path: 'placement-statistics' },
+  { name: 'Training Programme', path: 'training-programme' },
   { name: 'Our Recruiters', path: 'our-recruiters' },
-  { name: 'MOUs', path: 'mous' },
+  // { name: 'MOUs', path: 'mous' },
   { name: 'Team Members', path: 'team-members' },
-  { name: 'Placement Policies', path: 'placement-policies' },
+
 ];
 
 export default function PlacementPage() {

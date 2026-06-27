@@ -1,34 +1,33 @@
-import React from 'react'
+import React from 'react';
 
 const TrainingProgramme = () => {
-  // List of training modules
+  // Updated list of training modules
   const trainingModules = [
     "Communicative English",
-    "Dressing Sense",
-    "Personality Development Techniques",
-    "Stress Management",
-    "Employ-ability Skills",
-    "Life Skills Session",
-    "CV/Resume Writing",
-    "Workplace Etiquette",
-    "Cover letter Writing",
-    "Team Work",
-    "Mock Interview preparation",
-    "Leadership Skills",
-    "Aptitude & Analytical Skills",
-    "Industrial Visit",
-    "Logical Reasoning",
-    "Webinar Session",
     "Business English Communication",
-    "Group Discussion",
     "Accent Training",
-    "Mock Test",
-    "Personal Hygiene & Grooming",
-    "Campus Connect Program",
-    "HR meet and Interaction Session",
+    "CV/Resume Writing",
+    "Cover Letter Writing",
     "Presentation Skills",
-    "Workshops",
-    "Leadership Skills"
+    "Group Discussion",
+    "Mock Interview Preparation",
+    "Mock Tests",
+    "Aptitude & Analytical Skills",
+    "Logical Reasoning",
+    "Employability Skills",
+    "Personality Development Techniques",
+    "Leadership Skills",
+    "Teamwork",
+    "Workplace Etiquette",
+    "Dressing Sense",
+    "Personal Hygiene & Grooming",
+    "Stress Management",
+    "Life Skills Sessions",
+    "Industrial Visits",
+    "Campus Connect Program",
+    "HR Meet & Interaction Sessions",
+    "Webinars & Expert Talks",
+    "Workshops & Skill Development Sessions"
   ];
 
   return (
@@ -47,7 +46,7 @@ const TrainingProgramme = () => {
               Pre-Placement Training Programs
             </h2>
             <p className="text-gray-200 text-xs sm:text-sm mt-1 sm:mt-2">
-              CSIT | Career Development
+              From Campus to Corporate – Building Skills, Confidence, and Career Success.
             </p>
             <div className="h-0.5 w-8 sm:w-12 bg-white mt-2 sm:mt-3"></div>
           </div>
@@ -59,55 +58,91 @@ const TrainingProgramme = () => {
           {/* Introduction */}
           <div className="mb-6 sm:mb-8">
             <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-              The Pre-Placement Trainings Sessions aims at sharpening the skills of individuals for success in placement tests. The program spans across days with expertise from the industry, enabling them to transmit from college life to corporate ready individuals. A perfect blend of soft skills and relevant information ensures our students to develop their confidence and become ready to face the selection process.
+              The Pre-Placement Training Program at CSIT is designed to prepare students for success in campus recruitment processes by enhancing their technical, aptitude, and professional skills. The program bridges the gap between academic learning and industry expectations, enabling students to transition smoothly from campus life to corporate environments.
             </p>
             
             <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-              In order to sharpen, our Students' technical skills and polish their communication skills and make them ready for the corporate world, CSIT offer different training programs which are tailor-made for each student. These programs prepares them from a campus point of view. Also we provide Trainings to appear for Graduate Record Examination and Test of English as a Foreign Language tests.
+              Through a well-structured combination of soft skills training, technical preparation, and industry interaction, students build confidence and become fully equipped to face placement assessments, group discussions, and interviews.
             </p>
             
+            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+              In addition, specialized training support is provided for competitive exams such as <strong>Graduate Record Examination (GRE)</strong> and <strong>Test of English as a Foreign Language (TOEFL)</strong>, helping students pursue higher education opportunities globally.
+            </p>
+          </div>
+          
+          {/* Training Modules */}
+          <div className="mb-6 sm:mb-8">
             <h3 className="text-lg sm:text-xl font-medium text-[#0d173b] mb-3 sm:mb-4">
               Training Modules
             </h3>
-            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-              In this Training Activities, the following modules covered mentioned below in a Table are as follows:
+            <p className="text-sm text-gray-600 mb-4">
+              The program covers a comprehensive range of modules aimed at holistic student development:
             </p>
-          </div>
-          
-          {/* Training Modules Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {trainingModules.map((module, index) => (
-              <div 
-                key={index}
-                className="bg-gray-50 p-4 rounded-lg border-l-4 border-[#0d173b] shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 w-8 h-8 bg-[#0d173b] rounded-full flex items-center justify-center text-white font-medium">
-                    {index + 1}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {trainingModules.map((module, index) => (
+                <div 
+                  key={index}
+                  className="bg-gray-50 p-4 rounded-lg border-l-4 border-[#0d173b] shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#0d173b] rounded-full flex items-center justify-center text-white font-medium text-sm">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h4 className="ml-3 text-sm font-medium text-[#0d173b]">
+                      {module}
+                    </h4>
                   </div>
-                  <h4 className="ml-3 text-base font-medium text-[#0d173b]">
-                    {module}
-                  </h4>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           
-          {/* Additional Information */}
-          <div className="mt-8 p-4 bg-blue-50 border border-blue-100 rounded-md">
-            <h3 className="text-base sm:text-lg font-medium text-[#0d173b] mb-2">Program Benefits</h3>
-            <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base text-gray-700">
-              <li>Industry-aligned curriculum designed by experts</li>
-              <li>Hands-on practice with real-world scenarios</li>
-              <li>Personalized feedback and improvement strategies</li>
-              <li>Regular assessment to track progress</li>
-              <li>Exposure to current industry trends and practices</li>
-            </ul>
+          {/* Program Benefits */}
+          <div className="mt-8 p-4 sm:p-6 bg-blue-50 border border-blue-100 rounded-md">
+            <h3 className="text-lg sm:text-xl font-medium text-[#0d173b] mb-3">Program Benefits</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="flex items-start gap-2 bg-white p-3 rounded-md shadow-sm">
+                <span className="text-[#0d173b] font-bold text-lg">•</span>
+                <p className="text-sm text-gray-700">
+                  <strong>Industry-Aligned Curriculum:</strong> Designed in consultation with industry experts to meet current job market requirements
+                </p>
+              </div>
+              <div className="flex items-start gap-2 bg-white p-3 rounded-md shadow-sm">
+                <span className="text-[#0d173b] font-bold text-lg">•</span>
+                <p className="text-sm text-gray-700">
+                  <strong>Practical Learning Approach:</strong> Real-world scenarios, case studies, and mock sessions for hands-on experience
+                </p>
+              </div>
+              <div className="flex items-start gap-2 bg-white p-3 rounded-md shadow-sm">
+                <span className="text-[#0d173b] font-bold text-lg">•</span>
+                <p className="text-sm text-gray-700">
+                  <strong>Personalized Feedback:</strong> Continuous evaluation with individual improvement strategies
+                </p>
+              </div>
+              <div className="flex items-start gap-2 bg-white p-3 rounded-md shadow-sm">
+                <span className="text-[#0d173b] font-bold text-lg">•</span>
+                <p className="text-sm text-gray-700">
+                  <strong>Regular Assessments:</strong> Track student progress through tests, mock interviews, and performance reviews
+                </p>
+              </div>
+              <div className="flex items-start gap-2 bg-white p-3 rounded-md shadow-sm">
+                <span className="text-[#0d173b] font-bold text-lg">•</span>
+                <p className="text-sm text-gray-700">
+                  <strong>Industry Exposure:</strong> Interaction with professionals and insights into current industry trends
+                </p>
+              </div>
+              <div className="flex items-start gap-2 bg-white p-3 rounded-md shadow-sm">
+                <span className="text-[#0d173b] font-bold text-lg">•</span>
+                <p className="text-sm text-gray-700">
+                  <strong>Confidence Building:</strong> Enhances communication, presentation, and interpersonal skills
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TrainingProgramme
+export default TrainingProgramme;

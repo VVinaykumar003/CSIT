@@ -20,6 +20,7 @@ import FacilitiesIndex from "./pages/Campus/Facilities/Facilitiesindex";
 import InitiativesIndex from "./pages/Campus/Initiatives/InitiativesIndex"; // 👈 FIXED: Points to Initiatives tab manager
 import NPTEL from "./pages/Campus/Initiatives/NPTEL";
 import NIRF24 from "./pages/Campus/Initiatives/NIRF24";
+import StudentsClubsIndex from "./pages/StudentsClubs/StudentsClubsIndex";
 
 import FundsPage from "./pages/Funds/FundsIndex";
 import Home from "./pages/Home";
@@ -68,7 +69,7 @@ function App() {
             <Route path="/campus/initiatives" element={<InitiativesIndex />} />
             <Route path="/campus/NPTEL" element={<NPTEL />} />
             <Route path="/campus/NIRF24" element={<NIRF24 />} />
-            
+            <Route path="/students-clubs/*" element={<StudentsClubsIndex />} />
             {/* Admin Routes */}
             <Route path="/admin-login" element={<AdminLogin />} />
             <Route
