@@ -12,8 +12,15 @@ import Calendar from './Calendar';
 import StudentAffairsIndex from './Student affairs/StudentAffairsIndex';
 import RnD from './RnD';
 import Achievement from './Achievement';
+import Library from './Library';
+import Gymnasium from './Gymnasium';
+import MedicalFacilities from './MedicalFacilities';
 import Celebration from './Celebration';
-
+import GuestRoom from './GuestRoom';
+import SecurityServices from './SecurityServices';
+import EstateOffice from './EstateOffice';
+import Sports from './Sports';
+import StaffQuarters from './StaffQuarters';
 const sidebarLinks = [
   { name: 'Student Affairs', path: 'student-affairs' },
   { name: 'R&D', path: 'research-and-development' },
@@ -23,8 +30,18 @@ const sidebarLinks = [
   { name: 'Grievances', path: 'grievances' },
   // { name: 'IQAC', path: 'iqac' },
   { name: 'RTI', path: 'rti' },
+  { name: 'Library', path: 'library' },
+  { name: 'Gymnasium', path: 'gymnasium' },
+  { name: 'Medical Facilities', path: 'medical-facilities' },
   { name: 'Achievement', path: 'achievement' },
     { name: 'Celebration', path: 'celebration' },
+    { name: 'Guest Room', path: 'guest-room' },
+{ name: 'Security Services', path: 'security-services' },
+{ name: 'Estate Office', path: 'estate-office' },
+{ name: 'Sports', path: 'sports' },
+{ name: 'Staff Quarters', path: '/campus/staff-quarters' },
+
+
     // { name: 'Facillities', path: '/campus/facilities' },
 ];
 
@@ -83,8 +100,16 @@ export default function MorePage() {
                 <Route path="grievances" element={<Grievances />} />
                 {/* <Route path="iqac" element={<IQAC />} /> */}
                 <Route path="rti" element={<RTI />} />
+                <Route path="library" element={<Library />} />
+                <Route path="gymnasium" element={<Gymnasium />} />
+                <Route path="medical-facilities" element={<MedicalFacilities />} />
                 <Route path="achievement" element={<Achievement />} />
                 <Route path="celebration" element={<Celebration />} />
+                <Route path="guest-room" element={<GuestRoom />} />
+                <Route path="estate-office" element={<EstateOffice />} />
+                <Route path="security-services" element={<SecurityServices />} />
+                <Route path="staff-quarters" element={<StaffQuarters />} />
+                <Route path="sports" element={<Sports />} />
                 <Route index element={<Navigate to="student-affairs" replace />} />
                 <Route path="*" element={<Navigate to="student-affairs" replace />} />
               </Routes>

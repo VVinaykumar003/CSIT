@@ -8,10 +8,10 @@ const ScienceHumanities = () => {
         <div className="absolute inset-0 flex items-center px-6">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0d173b]">
-              Science & Humanities
+              Department of English
             </h2>
             <p className="text-gray-500 text-sm mt-2">
-              Maths, Physics, Chemistry & Communication Skills
+              Vision, Mission & Strengths
             </p>
             <div className="h-0.5 w-12 bg-[#0d173b] mt-3"></div>
           </div>
@@ -26,9 +26,7 @@ const ScienceHumanities = () => {
               Our Vision
             </h3>
             <p>
-              To build a strong foundation in science, mathematics, and communication that
-              nurtures analytical thinking, creativity, and lifelong learning for academic
-              excellence and professional success.
+            To help students acquire skills in English Language to communicate effectively in all aspects so as to achieve academic excellence and professional distinctions.
             </p>
           </div>
 
@@ -39,13 +37,10 @@ const ScienceHumanities = () => {
             </h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>
-                To impart quality education in Mathematics, Physics, Chemistry, and Communication Skills.
+              Facilitate the student-fraternity with quality education and strong language-learning environment resulting in affection and a deep understanding about English Language.
               </li>
               <li>
-                To strengthen problem-solving ability, scientific temper, and effective communication.
-              </li>
-              <li>
-                To prepare students for higher studies, research, and professional careers.
+              To inculcate professionally suitable personality traits in the students thereby imbibing ethical, professional and leadership qualities.
               </li>
             </ul>
           </div>
@@ -53,79 +48,23 @@ const ScienceHumanities = () => {
           {/* Program Educational Objectives Section */}
           <div className="mb-8">
             <h3 className="text-xl font-medium text-[#0d173b] mb-2">
-              Program Educational Objectives
+              Strengths
             </h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>
-                Develop a strong conceptual foundation in Mathematics, Physics, and Chemistry.
+              Large set of academic resources
               </li>
               <li>
-                Apply scientific principles and analytical skills to solve real-world problems.
+              Well-equipped language laboratory
               </li>
               <li>
-                Communicate ideas effectively through spoken and written English.
+              Advanced language learning soft-wares
               </li>
               <li>
-                Demonstrate ethical values, teamwork, and a commitment to lifelong learning.
-              </li>
-            </ul>
-          </div>
-
-          {/* Program Outcomes Section */}
-          <div className="mb-8">
-            <h3 className="text-xl font-medium text-[#0d173b] mb-2">
-              Program Outcomes
-            </h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>
-                <span className="font-bold text-[#0d173b]">Mathematical Knowledge:</span>{" "}
-                Apply mathematical concepts and techniques to solve scientific and engineering problems.
+              Special support classes for weaker students
               </li>
               <li>
-                <span className="font-bold text-[#0d173b]">Scientific Understanding:</span>{" "}
-                Understand and explain basic principles of Physics and Chemistry.
-              </li>
-              <li>
-                <span className="font-bold text-[#0d173b]">Problem Solving:</span>{" "}
-                Analyze problems logically and arrive at appropriate solutions using scientific reasoning.
-              </li>
-              <li>
-                <span className="font-bold text-[#0d173b]">Experimentation:</span>{" "}
-                Perform experiments, record observations, and interpret results accurately.
-              </li>
-              <li>
-                <span className="font-bold text-[#0d173b]">Communication Skills:</span>{" "}
-                Communicate confidently and effectively in both oral and written forms.
-              </li>
-              <li>
-                <span className="font-bold text-[#0d173b]">Team Work:</span>{" "}
-                Work effectively as an individual and as part of a team.
-              </li>
-              <li>
-                <span className="font-bold text-[#0d173b]">Ethics and Responsibility:</span>{" "}
-                Demonstrate ethical behavior, discipline, and responsibility in academic and professional settings.
-              </li>
-              <li>
-                <span className="font-bold text-[#0d173b]">Lifelong Learning:</span>{" "}
-                Recognize the importance of continuous learning and self-improvement.
-              </li>
-            </ul>
-          </div>
-
-          {/* Program Specific Outcomes */}
-          <div className="mb-8">
-            <h3 className="text-xl font-medium text-[#0d173b] mb-2">
-              Program Specific Outcomes
-            </h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>
-                Apply mathematical tools to support scientific and technical problem solving.
-              </li>
-              <li>
-                Use Physics and Chemistry concepts to understand natural phenomena and practical applications.
-              </li>
-              <li>
-                Communicate effectively in academic, professional, and social contexts.
+              Guidance facilities for aspiring candidates appearing in campus drives
               </li>
             </ul>
           </div>

@@ -3,7 +3,7 @@ import React from "react";
 const LaboratoriesContent = () => {
   const labs = [
     { id: 1, name: "Problem Solving & Logic Building Lab" },
-    { id: 2, name: "Artificial Intelligence Lab" },
+    { id: 2, name: "Artificial Intelligence & Machine Learning Lab" },
     { id: 3, name: "DBMS Lab" },
     { id: 4, name: "Computer Network Lab" },
     { id: 5, name: "Data Structures and Algorithm Analysis Lab" },

@@ -4,7 +4,7 @@ import fourth  from "../../../assets/ME/mech4thsem.pdf";
 import fifth   from "../../../assets/ME/mech5thsem.pdf";
 import sixth   from "../../../assets/ME/mech6thsem.pdf";
 import seventh from "../../../assets/ME/mech7thsem.pdf";
-// import eighth  from "../../../assets/ME/mech8thsem.pdf";
+import eighth  from "../../../assets/ME/mech8thsem.pdf";
 
 const CSECourseOutcomes = () => {
   // Data for semesters with syllabus paths
@@ -14,7 +14,7 @@ const CSECourseOutcomes = () => {
     { id: "sem5", name: "5th Semester", syllabus: fifth },
     { id: "sem6", name: "6th Semester", syllabus: sixth },
     { id: "sem7", name: "7th Semester", syllabus: seventh },
-    // { id: "sem8", name: "8th Semester", syllabus: eighth }
+    { id: "sem8", name: "8th Semester", syllabus: eighth }
   ];
 
   // Function to open the syllabus PDF

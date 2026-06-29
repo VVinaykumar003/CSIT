@@ -178,30 +178,43 @@ const privateBenefits = [
 
 
         {  
-       activeSection === "private-sector" &&  (<ul className="space-y-2">
-  {governmentBenefits.map((benefit, index) => (
-    <li
-      key={index}
-      className="flex items-start gap-2 text-gray-700"
-    >
-      <span className="text-green-600 mt-1">✓</span>
-      <span>{benefit}</span>
-    </li>
-  ))}
-</ul>)}
+       activeSection === "private-sector" &&  (
+        <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-100">
+          <h4 className="font-medium text-gray-800 mb-3">
+            Benefits of Private Sector Job Opportunities
+          </h4>
+          <ul className="space-y-2">
+            {privateBenefits.map((benefit, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-2 text-gray-700"
+              >
+                <span className="text-green-600 mt-1">✓</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+       )}
           
         {activeSection === "govt-sector" && (
- <ul className="space-y-2">
-  {privateBenefits.map((benefit, index) => (
-    <li
-      key={index}
-      className="flex items-start gap-2 text-gray-700"
-    >
-      <span className="text-green-600 mt-1">✓</span>
-      <span>{benefit}</span>
-    </li>
-  ))}
-</ul>)}
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-100">
+            <h4 className="font-medium text-gray-800 mb-3">
+              Benefits of Government Jobs
+            </h4>
+            <ul className="space-y-2">
+              {governmentBenefits.map((benefit, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-2 text-gray-700"
+                >
+                  <span className="text-green-600 mt-1">✓</span>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
           
           {/* {activeSection === "job-titles" && (
             <div>

@@ -34,9 +34,6 @@ const Society = () => {
                           for innovation across every field of engineering. Today, opportunities
                           to benefit society through engineering advancements are unparalleled in
                           history.
-                        </p>
-
-                        <p className="mb-4">
                           CSIT pushes the frontiers of modern science and engineering through
                           teaching and research. With this perspective in mind, eminent
                           academicians, educationalists, administrators, and enthusiastic people
@@ -54,7 +51,7 @@ const Society = () => {
                         "The overall development of Chhattisgarh in the fields of education, economy, and social upliftment.",
                         "Development of rural technology, infrastructure, and environmental conservation.",
                         "Deliver world-class research-based education to students and broad-based training to leaders in academia, industry, and society.",
-                        "Expand engineering knowledge through original research and technology development to serve societal needs.",
+                        "To expand the base of Engineering Knowledge through Original Research and by Developing Technology to serve the needs of Society.",
                       ].map((item, index) => (
                         <div
                           key={index}

@@ -1,10 +1,9 @@
 import React from "react";
 
 const ScienceHumanitiesFaculty = () => {
-  const members = [
-    { id: 1, name: "Dr Chandra Shekhar Sharma", designation: "Associate Professor" },
-    
-  ];
+  const members = [    
+    { id: 1, name: "Dr Chandra Shekhar Sharma", designation: "Associate Professor and Head", department: "Department of English", qualification: "MA English, MA Sociology, B.Ed and PhD [English Literature]", experience: "26 Years", email: "chandrashekhar@csitdurg.in" },
+  ]; 
 
   return (
     <div className="bg-white shadow-lg rounded-md overflow-hidden">
@@ -24,26 +23,38 @@ const ScienceHumanitiesFaculty = () => {
       </div>
 
       {/* Table Section */}
-      <div className="p-6 overflow-x-auto">
-        <table className="min-w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+      <div className="p-6 ">
+        <table className="min-w-full border border-gray-200 rounded-lg shadow-sm overflow-x-scroll">
           <thead>
             <tr className="bg-[#0d173b] text-white text-left text-sm uppercase tracking-wider">
-              <th className="px-6 py-3">S.No</th>
-              <th className="px-6 py-3">Name of Members</th>
+              <th className="px-6 py-3">S.No.</th>
+              <th className="px-6 py-3">Name</th>
               <th className="px-6 py-3">Designation</th>
+              <th className="px-6 py-3">Department</th>
+              <th className="px-6 py-3">Qualification</th>
+              <th className="px-6 py-3">Experience</th>
+              <th className="px-6 py-3">Email</th>
             </tr>
           </thead>
-          <tbody className="text-sm text-gray-800">
+          <tbody className="text-sm text-gray-800 ">
             {members.map((member, idx) => (
               <tr
                 key={member.id}
-                className={idx % 2 === 0 ? "bg-gray-100" : "bg-white"}
+                className={`${
+                  idx % 2 === 0 ? "bg-gray-100" : "bg-white"
+                } hover:bg-gray-200 transition-colors`}
               >
                 <td className="px-6 py-4 font-medium text-[#0d173b]">
                   {idx + 1}
                 </td>
                 <td className="px-6 py-4">{member.name}</td>
                 <td className="px-6 py-4">{member.designation}</td>
+                <td className="px-6 py-4">{member.department}</td>
+                <td className="px-6 py-4">{member.qualification}</td>
+                <td className="px-6 py-4">{member.experience}</td>
+                <td className="px-6 py-4">
+                  <a href={`mailto:${member.email}`} className="text-indigo-600 hover:underline">{member.email}</a>
+                </td>
               </tr>
             ))}
           </tbody>

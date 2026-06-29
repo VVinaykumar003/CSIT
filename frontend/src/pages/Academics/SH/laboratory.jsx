@@ -1,16 +1,10 @@
 import React from "react";
 
 const LaboratoriesContent = () => {
-  const labs = [
-    { id: 1, name: "Mathematics Lab" },
-    { id: 2, name: "Physics Lab" },
-    { id: 3, name: "Chemistry Lab" },
-    { id: 4, name: "Communication Skills Lab" },
-    { id: 5, name: "Computer Programming Lab" },
-    { id: 6, name: "Language Lab" },
-    { id: 7, name: "Science Demonstration Lab" },
-    { id: 8, name: "Seminar and Presentation Lab" },
-  ];
+  const labDetails = [
+    { id: 1, name: "Communication Skills Lab", description: "The Communication Skills Lab is a state-of-the-art facility designed to enhance students' proficiency in English. It is well-equipped with advanced language learning software and a rich set of academic resources. The lab provides an interactive and immersive environment for students to practice listening, speaking, reading, and writing skills, preparing them for professional communication and campus placements." },
+    // Add other labs here if descriptions become available
+  ]; 
 
   return (
     <div className="w-full overflow-x-auto">
@@ -28,32 +22,16 @@ const LaboratoriesContent = () => {
         </div>
       </div>
 
-      <div className="p-6 overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="border-b border-gray-300">
-              <th className="py-3 px-4 text-left font-medium bg-[#0d173b] text-white">
-                S.No
-              </th>
-              <th className="py-3 px-4 text-left font-medium bg-[#0d173b] text-white">
-                Name of Laboratory
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {labs.map((lab, index) => (
-              <tr
-                key={lab.id}
-                className={index % 2 === 0 ? "bg-gray-200" : "bg-white"}
-              >
-                <td className="py-3 px-4 border-t border-gray-300">{lab.id}</td>
-                <td className="py-3 px-4 border-t border-gray-300">
-                  {lab.name}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="p-6">
+        <div className="space-y-8">
+          {labDetails.map((lab) => (
+            <div key={lab.id} className="border-b pb-8">
+              <h3 className="text-xl font-semibold text-[#0d173b] mb-2">{lab.id}. {lab.name}</h3>
+              <p className="text-gray-700">{lab.description}</p>
+              <p className="text-sm text-gray-500 mt-4 italic">[Photographs of the lab will be added here.]</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

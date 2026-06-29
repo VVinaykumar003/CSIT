@@ -32,9 +32,9 @@ const CSECourseOutcomes = () => {
         <div className="absolute inset-0 flex items-center px-6">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0d173b]">
-            CourseOutcomes
+            Course Outcomes
             </h2>
-            <p className="text-gray-500 text-sm mt-2">CSIT | CSECourseOutcomes</p>
+            <p className="text-gray-500 text-sm mt-2">CSIT | CSE Course Outcomes</p>
             <div className="h-0.5 w-14 bg-[#0d173b] mt-3 rounded"></div>
           </div>
         </div>

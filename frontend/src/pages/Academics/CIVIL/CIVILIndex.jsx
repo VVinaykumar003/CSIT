@@ -4,6 +4,7 @@ import {
   Briefcase,
   ChevronDown,
   Target,
+  FileText,
   Users,
 } from "lucide-react";
 import { useState } from "react";
@@ -13,6 +14,7 @@ import Career from "./Careers.jsx";
 import CourseOutcome from "./CourseOutcome.jsx";
 import Faculty from "./Faculty.jsx";
 import LaboratoriesContent from "./laboratory.jsx";
+import QuestionPaper from "./QuestionPaper.jsx";
 
 export default function ModernDepartmentPage() {
   const [activeTab, setActiveTab] = useState("aim");
@@ -44,6 +46,11 @@ export default function ModernDepartmentPage() {
       title: "Faculty Members",
       icon: <Users className="text-blue-500" />,
       content: <Faculty />,
+    },
+    papers: {
+      title: "Question Papers",
+      icon: <FileText className="text-teal-500" />,
+      content: <QuestionPaper />,
     },
   };
 

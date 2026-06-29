@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import thred   from "../../../assets/IT/IT3rdsem.pdf";
 import fourth  from "../../../assets/IT/IT4thsem.pdf";
 import fifth   from "../../../assets/IT/IT5thsem.pdf";

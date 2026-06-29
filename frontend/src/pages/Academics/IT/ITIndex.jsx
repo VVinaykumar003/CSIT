@@ -1,6 +1,7 @@
 import {
   Beaker,
   BookOpen,
+  BookUser,
   Briefcase,
   ChevronDown,
   Target,
@@ -14,12 +15,40 @@ import CourseOutcome from "./CourseOutcome.jsx";
 import Faculty from "./Faculty.jsx";
 import LaboratoriesContent from "./laboratory.jsx";
 
+const HodDeskContent = () => (
+  <div className="bg-white shadow-md rounded-md overflow-hidden">
+    <div className="h-40 bg-gray-100 relative">
+      <div className="absolute inset-0 flex items-center px-6">
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0d173b]">
+            From the HOD's Desk
+          </h2>
+          <p className="text-gray-500 text-sm mt-2">CSIT | Department of Information Technology</p>
+          <div className="h-0.5 w-12 bg-[#0d173b] mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <div className="p-6 prose max-w-none text-gray-700">
+      <p>Established with a vision to create skilled IT professionals, the Department of Information Technology at CSIT, Durg is dedicated to imparting quality education and fostering innovation in the field of information and communication technologies. The department focuses on developing strong technical foundations along with problem-solving and analytical skills required in today's digital world.</p>
+      <p>The department is equipped with modern laboratories that provide practical exposure to programming, database management, computer networks, web technologies, cloud computing, cyber security, and emerging IT domains. Our experienced faculty members act as mentors and facilitators, guiding students in academics, skill development, career planning, and professional growth.</p>
+      <p>Through industry interactions, workshops, internships, certification programs, and project-based learning, students are encouraged to bridge the gap between classroom knowledge and real-world applications. The department strives to nurture competent IT professionals who are capable of adapting to rapidly changing technologies and contributing effectively to industry and society.</p>
+      <p>We are committed to academic excellence, innovation, and holistic development, empowering our students to become successful professionals and lifelong learners.</p>
+      <p className="font-bold">Dr. Anand Kumbhare<br />Head of Department<br />Department of Information Technology<br />CSIT, Durg</p>
+    </div>
+  </div>
+);
+
 export default function ModernDepartmentPage() {
-  const [activeTab, setActiveTab] = useState("aim");
+  const [activeTab, setActiveTab] = useState("hod");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Content data for tabs
   const tabContent = {
+    hod: {
+      title: "HOD's Desk",
+      icon: <BookUser className="text-purple-500" />,
+      content: <HodDeskContent />,
+    },
     aim: {
       title: "Our Aim",
       icon: <Target className="text-indigo-500" />,

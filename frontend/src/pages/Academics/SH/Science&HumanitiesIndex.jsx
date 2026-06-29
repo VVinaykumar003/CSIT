@@ -2,6 +2,7 @@ import {
   Beaker,
   BookOpen,
   Briefcase,
+  Building,
   ChevronDown,
   Target,
   Users,
@@ -14,11 +15,35 @@ import CourseOutcome from "./CourseOutcome.jsx";
 import Faculty from "./Faculty.jsx";
 import LaboratoriesContent from "./laboratory.jsx";
 
+const AboutContent = () => (
+  <div className="bg-white shadow-md rounded-md overflow-hidden">
+    <div className="h-40 bg-gray-100 relative">
+      <div className="absolute inset-0 flex items-center px-6">
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0d173b]">
+            Department of English
+          </h2>
+          <p className="text-gray-500 text-sm mt-2">CSIT | Science & Humanities</p>
+          <div className="h-0.5 w-12 bg-[#0d173b] mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <div className="p-6 prose max-w-none text-gray-700">
+      <p>The Department of English aims to facilitate the students to acquire English Language Skills and Professional Skills so to tread successfully on their career path. The department just not dedicates in teaching the students about English language rather it dedicates in providing a free and fair language learning environment through vivid pedagogical methods and resources so that the learners become industry-ready and professionally strong. The department also engages in teaching modules on Indian Knowledge System and Indian Culture and Constitution to make learners aware of their socio-cultural roots.</p>
+    </div>
+  </div>
+);
+
 export default function ScienceHumanitiesPage() {
-  const [activeTab, setActiveTab] = useState("aim");
+  const [activeTab, setActiveTab] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const tabContent = {
+    about: {
+      title: "About",
+      icon: <Building className="text-gray-500" />,
+      content: <AboutContent />,
+    },
     aim: {
       title: "Our Aim",
       icon: <Target className="text-indigo-500" />,
@@ -50,7 +75,7 @@ export default function ScienceHumanitiesPage() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       <div className="w-full bg-[#0a1432] text-white p-8">
         <h1 className="text-4xl font-bold mb-2">Science & Humanities</h1>
-        <p className="text-lg">Maths, Physics, Chemistry & Communication Skills</p>
+        <p className="text-lg">Department of English, Maths, Physics & Chemistry</p>
         <div className="w-24 h-1 bg-white mt-4"></div>
       </div>
 

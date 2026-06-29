@@ -6,108 +6,126 @@ const members = [
     id: 1,
     name: "Dr. Ravi Mishra",
     designation: "Professor & Principal",
+    email: "principal@csitdurg.in",
     qualification: "Ph.D., M.Tech., B.E.",
   },
   {
     id: 2,
     name: "Mr. Reetesh Kumar Sharma",
     designation: "Associate Professor",
+    email: "reeteshsharma@csitdurg.in",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 3,
     name: "Ms. Purnima",
     designation: "Assistant Professor",
+    email: "monudutta91@gmail.com",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 4,
     name: "Ms. Shruti Mehta",
     designation: "Assistant Professor",
+    email: "shrutimehra0892@gmail.com",
     qualification: "B.E.",
   },
   {
     id: 5,
     name: "Mrs. Poonam Sharma",
     designation: "Assistant Professor",
+    email: "psh518001@gmail.com",
     qualification: "BCA, MCA",
   },
   {
     id: 6,
     name: "Ms. Prachi Sharma",
     designation: "Assistant Professor",
+    email: "ps199688@gmail.com",
     qualification: "BCA, MCA",
   },
   {
     id: 7,
     name: "Mrs. Neeku Sahu",
     designation: "Assistant Professor",
+    email: "neekusahu@gmail.com",
     qualification: "BCA, MCA",
   },
   {
     id: 8,
     name: "Mrs. Panchkriti Bharti",
     designation: "Assistant Professor",
+    email: "panchkirti@csitdurg.in",
     qualification: "Dip. in Comp., M.Sc. (IT), M.Phil",
   },
   {
     id: 9,
     name: "Mr. Harish Kumar",
     designation: "Assistant Professor",
+    email: "gupta.harish328@gmail.com",
     qualification: "M.Tech (CS), B.Tech (ETC)",
   },
   {
     id: 10,
     name: "Mrs. Deepty Dubey",
     designation: "Associate Professor",
+    email: "deepty_shukla@csitdurg.in",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 11,
     name: "Dr. Monika Bhatnagar",
     designation: "Associate Professor",
+    email: "monikabhatnagar12@gmail.com",
     qualification: "M.Tech., Ph.D.",
   },
   {
     id: 12,
     name: "Mrs. Aparna Soni",
     designation: "Assistant Professor",
+    email: "aprna13788soni@gmail.com",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 13,
     name: "Mr. Keshav Kori",
     designation: "Assistant Professor",
+    email: "keshavsvnit@gmail.com",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 14,
     name: "Ms. Ankita Durge",
     designation: "Assistant Professor",
+    email: "ankitadurge1509@gmail.com",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 15,
     name: "Dr. Suraj Sharma",
     designation: "Visiting Faculty",
+    email: "surajsharma@csitdurg.in",
     qualification: "M.Tech., Ph.D.",
   },
   {
     id: 16,
     name: "Mr. Jayesh Dewangan",
     designation: "Assistant Professor",
+    email: "jayeshdewangan@csitdurg.in",
     qualification: "B.E., M.Tech.",
   },
   {
     id: 17,
     name: "Mr. Sabyasachi Patra",
     designation: "Visiting Faculty",
+    email: "sabyasachipatra@csitdurg.in",
     qualification: "M.Tech.",
   },
   {
     id: 18,
     name: "Ms. Kajal Verma",
     designation: "Assistant Professor",
+    email: "kajalverma.csit@gmail.com",
     qualification: "B.E., M.Tech.",
   },
 ];
@@ -151,6 +169,7 @@ const members = [
           <th className="px-6 py-3">S.No</th>
           <th className="px-6 py-3">Faculty Name</th>
           <th className="px-6 py-3">Designation</th>
+          <th className="px-6 py-3">Mail ID</th>
           <th className="px-6 py-3">Qualification</th>
         </tr>
       </thead>
@@ -183,6 +202,16 @@ const members = [
               </span>
             </td>
 
+            <td className="px-6 py-4">
+              {member.email && (
+                <a
+                  href={`mailto:${member.email}`}
+                  className="text-blue-600 hover:underline"
+                >
+                  {member.email}
+                </a>
+              )}
+            </td>
             <td className="px-6 py-4">
               {member.qualification}
             </td>
