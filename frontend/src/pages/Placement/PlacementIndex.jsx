@@ -11,23 +11,23 @@ import PlacementPolicy from './PlacementPolicy';
 import TeamMembers from './TeamMembers';
 import PlacementStatistics from './PlacementStatistics';
 import TrainingProgramme from './TrainingProgramme';
+import CapacityDevelopment from './CapacityDevelopment'; // ✅ NEW IMPORT
 
 const sidebarLinks = [
   { name: 'About Cell', path: 'about-tnp-cell' },
-   { name: 'Placement Policies', path: 'placement-policies' },
+  { name: 'Placement Policies', path: 'placement-policies' },
   { name: 'VT & Internship', path: 'internship' },
+  { name: 'Capacity Development Program', path: 'capacity-development' }, // ✅ NEW
   { name: 'Placement Statistics', path: 'placement-statistics' },
   { name: 'Training Programme', path: 'training-programme' },
   { name: 'Our Recruiters', path: 'our-recruiters' },
   // { name: 'MOUs', path: 'mous' },
   { name: 'Team Members', path: 'team-members' },
-
 ];
 
 export default function PlacementPage() {
   const location = useLocation();
   
-  // Determine active section based on current path
   const getActiveSection = () => {
     const path = location.pathname.split('/').pop();
     const activeLink = sidebarLinks.find(link => link.path === path);
@@ -79,6 +79,7 @@ export default function PlacementPage() {
                 <Route path="team-members" element={<TeamMembers />} />
                 <Route path="placement-statistics" element={<PlacementStatistics />} />
                 <Route path="training-programme" element={<TrainingProgramme />} />
+                <Route path="capacity-development" element={<CapacityDevelopment />} /> {/* ✅ NEW ROUTE */}
                 <Route index element={<Navigate to="about-tnp-cell" replace />} />
                 <Route path="*" element={<Navigate to="about-tnp-cell" replace />} />
               </Routes>
@@ -88,4 +89,4 @@ export default function PlacementPage() {
       </div>
     </div>
   );
-} 
+}

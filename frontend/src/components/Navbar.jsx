@@ -220,32 +220,34 @@ export default function Navbar() {
             </div>
 
             {/* T&P Cell */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
-              <button
-                onClick={() => toggleDesktopDropdown(6)}
-                onMouseEnter={() => openDesktopDropdown(6)}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-              >
-                T&P Cell
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+<div className="group relative" onMouseLeave={closeDesktopDropdown}>
+  <button
+    onClick={() => toggleDesktopDropdown(6)}
+    onMouseEnter={() => openDesktopDropdown(6)}
+    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+  >
+    T&P Cell
+    <ChevronDown className="ml-1 h-4 w-4" />
+  </button>
 
-              {activeDropdownDesktop === 6 && (
-                <div className="absolute z-20 top-full pt-2 w-64">
-                  <div className="absolute h-2 -top-2 inset-x-0"></div>
-                  <div className="rounded-md shadow-lg bg-white">
-                    <div className="py-1">
-                      <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
-                      <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
-                      <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
-                      <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
-                      <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
-                      <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+  {activeDropdownDesktop === 6 && (
+    <div className="absolute z-20 top-full pt-2 w-64">
+      <div className="absolute h-2 -top-2 inset-x-0"></div>
+      <div className="rounded-md shadow-lg bg-white">
+        <div className="py-1">
+          <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
+          <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
+          <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
+          <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link>  {/* ✅ NEW */}
+          <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
+          <Link to="/placement/training-programme" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Training Programme</Link>
+          <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
+          <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
 
             {/* Alumni */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
@@ -274,32 +276,32 @@ export default function Navbar() {
               )}
             </div>
 
-           {/* Students Clubs */}
-<div className="group relative" onMouseLeave={closeDesktopDropdown}>
-  <button
-    onClick={() => toggleDesktopDropdown(8)}
-    onMouseEnter={() => openDesktopDropdown(8)}
-    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-  >
-    Students Clubs
-    <ChevronDown className="ml-1 h-4 w-4" />
-  </button>
+            {/* Students Clubs */}
+            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+              <button
+                onClick={() => toggleDesktopDropdown(8)}
+                onMouseEnter={() => openDesktopDropdown(8)}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+              >
+                Students Clubs
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
 
-  {activeDropdownDesktop === 8 && (
-    <div className="absolute z-20 top-full pt-2 w-56">
-      <div className="absolute h-2 -top-2 inset-x-0"></div>
-      <div className="rounded-md shadow-lg bg-white">
-        <div className="py-1">
-          <Link to="/students-clubs/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
-          <Link to="/students-clubs/various-clubs" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Various Clubs</Link>
-          <Link to="/students-clubs/development-program" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Development Program</Link>
-          <Link to="/students-clubs/industry-interaction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Industry Interaction</Link>
-          <Link to="/students-clubs/extracurricular-activities" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Extracurricular Activities</Link>
-        </div>
-      </div>
-    </div>
-  )}
-</div>
+              {activeDropdownDesktop === 8 && (
+                <div className="absolute z-20 top-full pt-2 w-56">
+                  <div className="absolute h-2 -top-2 inset-x-0"></div>
+                  <div className="rounded-md shadow-lg bg-white">
+                    <div className="py-1">
+                      <Link to="/students-clubs/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
+                      <Link to="/students-clubs/various-clubs" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Various Clubs</Link>
+                      <Link to="/students-clubs/development-program" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Development Program</Link>
+                      <Link to="/students-clubs/industry-interaction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Industry Interaction</Link>
+                      <Link to="/students-clubs/extracurricular-activities" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Extracurricular Activities</Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* More */}
             <div className="group relative" onMouseLeave={closeDesktopDropdown}>
@@ -522,34 +524,34 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Placement */}
-            <div>
-              <button
-                onClick={() => toggleMobileDropdown(6)}
-                className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
-              >
-                T&P Cell
-                <ChevronDown
-                  className={`ml-1 h-4 w-4 transition-transform ${
-                    activeDropdownMobile === 6 ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {activeDropdownMobile === 6 && (
-                <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/about-tnp-cell" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Cell</Link>
-                  <Link to="/internship" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>VT & Internship</Link>
-                  <Link to="/mous" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>MOUs</Link>
-                  <Link to="/our-recruiters" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Our Recruiters</Link>
-                  <Link to="/placement-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Policies</Link>
-                  <Link to="/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
-                  <Link to="/placement-statistics" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Statistics</Link>
-                  <Link to="/training-programme" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Training Programme</Link>
-                </div>
-              )}
-            </div>
+           {/* T&P Cell */}
+<div>
+  <button
+    onClick={() => toggleMobileDropdown(6)}
+    className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
+  >
+    T&P Cell
+    <ChevronDown
+      className={`ml-1 h-4 w-4 transition-transform ${
+        activeDropdownMobile === 6 ? "rotate-180" : ""
+      }`}
+    />
+  </button>
+  {activeDropdownMobile === 6 && (
+    <div className="pl-4 space-y-1 mt-1">
+      <Link to="/placement/about-tnp-cell" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Cell</Link>
+      <Link to="/placement/placement-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Policies</Link>
+      <Link to="/placement/internship" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Vocational Training & Internship</Link>
+      <Link to="/placement/capacity-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Capacity Development Program</Link>  {/* ✅ NEW */}
+      <Link to="/placement/placement-statistics" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Statistics</Link>
+      <Link to="/placement/training-programme" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Training Programme</Link>
+      <Link to="/placement/our-recruiters" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Our Recruiters</Link>
+      <Link to="/placement/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
+    </div>
+  )}
+</div>
 
-            {/* Alumni */}
+            {/* ✅ FIXED: Alumni - Same as Desktop */}
             <div>
               <button
                 onClick={() => toggleMobileDropdown(7)}
@@ -564,39 +566,38 @@ export default function Navbar() {
               </button>
               {activeDropdownMobile === 7 && (
                 <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/about-association" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Association</Link>
-                  <Link to="/activities" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Activities</Link>
-                  <Link to="/presence" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Presence</Link>
-                  <Link to="/registered-association" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Registered Association</Link>
-                  <Link to="/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
+                  <Link to="/alumni/about-association" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Association</Link>
+                  <Link to="/alumni/activities" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Activities</Link>
+                  <Link to="/alumni/presence" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Presence</Link>
+                  <Link to="/alumni/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
+                  <Link to="/alumni/registered-association" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Registered Association</Link>
                 </div>
               )}
             </div>
 
-           {/* Students Clubs */}
-<div>
-  <button
-    onClick={() => toggleMobileDropdown(8)}
-    className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
-  >
-    Students Clubs
-    <ChevronDown
-      className={`ml-1 h-4 w-4 transition-transform ${
-        activeDropdownMobile === 8 ? "rotate-180" : ""
-      }`}
-    />
-  </button>
-
-  {activeDropdownMobile === 8 && (
-    <div className="pl-4 space-y-1 mt-1">
-      <Link to="/students-clubs/introduction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introduction</Link>
-      <Link to="/students-clubs/various-clubs" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Various Clubs</Link>
-      <Link to="/students-clubs/development-program" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Development Program</Link>
-      <Link to="/students-clubs/industry-interaction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Industry Interaction</Link>
-      <Link to="/students-clubs/extracurricular-activities" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Extracurricular Activities</Link>
-    </div>
-  )}
-</div>
+            {/* Students Clubs */}
+            <div>
+              <button
+                onClick={() => toggleMobileDropdown(8)}
+                className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
+              >
+                Students Clubs
+                <ChevronDown
+                  className={`ml-1 h-4 w-4 transition-transform ${
+                    activeDropdownMobile === 8 ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {activeDropdownMobile === 8 && (
+                <div className="pl-4 space-y-1 mt-1">
+                  <Link to="/students-clubs/introduction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introduction</Link>
+                  <Link to="/students-clubs/various-clubs" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Various Clubs</Link>
+                  <Link to="/students-clubs/development-program" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Development Program</Link>
+                  <Link to="/students-clubs/industry-interaction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Industry Interaction</Link>
+                  <Link to="/students-clubs/extracurricular-activities" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Extracurricular Activities</Link>
+                </div>
+              )}
+            </div>
 
             {/* More */}
             <div>
