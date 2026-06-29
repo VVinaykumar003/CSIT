@@ -149,11 +149,13 @@ export default function Navbar() {
                   <div className="absolute h-2 -top-2 inset-x-0"></div>
                   <div className="rounded-md shadow-lg bg-white">
                     <div className="py-1">
-                      <Link to="/more/research-and-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">IPR FILLED</Link>
-                      <Link to="/more/research-and-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">PAPER PUBLICATION CIVIL</Link>
-                      <Link to="/more/research-and-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">PAPER PUBLICATION EEE</Link>
-                      <Link to="/more/research-and-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">PAPER PUBLICATION ME</Link>
-                      <Link to="/more/research-and-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">PROJECT GRANTS</Link>
+                      <Link to="/R-D/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
+                      <Link to="/R-D/office-bearers-and-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Office Bearers & Policies</Link>
+                      <Link to="/R-D/projects" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Projects</Link>
+                      <Link to="/R-D/publications" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Publications</Link>
+                      <Link to="/R-D/IPR" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">IPR</Link>
+                      <Link to="/R-D/Activities" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Activities</Link>
+                      <Link to="/R-D/RS&Grants" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Research Support & Grants</Link>
                     </div>
                   </div>
                 </div>
@@ -461,11 +463,13 @@ export default function Navbar() {
               </button>
               {activeDropdownMobile === 3 && (
                 <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/more/research-and-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>IPR FILLED</Link>
-                  <Link to="/more/research-and-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PAPER PUBLICATION CIVIL</Link>
-                  <Link to="/more/research-and-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PAPER PUBLICATION EEE</Link>
-                  <Link to="/more/research-and-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PAPER PUBLICATION ME</Link>
-                  <Link to="/more/research-and-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PROJECT GRANTS</Link>
+                  <Link to="/R-D/introduction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introductions</Link>
+                  <Link to="/R-D/office-bearers-and-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Office Bearers & Policies</Link>
+                  <Link to="/R-D/projects" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
+                  <Link to="/R-D/publications" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PAPER PUBLICATION EEE</Link>
+                  <Link to="/R-D/IPR" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PAPER PUBLICATION ME</Link>
+                  <Link to="/R-D/Activities" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>PROJECT GRANTS</Link>
+                  <Link to="/R-D/RS&Grants" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>RESEARCH SUPPORT & GRANTS</Link>
                 </div>
               )}
             </div>

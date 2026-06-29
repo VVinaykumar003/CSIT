@@ -34,6 +34,8 @@ import PixelTracker from "./components/PixelTracker";
 import NotificationForm from "./pages/Admin/NotificationForm";  
 import NotificationDashboard from "./pages/Admin/NotificationDashboard";
 
+import ResearchDevelopment from "./pages/R&D/R&DSidebar";
+
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem("adminToken");
   if (!token) {
@@ -70,6 +72,7 @@ function App() {
             <Route path="/campus/NPTEL" element={<NPTEL />} />
             <Route path="/campus/NIRF24" element={<NIRF24 />} />
             <Route path="/students-clubs/*" element={<StudentsClubsIndex />} />
+            <Route path="/R-D/*" element={<ResearchDevelopment />} />
             {/* Admin Routes */}
             <Route path="/admin-login" element={<AdminLogin />} />
             <Route
