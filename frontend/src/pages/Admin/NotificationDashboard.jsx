@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { X, AlertCircle, Eye, Loader2, Trash2, Edit, CheckSquare, PlusCircle } from "lucide-react";
-import api from "../../../services/api";
+import api from "../../services/api";
 import NotificationForm from "./NotificationForm";
 
 const NotificationDashboard = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Trash2, Loader2, PlusCircle, Newspaper, Edit, AlertCircle } from "lucide-react";
-import api from "../../../services/api";
+import api from "../../services/api";
 import MediaForm from "./MediaForm";
 
 const MediaDashboard = () => {

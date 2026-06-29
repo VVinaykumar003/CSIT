@@ -8,7 +8,7 @@ import {
   MdClose,
 } from "react-icons/md";
 import { motion } from "framer-motion";
-import api from "../../../services/api";
+import api from "../../services/api";
 
 /* ── Government Layout Scheme Config ────────────────── */
 const COLUMN_CONFIG = [

@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import api from "../../../services/api";
+import api from "../../services/api";
 import FormImage from "../../assets/FormImage.png";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ArrowLeft, Loader2, Save, AlertCircle } from "lucide-react";
-import api from "../../../services/api";
+import api from "../../services/api";
 
 function NotificationForm({ onClose, onSuccess, editData }) {
   const [formData, setFormData] = useState({

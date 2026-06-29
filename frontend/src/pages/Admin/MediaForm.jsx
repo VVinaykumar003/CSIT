@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ArrowLeft, Upload, Loader2, Save, AlertCircle } from "lucide-react";
-import api from "../../../services/api";
+import api from "../../services/api";
 
 function MediaForm({ onBack, onSuccess, editData }) {
   const [formData, setFormData] = useState({ title: "", category: "", description: "", date: "" });

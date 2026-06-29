@@ -10,7 +10,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import api from "../../../services/api"; // your axios instance
+import api from "../../services/api"; // your axios instance
 
 const GalleryDashboard = () => {
   const [images, setImages] = useState([]);

@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { Upload, Loader2, CheckCircle2, XCircle, Image, X } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import { useNavigate } from "react-router-dom";
-import api from "../../../services/api";
+import api from "../../services/api";
 
 function GalleryForm() {
   const [formData, setFormData] = useState({

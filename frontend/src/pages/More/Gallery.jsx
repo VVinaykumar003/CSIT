@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import apiPublic from "../../../services/apiPublic";
+import apiPublic from "../../services/apiPublic";
 
 const Gallery = () => {
   const [images, setImages] = useState([]);

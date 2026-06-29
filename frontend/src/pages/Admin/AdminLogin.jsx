@@ -4,7 +4,7 @@ import React from "react";
 import { Eye, EyeOff, LogIn, User, Lock } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import api from "../../../services/api";
+import api from "../../services/api";
 import axios from "axios";
 import { trackCompleteRegistration } from "../../utils/fbPixel";
 

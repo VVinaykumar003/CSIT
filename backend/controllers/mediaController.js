@@ -44,14 +44,27 @@ const createMediaArticle = async (req, res) => {
 };
 
 // Get All Media Articles (Public & Admin side logs)
+// controllers/mediaController.js
 const getAllMediaArticles = async (req, res) => {
   try {
     console.log("Pulling total media grid data arrays...".yellow);
-    const articles = await MediaCoverage.find({}).sort({ createdAt: -1 });
+    
+    // ✅ Only fetch active articles for frontend
+    const articles = await MediaCoverage.find({ isActive: true }).sort({ createdAt: -1 });
+    // OR fetch all and let frontend filter
+    // const articles = await MediaCoverage.find({}).sort({ createdAt: -1 });
 
-    return res.status(200).json({ success: true, count: articles.length, articles });
+    return res.status(200).json({ 
+      success: true, 
+      count: articles.length, 
+      articles 
+    });
   } catch (error) {
-    return res.status(500).json({ success: false, message: "Data pipeline execution error", error: error.message });
+    return res.status(500).json({ 
+      success: false, 
+      message: "Data pipeline execution error", 
+      error: error.message 
+    });
   }
 };
 
