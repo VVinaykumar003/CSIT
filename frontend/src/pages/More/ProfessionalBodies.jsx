@@ -1,11 +1,11 @@
 import React from "react";
 
 // Assuming logos are in the assets folder
-import ieiLogo from "../../assets/professionalBodies/01.jpg";
-import qcfiLogo from "../../assets/professionalBodies/02.jpg";
-import isteLogo from "../../assets/professionalBodies/06.jpg";
-import ieteLogo from "../../assets/professionalBodies/04.jpg";
-import isoiLogo from "../../assets/professionalBodies/05.jpg";
+import ieiLogo from "../../assets/professionalBodies/ieiLogo.jpg";
+import qcfiLogo from "../../assets/professionalBodies/qcfiLogo.jpg";
+import isteLogo from "../../assets/professionalBodies/isteLogo.jpg";
+import ieteLogo from "../../assets/professionalBodies/ieteLogo.jpg";
+import isoiLogo from "../../assets/professionalBodies/isoiLogo.jpg";
 
 const ProfessionalBodies = () => {
   return (
