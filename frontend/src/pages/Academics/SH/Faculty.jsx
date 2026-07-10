@@ -23,8 +23,8 @@ const ScienceHumanitiesFaculty = () => {
       </div>
 
       {/* Table Section */}
-      <div className="p-6 ">
-        <table className="min-w-full border border-gray-200 rounded-lg shadow-sm overflow-x-scroll">
+      <div className="p-6 overflow-x-auto">
+        <table className="min-w-full border border-gray-200 rounded-lg shadow-sm">
           <thead>
             <tr className="bg-[#0d173b] text-white text-left text-sm uppercase tracking-wider">
               <th className="px-6 py-3">S.No.</th>

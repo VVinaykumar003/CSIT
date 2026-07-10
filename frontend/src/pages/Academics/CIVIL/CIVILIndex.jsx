@@ -48,7 +48,7 @@ export default function ModernDepartmentPage() {
       content: <Faculty />,
     },
     papers: {
-      title: "Question Papers",
+      title: "Question Paper [CT | University] ",
       icon: <FileText className="text-teal-500" />,
       content: <QuestionPaper />,
     },
@@ -128,7 +128,7 @@ export default function ModernDepartmentPage() {
                     : "border-b-2 border-transparent text-gray-500 hover:bg-gray-300 hover:text-gray-700"
                 }`}
               >
-                <span className="text-sm lg:text-base">
+                <span className="text-sm lg:text-xs">
                   {tabContent[tab].title}
                 </span>
               </button>

@@ -11,6 +11,7 @@ import It from "./IT/ITIndex";
 import Mec from "./ME/MEIndex";
 import Mechatronics from "./MECHATRONICS/MechatronicsIndex";
 import ScienceHumanities from "./SH/Science&HumanitiesIndex";
+import Maths from "./maths/Maths";
 
 const sidebarLinks = [
   {
@@ -34,8 +35,12 @@ const sidebarLinks = [
     path: "artificial-intelligence-and-data-science-engineering",
   },
   {
-    name: "Science & Humanities - Maths, Physics , Chemistry ,Communication Skill",
+    name: "Science & Humanities - Physics , Chemistry ,English",
     path: "science-and-humanities",
+  },
+  {
+    name: "Maths",
+    path: "maths",
   },
 ];
 
@@ -112,6 +117,7 @@ export default function AcademicPage() {
                   path="science-and-humanities"
                   element={<ScienceHumanities />}
                 />
+               <Route path="maths" element={<Maths />} />
                 <Route
                   path="/"
                   element={

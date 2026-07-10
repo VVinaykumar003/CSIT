@@ -113,7 +113,7 @@ export default function Sidebar({ links, activeSection, basePath }) {
               <>
                 <button
                   onClick={() => toggleDropdown(link.name)}
-                  className={`w-full text-left px-3 md:px-4 py-2 md:py-3 transition-all duration-200 flex items-center justify-between border-l-2 text-sm md:text-base
+                  className={`w-full text-left px-3 md:px-4 py-2 md:py-3 transition-all duration-200 flex items-center justify-between border-l-2 text-xs md:text-base
                     ${
                       activeSection === link.name
                         ? "border-[#0d173b] bg-gray-50 text-[#0d173b] font-medium"
@@ -136,7 +136,7 @@ export default function Sidebar({ links, activeSection, basePath }) {
                           <button
                             onClick={() => handleNavigation(subLink.path)}
                             disabled={isNavigating}
-                            className={`w-full text-left px-3 md:px-4 py-2 transition-all duration-200 flex items-center text-xs md:text-sm
+                            className={`w-full text-left px-3 md:px-4 py-2 transition-all duration-200 flex items-center text-xs md:text-xs
                               ${location.pathname.endsWith(subLink.path) ? "text-[#0d173b] font-semibold" : "text-gray-500 hover:text-[#0d173b]"}
                               ${isNavigating ? "opacity-70 cursor-wait" : ""}`}
                           >
@@ -152,7 +152,7 @@ export default function Sidebar({ links, activeSection, basePath }) {
               <button
                 onClick={() => handleNavigation(link.path)}
                 disabled={isNavigating}
-                className={`w-full text-left px-3 md:px-4 py-2 md:py-3 transition-all duration-200 flex items-center border-l-2 text-sm md:text-base
+                className={`w-full text-left px-3 md:px-4 py-2 md:py-3 transition-all duration-200 flex items-center border-l-2 text-xs md:text-base
                   ${
                     activeSection === link.name && !link.subLinks
                       ? "border-[#0d173b] bg-gray-50 text-[#0d173b] font-medium"
