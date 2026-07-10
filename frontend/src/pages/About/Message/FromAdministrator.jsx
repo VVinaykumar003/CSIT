@@ -12,7 +12,7 @@ const FromAdministrator = () => {
           </div>
         </div>
         <h1 className="text-3xl font-bold text-white z-10 text-center">
-          Message From Director[Administrator]
+          Message From Director
         </h1>
       </div>
 

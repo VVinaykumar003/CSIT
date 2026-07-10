@@ -12,7 +12,7 @@ const FromAcademic = () => {
           </div>
         </div>
         <h1 className="text-3xl font-bold text-white z-10 text-center">
-          Message From Principal[Academic]
+          Message From Principal
         </h1>
       </div>
 

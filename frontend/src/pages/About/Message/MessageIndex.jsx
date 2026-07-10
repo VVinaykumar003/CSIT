@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import FromAcademic from "./FromAcademic"; 
+import FromAcademic from "./FromPrincipal"; 
 import FromAdministrator from "./FromAdministrator";
 import FromChairman from "./FromChairman";
 
@@ -19,7 +19,7 @@ export default function MessageIndex() {
       content: <FromAdministrator />,
     },
     foracademic: {
-      title: "Academic",
+      title: "Principal",
       content: <FromAcademic />,
     },
    

@@ -6,8 +6,9 @@ export default function NPTELPage() {
   return (
     <div className="min-h-screen w-full bg-gray-50 font-sans">
       <Header />
+       <Navbar />
       {/* Full-width Navbar */}
-      <div className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100 w-full">
+      <div className="sticky top-0 z-0 bg-white shadow-sm border-b border-gray-100 w-full">
         <div className="w-full min-h-screen flex flex-col items-center bg-gray-50 px-3 sm:px-4 md:px-6 lg:px-8">
           {/* Title */}
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mt-6 mb-4 text-center">
@@ -33,7 +34,7 @@ export default function NPTELPage() {
             Download NIRF24
           </a>
         </div>
-        <Navbar />
+       
       </div>
     </div>
   );

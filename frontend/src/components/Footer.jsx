@@ -132,7 +132,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/more/iqac"
+                  to="/campus/initiatives?tab=iqac"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   IQAC
@@ -156,7 +156,7 @@ const SchoolFooter = () => {
               </li> */}
               <li>
                 <Link
-                  to="/campus/initiatives?tab=swar"
+                  to="/more/professional-bodies"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Professional Bodies 
@@ -206,7 +206,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/admission/admission-process"
+                  to="campus/initiatives?tab=incubation"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Institutional Innovation Council
@@ -214,7 +214,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/admission/admission-process"
+                  to="/campus/initiatives?tab=incubation"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Incubation Cell
@@ -222,7 +222,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/campus/NPTEL"
+                  to="/campus/initiatives?tab=nptel"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   NPTEL
