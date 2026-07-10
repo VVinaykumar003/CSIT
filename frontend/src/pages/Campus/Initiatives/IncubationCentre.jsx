@@ -111,9 +111,52 @@ export default function IncubationCentre() {
           <p className="text-gray-700 text-sm md:text-base mb-4">
             Chhatrapati Shivaji Institute of Technology (CSIT), Durg has established the Incubation Centre as a significant step towards building a strong innovation and entrepreneurship ecosystem within the institute. Initiated under the visionary leadership of <strong>Ajay Prakash Verma</strong> (Chairman, CSIT), the Centre is dedicated to nurturing innovative ideas and transforming them into scalable and sustainable ventures that contribute to society and industry.
           </p>
-          <p className="text-gray-700 text-sm md:text-base mb-4">
+          {/* <p className="text-gray-700 text-sm md:text-base mb-4">
             The Centre is efficiently managed by <strong>Anil Kumar</strong> (Manager, Incubation Centre), supported by <strong>Anmol Bhardwaj</strong> (Deputy Manager) and <strong>Vijay Kumar Bhonsle</strong> (Accounts Officer), ensuring smooth operations, strategic growth, and effective support to start-ups and innovators.
-          </p>
+          </p> */}
+          <div className="bg-blue-50 border border-blue-100 p-5 rounded-lg mb-4">
+  <h4 className="text-lg font-semibold text-[#0d173b] mb-4">
+    Team Members
+  </h4>
+
+  <div className="space-y-4">
+    <div>
+      <h5 className="font-semibold text-[#0d173b]">
+        Mr. Anil Kumar - Manager
+      </h5>
+      <p className="text-sm text-gray-700">
+        📞 8770196674
+      </p>
+      <p className="text-sm text-gray-700">
+        ✉️ anilray926@gmail.com
+      </p>
+    </div>
+
+    <div>
+      <h5 className="font-semibold text-[#0d173b]">
+        Mr. Anmol Bhardwaj - Deputy Manager
+      </h5>
+      <p className="text-sm text-gray-700">
+        📞 7898310486
+      </p>
+      <p className="text-sm text-gray-700">
+        ✉️ anmolbhardwaj@csitdurg.in
+      </p>
+    </div>
+
+    <div>
+      <h5 className="font-semibold text-[#0d173b]">
+        Vijay Kumar Bhonsle - Accounts Officer
+      </h5>
+      <p className="text-sm text-gray-700">
+        📞 9826124312
+      </p>
+      <p className="text-sm text-gray-700">
+        ✉️ vijaybhonsle@csitdurg.in
+      </p>
+    </div>
+  </div>
+</div>
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border-l-4 border-emerald-500 p-4 rounded-lg mb-4">
             <p className="text-sm text-gray-700">
               <span className="font-bold text-emerald-700">🏆 Recognition:</span> With immense pride, CSIT has been recognized as a <strong>Host Institution (HI)</strong> under the Ministry of Micro, Small and Medium Enterprises <strong>(MSME) in 2026</strong>, marking a significant milestone in its journey towards excellence in innovation and start-up development. This prestigious recognition strengthens the Centre's ability to support budding entrepreneurs through enhanced resources, funding opportunities, and government-backed incubation support.

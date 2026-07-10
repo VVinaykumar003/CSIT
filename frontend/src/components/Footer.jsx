@@ -209,7 +209,7 @@ const SchoolFooter = () => {
                   to="/admission/admission-process"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  IIC
+                  Institutional Innovation Council
                 </Link>
               </li>
               <li>
@@ -217,7 +217,7 @@ const SchoolFooter = () => {
                   to="/admission/admission-process"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  Incubation
+                  Incubation Cell
                 </Link>
               </li>
               <li>
@@ -259,10 +259,10 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/more/rti"
+                  to="/more/gallery"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  RTI
+                Gallery
                 </Link>
               </li>
               <li>

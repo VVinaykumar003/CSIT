@@ -321,16 +321,16 @@ export default function Navbar() {
                   <div className="absolute h-2 -top-2 inset-x-0"></div>
                   <div className="rounded-md shadow-lg bg-white">
                     <div className="py-1">
-                      <Link to="/more/student-affairs" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Student Affairs</Link>
+                      {/* <Link to="/more/student-affairs" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Student Affairs</Link> */}
                       <Link to="/more/calendar" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Calendar</Link>
                       <Link to="/more/feedback" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Feedback</Link>
                       <Link to="/more/gallery" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Gallery</Link>
                       <Link to="/more/grievances" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Grievances</Link>
                       <Link to="/more/iqac" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">IQAC</Link>
-                      <Link to="/more/rti" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">RTI</Link>
+                      {/* <Link to="/more/rti" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">RTI</Link> */}
                       <Link to="/campus/facilities" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Facilities</Link>
-                      <Link to="/more/celebration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Celebration</Link>
-                      <Link to="/more/achievement" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Achievement</Link>
+                      {/* <Link to="/more/celebration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Celebration</Link> */}
+                      {/* <Link to="/more/achievement" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Achievement</Link> */}
                       <a
                         href="https://drive.google.com/drive/folders/17bERsF79PR7RLIc8k69I1wXJGbEJXyOL?usp=drive_link"
                         target="_blank"
@@ -618,13 +618,13 @@ export default function Navbar() {
               </button>
               {activeDropdownMobile === 9 && (
                 <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/more/student-affairs" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Student Affairs</Link>
+                  {/* <Link to="/more/student-affairs" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Student Affairs</Link> */}
                   <Link to="/more/calendar" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Calendar</Link>
                   <Link to="/more/feedback" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Feedback</Link>
                   <Link to="/more/gallery" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Gallery</Link>
                   <Link to="/more/grievances" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Grievances</Link>
                   <Link to="/more/iqac" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>IQAC</Link>
-                  <Link to="/more/rti" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>RTI</Link>
+                  {/* <Link to="/more/rti" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>RTI</Link> */}
                   <a
                     href="https://drive.google.com/drive/folders/17bERsF79PR7RLIc8k69I1wXJGbEJXyOL?usp=drive_link"
                     target="_blank"

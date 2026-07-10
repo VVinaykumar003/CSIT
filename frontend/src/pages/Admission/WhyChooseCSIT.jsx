@@ -72,7 +72,7 @@ const WhyCSIT = () => {
       {/* Content */}
       <div className="p-6 md:p-8 space-y-8 bg-gradient-to-b from-white to-gray-50">
         {/* Rankings Section */}
-        <div>
+        {/* <div>
           <h3 className="text-xl font-semibold text-[#0d173b] flex items-center gap-2 mb-4">
             <span className="text-2xl">📊</span>
             All India Ranking (By Dataquest)
@@ -90,10 +90,10 @@ const WhyCSIT = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Innovations Section */}
-        <div>
+        {/* <div>
           <h3 className="text-xl font-semibold text-[#0d173b] flex items-center gap-2 mb-4">
             <span className="text-2xl">💡</span>
             Focus on Innovations & Entrepreneurship
@@ -110,10 +110,10 @@ const WhyCSIT = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Career Pathways Section */}
-        <div>
+        {/* <div>
           <h3 className="text-xl font-semibold text-[#0d173b] flex items-center gap-2 mb-4">
             <span className="text-2xl">🎯</span>
             Career Pathways
@@ -138,8 +138,46 @@ const WhyCSIT = () => {
               focused courses.
             </p>
           </div>
-        </div>
+        </div> */}
+       
 
+         <ul className="list-disc pl-6 space-y-4 text-gray-700">
+    <li>
+      <span className="font-semibold">Excellence in Education:</span>{" "}
+      Delivering quality technical education through experienced faculty
+      members, outcome-based learning, and a curriculum aligned with
+      industry requirements.
+    </li>
+
+    <li>
+      <span className="font-semibold">Modern Infrastructure:</span>{" "}
+      A vibrant campus equipped with smart classrooms, advanced laboratories,
+      innovation centers, digital library, workshops, sports facilities,
+      hostels, and modern learning resources.
+    </li>
+
+    <li>
+      <span className="font-semibold">Industry Integration:</span>{" "}
+      Strong partnerships with leading industries, Centre of Excellence
+      programs, internships, industrial visits, live projects,
+      certification courses, and excellent placement support to prepare
+      students for successful careers.
+    </li>
+
+    <li>
+      <span className="font-semibold">Research & Innovation:</span>{" "}
+      Encouraging research, entrepreneurship, startups, innovation projects,
+      patents, and participation in national and international technical
+      competitions.
+    </li>
+
+    <li>
+      <span className="font-semibold">Holistic Development:</span>{" "}
+      Promoting leadership, communication skills, personality development,
+      student clubs, cultural activities, sports, and community engagement
+      for overall personality enhancement.
+    </li>
+  </ul>
         {/* ✅ Career Options Section - NEW */}
         <div>
           <h3 className="text-xl font-semibold text-[#0d173b] flex items-center gap-2 mb-4">

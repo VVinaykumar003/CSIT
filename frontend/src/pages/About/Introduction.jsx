@@ -52,54 +52,61 @@ export default function IntroductionPage() {
             <div className="mt-8">
   <div className="mb-8">
     <h2 className="text-3xl md:text-4xl font-bold text-[#0d173b]">
-      Why Choose CSIT?
+      {/* Why Choose CSIT? */}
+      Location
     </h2>
-    <p className="text-gray-600 mt-2">
+    {/* <p className="text-gray-600 mt-2">
       Building future-ready professionals through quality education,
       innovation, and industry-focused learning.
-    </p>
+    </p> */}
   </div>
 
   <div className="grid gap-4">
     {[
       {
-        title: "Excellence in Education",
+        // title: "Excellence in Education",
         description:
-          "Delivering quality technical education through experienced faculty members, outcome-based learning, and a curriculum aligned with industry requirements.",
+          // "Delivering quality technical education through experienced faculty members, outcome-based learning, and a curriculum aligned with industry requirements.",
+         " The institute is situated on Durg–Balod, Dallirajhara Road at Shivaji Nagar near Kolihapuri, District Durg, Chhattisgarh. It is approximately 4 km from the Collectorate and 6 km from Durg Railway Station. The serene surroundings offer a peaceful academic atmosphere away from city congestion, while still remaining easily accessible.",
       },
       {
         title: "Modern Infrastructure",
         description:
-          "A vibrant campus equipped with smart classrooms, advanced laboratories, innovation centers, digital library, workshops, sports facilities, hostels, and modern learning resources.",
+          // "A vibrant campus equipped with smart classrooms, advanced laboratories, innovation centers, digital library, workshops, sports facilities, hostels, and modern learning resources.",
+         "The campus is well connected by : Air: Swami Vivekananda Airport, about 45 km away | Rail: Durg Junction railway station, about 6 km away | Road: Durg Bus Stand, about 4 km from the institute.",
+
       },
       {
         title: "Industry Integration",
         description:
-          "Strong partnerships with leading industries, internships, industrial visits, live projects, certification courses, and excellent placement support.",
+          // "Strong partnerships with leading industries, internships, industrial visits, live projects, certification courses, and excellent placement support.",
+          "This balance of connectivity and calm surroundings makes it an ideal setting for focused learning.",
+
+
       },
-      {
-        title: "Research & Innovation",
-        description:
-          "Encouraging research, entrepreneurship, startups, innovation projects, patents, and participation in national and international technical competitions.",
-      },
-      {
-        title: "Holistic Development",
-        description:
-          "Promoting leadership, communication skills, personality development, student clubs, cultural activities, sports, and community engagement.",
-      },
+      // {
+      //   title: "Research & Innovation",
+      //   description:
+      //     "Encouraging research, entrepreneurship, startups, innovation projects, patents, and participation in national and international technical competitions.",
+      // },
+      // {
+      //   title: "Holistic Development",
+      //   description:
+      //     "Promoting leadership, communication skills, personality development, student clubs, cultural activities, sports, and community engagement.",
+      // },
     ].map((item, index) => (
       <div
         key={index}
         className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-all duration-300"
       >
-        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-700 font-semibold shrink-0">
+        {/* <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-700 font-semibold shrink-0">
           {index + 1}
-        </div>
+        </div> */}
 
         <div>
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-1">
+          {/* <h3 className="text-lg font-semibold text-[#0d173b] mb-1">
             {item.title}
-          </h3>
+          </h3> */}
           <p className="text-gray-600 leading-relaxed">
             {item.description}
           </p>

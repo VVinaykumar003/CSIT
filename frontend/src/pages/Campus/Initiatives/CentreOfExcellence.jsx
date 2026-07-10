@@ -128,7 +128,7 @@ export default function CentreOfExcellence() {
       {/* 1. About Centre of Excellence Program */}
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-gray-50 p-5 md:p-6 rounded-lg shadow-sm">
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">1. About Centre of Excellence Program</h3>
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">About Centre of Excellence Program</h3>
           <p className="text-gray-700 text-sm md:text-base mb-4">
             It is an industry-aligned, skill development initiative alongside the regular academic curriculum which is specifically designed to bridge the gap between academic, earning and real-world industry requirements. Under this Program Key Points are:
           </p>
@@ -146,7 +146,7 @@ export default function CentreOfExcellence() {
       {/* 2. Placement Guarantee */}
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-gradient-to-r from-emerald-50 to-green-50 border-l-4 border-emerald-500 p-5 md:p-6 rounded-lg shadow-sm">
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-2">2. Placement Guarantee</h3>
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-2">Placement Guarantee</h3>
           <p className="text-gray-700 text-sm md:text-base">
             It gives guarantees a minimum placement of <strong>Rs 3.6 LPA (Annual CTC)</strong> for all eligible COE students through its associated and partner companies. This guarantee is subjected to the student satisfying all eligibility criteria.
           </p>
@@ -156,7 +156,7 @@ export default function CentreOfExcellence() {
       {/* 3. Eligibility Conditions */}
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-amber-50 p-5 md:p-6 rounded-lg shadow-sm border-l-4 border-amber-500">
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">3. Eligibility Conditions</h3>
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">Eligibility Conditions</h3>
           <p className="text-gray-700 text-sm md:text-base mb-4">
             A student shall be considered eligible for the placement guarantee under this PPO only upon satisfying all of the following conditions. Non-compliance with even one condition may render the student ineligible for the Placement guarantee.
           </p>
