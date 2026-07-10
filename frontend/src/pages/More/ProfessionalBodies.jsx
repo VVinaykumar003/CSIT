@@ -1,9 +1,9 @@
 import React from "react";
 
 // Assuming logos are in the assets folder
-import ieiLogo from "../../assets/professionalBodies/ieiLogo.jpg";
+import ieiLogo from "../../assets/professionalBodies/isteLogo.jpg"; // Corrected: This was pointing to the wrong file.
 import qcfiLogo from "../../assets/professionalBodies/qcfiLogo.jpg";
-import isteLogo from "../../assets/professionalBodies/isteLogo.jpg";
+import isteLogo from "../../assets/professionalBodies/ieiLogo.jpg"; // Corrected: This is the ISTE certificate.
 import ieteLogo from "../../assets/professionalBodies/ieteLogo.jpg";
 import isoiLogo from "../../assets/professionalBodies/isoiLogo.jpg";
 
@@ -36,7 +36,7 @@ const ProfessionalBodies = () => {
       {/* Institution of Engineers (India) */}
       <div className="flex flex-col md:flex-row items-start gap-6 p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow bg-gray-50">
         <div className="w-full md:w-1/4 flex justify-center p-4 bg-white rounded-md">
-          <img src={isteLogo} alt="Institution of Engineers (India) Logo" className="h-24 object-contain"/>
+          <img src={ieiLogo} alt="Institution of Engineers (India) Logo" className="h-24 object-contain"/>
         </div>
         <div className="w-full md:w-3/4">
           <h3 className="text-[#0d173b] font-semibold text-xl mb-2">
@@ -66,7 +66,7 @@ const ProfessionalBodies = () => {
       {/* ISTE */}
       <div className="flex flex-col md:flex-row items-start gap-6 p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow bg-gray-50">
         <div className="w-full md:w-1/4 flex justify-center p-4 bg-white rounded-md">
-          <img src={ieiLogo} alt="Indian Society of Technical Education Logo" className="h-24 object-contain"/>
+          <img src={isteLogo} alt="Indian Society of Technical Education Logo" className="h-24 object-contain"/>
         </div>
         <div className="w-full md:w-3/4">
           <h3 className="text-[#0d173b] font-semibold text-xl mb-2">
@@ -81,7 +81,7 @@ const ProfessionalBodies = () => {
       {/* IETE */}
       <div className="flex flex-col md:flex-row items-start gap-6 p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow bg-gray-50">
         <div className="w-full md:w-1/4 flex justify-center p-4 bg-white rounded-md">
-          <img src={isoiLogo} alt="The Institute of Electronics & Telecommunication Engineers Logo" className="h-24 object-contain"/>
+          <img src={ieteLogo} alt="The Institute of Electronics & Telecommunication Engineers Logo" className="h-24 object-contain"/>
         </div>
         <div className="w-full md:w-3/4">
           <h3 className="text-[#0d173b] font-semibold text-xl mb-2">
@@ -96,7 +96,7 @@ const ProfessionalBodies = () => {
       {/* Instrument Society of India */}
       <div className="flex flex-col md:flex-row items-start gap-6 p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow bg-gray-50">
         <div className="w-full md:w-1/4 flex justify-center p-4 bg-white rounded-md">
-          <img src={ieteLogo} alt="Instrument Society of India Logo" className="h-24 object-contain"/>
+          <img src={isoiLogo} alt="Instrument Society of India Logo" className="h-24 object-contain"/>
         </div>
         <div className="w-full md:w-3/4">
           <h3 className="text-[#0d173b] font-semibold text-xl mb-2">
