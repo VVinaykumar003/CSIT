@@ -7,16 +7,16 @@ const Gallery = () => {
   const [error, setError] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("Institute"); // ✅ default "Institute"
+  const [selectedCategory, setSelectedCategory] = useState("Infrastructure"); // ✅ default "Infrastructure"
 
   const categories = [
-    "Institute",
+    "Infrastructure",
     "Departments",
     "Initiatives",
     "T & P Cell",
-    "Student Affairs",
-    "Library",
+    "Student Clubs",
     "Facilities",
+    "R & D",
     "Alumni",
     "Media Coverage",
   ];
@@ -50,8 +50,8 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    // ✅ On first load, show Institute images
-    fetchImagesByCategory("Institute");
+    // ✅ On first load, show Infrastructure images
+    fetchImagesByCategory("Infrastructure");
   }, []);
 
   const openModal = (index) => {

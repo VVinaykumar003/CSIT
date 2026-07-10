@@ -35,6 +35,7 @@ import NotificationForm from "./pages/Admin/NotificationForm";
 import NotificationDashboard from "./pages/Admin/NotificationDashboard";
 
 import ResearchDevelopment from "./pages/R&D/R&DSidebar";
+import Anti_Raging from "./pages/More/Anti_Raging";
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem("adminToken");
@@ -163,7 +164,8 @@ function App() {
             <Route path="/gallery/upload" element={<GalleryForm />} />
             <Route path="/gallery/manage" element={<GalleryDashboard />} />
             <Route path="/more/*" element={<MorePage />} />
-            <Route path="/student-affairs" element={<Navigate to="/more/student-affairs" replace />} />
+            {/* <Route path="/more/anti-ragging" element={<Anti_Raging />} /> */}
+            {/* <Route path="/student-affairs" element={<Navigate to="/more/student-affairs" replace />} /> */}
             <Route path="/research-and-development" element={<Navigate to="/more/research-and-development" replace />} />
             <Route path="/calendar" element={<Navigate to="/more/calendar" replace />} />
             <Route path="/feedback" element={<Navigate to="/more/feedback" replace />} />

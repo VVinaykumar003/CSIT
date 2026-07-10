@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-export default function NssInitiativesList() {
+export default function NSS() {
   const [activeYear, setActiveYear] = useState("2025-26");
 
   // Updated initiatives data with new content
-  const initiativesData = {
+  const activities = {
     "2025-26": [
       {
         id: 1,
@@ -85,7 +85,7 @@ export default function NssInitiativesList() {
       },
       {
         id: 12,
-        event: "Cyber Security workshop",
+        event: "Cyber Security Workshop",
         date: "10-10-2025 & 11-10-2025",
         venue: "CSIT, Campus",
         remark: ""
@@ -99,7 +99,7 @@ export default function NssInitiativesList() {
       },
       {
         id: 14,
-        event: "Essay writing competition at G.H.S.S. Vinayakpur",
+        event: "Essay Writing Competition at G.H.S.S. Vinayakpur",
         date: "16-10-2025",
         venue: "Village - Vinayakpur",
         remark: "One Day Camp (Outreach Programme)"
@@ -163,13 +163,13 @@ export default function NssInitiativesList() {
       {
         id: 23,
         event: "Youth Day",
-        date: "01-10-2026",
+        date: "10-01-2026",
         venue: "CSIT, Campus",
         remark: ""
       },
       {
         id: 24,
-        event: "Tradition Games Day",
+        event: "Traditional Games Day",
         date: "01-12-2026",
         venue: "CSIT, Campus",
         remark: ""
@@ -198,20 +198,20 @@ export default function NssInitiativesList() {
       {
         id: 28,
         event: "Republic Day",
-        date: "23-01-2026",
-        venue: "CSIT, Campus",
-        remark: ""
-      },
-      {
-        id: 29,
-        event: "Pariksha pe charcha",
         date: "26-01-2026",
         venue: "CSIT, Campus",
         remark: ""
       },
       {
+        id: 29,
+        event: "Pariksha Pe Charcha",
+        date: "29-01-2026",
+        venue: "CSIT, Campus",
+        remark: ""
+      },
+      {
         id: 30,
-        event: "Youva Sanvaad",
+        event: "Yuva Samvaad",
         date: "02-06-2026",
         venue: "SRIU, Raipur",
         remark: ""
@@ -219,7 +219,7 @@ export default function NssInitiativesList() {
       {
         id: 31,
         event: "International Women's Day",
-        date: "02-11-2026",
+        date: "08-03-2026",
         venue: "CSIT, Campus",
         remark: ""
       },
@@ -233,7 +233,7 @@ export default function NssInitiativesList() {
       {
         id: 33,
         event: "Shaheed Diwas",
-        date: "15-03-2026",
+        date: "23-03-2026",
         venue: "CSIT, Campus",
         remark: ""
       },
@@ -332,7 +332,7 @@ export default function NssInitiativesList() {
       },
       {
         id: 12,
-        event: "World Food Day",
+        event: "Word Food Day",
         date: "16-10-2024",
         venue: "CSIT, Campus",
         remark: ""
@@ -423,7 +423,7 @@ export default function NssInitiativesList() {
       },
       {
         id: 25,
-        event: "Swattchata Abhiyan",
+        event: "Swachhata Abhiyan",
         date: "19-01-2025",
         venue: "CSIT, Campus",
         remark: ""
@@ -511,9 +511,32 @@ export default function NssInitiativesList() {
     "Creates a sense of social responsibility and nation-building, making you a well-rounded citizen."
   ];
 
+  const achievements = [
+    { id: 1, name: "Ms. Shanu Vaishnav", year: "2023-24", subject: "Selected For Republic Day Parade (RDC)" },
+    { id: 2, name: "Mr. Deepanshu Sahu", year: "2024-25", subject: "Selected For NIC Camp at Somani C.G" },
+    { id: 3, name: "Ms. Swati sahu", year: "2025-26", subject: "Selected For Viksit Bharat Younge Leadet Dialogue C.G. Team through My Bharat." },
+    { id: 4, name: "Mr. Nitin Chakradhari", year: "2025-26", subject: "Selected For State lavel Camp 2025-26 at Balodabazar" },
+    { id: 5, name: "Mr. Shubham Chandrakar", year: "2025-26", subject: "Selected As P.O. of CSVTU NSS Team for State Level Camp At Balodabazar" },
+    { id: 6, name: "Ms. Anjali Sahu", year: "2025-26", subject: "Selected For Top 400 Student under MY Bharat Budget Quest 2026" }
+  ];
+
+  const nssStructure = [
+    "Dr. Ravi Mishra (Principal CSIT, Durg)",
+    "Mr. Shubham Chandrakar (Programme Officer)",
+    "Mr. Narendra Suryavanshi (Asst. Programme Officer)",
+    "Student Co Ordinator",
+    "Volunteers"
+  ];
+
+  const nssSymbols = [
+    { title: "Wheel", description: "Symbolizes movement, progress, and social change." },
+    { title: "Eight Spokes", description: "Represent the 24 hours of the day, reminding volunteers to serve society at all times." },
+    { title: "Red Colour", description: "Signifies youth, energy, enthusiasm, and dedication." },
+    { title: "Navy Blue Colour", description: "Represents the vast universe and NSS's contribution to the welfare of humanity." }
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto bg-gradient-to-br from-white to-blue-50 shadow-xl overflow-hidden my-4">
-      
+    <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       {/* Header */}
       <div className="bg-[#0d173b] text-white p-6 md:p-8">
         <div className="max-w-7xl mx-auto">
@@ -523,31 +546,53 @@ export default function NssInitiativesList() {
         </div>
       </div>
 
-      {/* Motto Section */}
-      <div className="px-6 py-5 bg-white bg-opacity-90">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
-          <div className="p-3 bg-blue-50 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
-            </svg>
-          </div>
-          <div>
-            <p className="text-gray-700 text-sm md:text-base">
-              The National Service Scheme (NSS) Unit of CSIT Durg is dedicated to developing socially responsible, skilled, and compassionate students through community service and leadership activities. The unit actively organizes awareness campaigns, cleanliness drives, health camps, environmental initiatives, and rural development programs. NSS at CSIT provides students with opportunities to serve society, enhance their personality, and contribute to nation-building while embodying the motto{" "}
-              <span className="text-blue-700 font-semibold">"Not Me But You."</span>
-            </p>
+      <div className="p-4 md:p-6">
+        {/* About NSS */}
+        <div className="bg-blue-50 p-5 md:p-6 rounded-lg shadow-sm mb-6">
+          <h2 className="text-xl font-semibold text-[#0d173b] mb-4">About NSS</h2>
+          <p className="mb-4 text-gray-700 text-sm md:text-base">
+            The National Service Scheme (NSS) is a flagship youth development programme launched by the Government of India under the Ministry of Youth Affairs & Sports. Established in 1969, NSS aims to develop the personality and character of students through voluntary community service. Guided by its motto, "Not Me, But You," the scheme instills the values of social responsibility, leadership, discipline, teamwork, and national integration while encouraging students to actively contribute to the welfare and development of society.
+          </p>
+        </div>
+
+        {/* About Us */}
+        <div className="bg-gray-50 p-5 md:p-6 rounded-lg shadow-sm mb-6">
+          <h2 className="text-xl font-semibold text-[#0d173b] mb-4">About Us</h2>
+          <p className="mb-4 text-gray-700 text-sm md:text-base">
+            The National Service Scheme (NSS) Unit of CSIT Durg is dedicated to developing socially responsible, skilled, and compassionate students through community service and leadership activities. The unit actively organizes awareness campaigns, cleanliness drives, health camps, environmental initiatives, and rural development programs. NSS at CSIT provides students with opportunities to serve society, enhance their personality, and contribute to nation-building while embodying the motto "Not Me But You."
+          </p>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 text-center">
+              <p className="text-sm font-medium text-gray-600">Unit Size</p>
+              <p className="text-lg font-bold text-[#0d173b]">100 Volunteers/year</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 text-center">
+              <p className="text-sm font-medium text-gray-600">Motto</p>
+              <p className="text-lg font-bold text-[#0d173b]">"Not Me But You."</p>
+            </div>
           </div>
         </div>
-        
-        {/* Motto Box */}
-        <div className="bg-gradient-to-r from-[#0d173b] to-[#1e305f] text-white p-4 rounded-lg text-center">
-          <p className="text-lg md:text-xl font-bold">Motto: "Not Me But You."</p>
+
+        {/* NSS Symbols & Badge */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-blue-50 p-5 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold text-[#0d173b] mb-3">NSS Symbols</h3>
+            <p className="text-gray-700 text-sm mb-4">The NSS symbol is inspired by the wheel of the Konark Sun Temple and represents continuous progress, social service, and nation-building.</p>
+            <ul className="space-y-2">
+              {nssSymbols.map(symbol => (
+                <li key={symbol.title} className="flex items-start"><span className="font-bold text-[#0d173b] w-28 flex-shrink-0">{symbol.title}:</span><span className="text-sm text-gray-600">{symbol.description}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold text-[#0d173b] mb-3">NSS Badge</h3>
+            <p className="text-gray-700 text-sm">The NSS Badge symbolizes the spirit of selfless service, discipline, and social responsibility. Its design is inspired by the wheel of the Konark Sun Temple, representing continuous movement, progress, and dedication to nation-building. Wearing the NSS badge reflects a volunteer's commitment to the motto "Not Me, But You", emphasizing service to society above self-interest.</p>
+          </div>
         </div>
       </div>
 
       {/* Objectives & Who Can Join */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-6 mb-6">
         <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
           <h3 className="text-lg font-bold text-[#0d173b] mb-3">🎯 Objectives</h3>
           <p className="text-gray-700 text-sm md:text-base italic">"Student personality development through community services."</p>
@@ -559,8 +604,8 @@ export default function NssInitiativesList() {
       </div>
 
       {/* Key Benefits Section */}
-      <div className="px-6 mb-6">
-        <h3 className="text-xl font-bold text-[#0d173b] mb-4 flex items-center gap-2">
+      <div className="px-4 md:px-6 mb-6">
+        <h3 className="text-xl font-semibold text-[#0d173b] mb-4 flex items-center gap-2">
           <span className="text-2xl">⭐</span> Key Benefits of Joining NSS
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -573,9 +618,38 @@ export default function NssInitiativesList() {
         </div>
       </div>
 
+      {/* Achievements Section */}
+      <div className="px-4 md:px-6 mb-6">
+        <h3 className="text-xl font-semibold text-[#0d173b] mb-4 flex items-center gap-2">
+          <span className="text-2xl">🏆</span> Achievements
+        </h3>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-blue-200 rounded-lg">
+            <thead className="bg-[#0d173b]">
+              <tr>
+                <th className="py-3 px-3 text-left text-xs font-medium text-white">S.No.</th>
+                <th className="py-3 px-3 text-left text-xs font-medium text-white">Name of the Awardee</th>
+                <th className="py-3 px-3 text-left text-xs font-medium text-white">Year</th>
+                <th className="py-3 px-3 text-left text-xs font-medium text-white">Subject</th>
+              </tr>
+            </thead>
+            <tbody>
+              {achievements.map((item) => (
+                <tr key={item.id} className="hover:bg-blue-50 border-b border-gray-100">
+                  <td className="py-3 px-3 text-sm text-gray-700">{item.id}</td>
+                  <td className="py-3 px-3 text-sm text-gray-700">{item.name}</td>
+                  <td className="py-3 px-3 text-sm text-gray-700">{item.year}</td>
+                  <td className="py-3 px-3 text-sm text-gray-700">{item.subject}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Special Camps Section */}
-      <div className="px-6 mb-6">
-        <h3 className="text-xl font-bold text-[#0d173b] mb-4 flex items-center gap-2">
+      <div className="px-4 md:px-6 mb-6">
+        <h3 className="text-xl font-semibold text-[#0d173b] mb-4 flex items-center gap-2">
           <span className="text-2xl">⛺</span> 7 Days Special Camp
         </h3>
         <div className="overflow-x-auto">
@@ -603,7 +677,7 @@ export default function NssInitiativesList() {
       </div>
 
       {/* Year Filter Tabs */}
-      <div className="px-6 mb-4 flex flex-wrap gap-3">
+      <div className="px-4 md:px-6 mb-4 flex flex-wrap gap-3">
         <button
           onClick={() => setActiveYear("2025-26")}
           className={`px-6 py-2 rounded-lg font-semibold transition-all ${
@@ -627,8 +701,8 @@ export default function NssInitiativesList() {
       </div>
 
       {/* Events Table */}
-      <div className="px-6 pb-6">
-        <h3 className="text-xl font-bold text-[#0d173b] mb-4 flex items-center gap-2">
+      <div className="px-4 md:px-6 pb-6">
+        <h3 className="text-xl font-semibold text-[#0d173b] mb-4 flex items-center gap-2">
           <span className="text-2xl">📅</span> Events - {activeYear}
         </h3>
         <div className="overflow-x-auto">
@@ -643,7 +717,7 @@ export default function NssInitiativesList() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {initiativesData[activeYear].map((item, index) => (
+              {activities[activeYear].map((item, index) => (
                 <tr key={item.id} className={index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50'}>
                   <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
                   <td className="px-4 py-3 text-sm text-gray-900">{item.event}</td>
@@ -665,35 +739,45 @@ export default function NssInitiativesList() {
         </div>
       </div>
 
-      {/* Team Members Section */}
-      <div className="px-6 pb-6">
-        <h3 className="text-xl font-bold text-[#0d173b] mb-4 flex items-center gap-2">
-          <span className="text-2xl">👨‍🏫</span> Team Members
-        </h3>
-        <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-              <div className="h-10 w-10 bg-[#0d173b] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                SC
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Mr. Shubham Chandrakar</p>
-                <p className="text-sm text-gray-500">Programme Officer</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-              <div className="h-10 w-10 bg-[#0d173b] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                NS
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Mr. Narendra Suryavanshi</p>
-                <p className="text-sm text-gray-500">Asst. Programme Officer</p>
-              </div>
-            </div>
-          </div>
+      {/* From the Programme Officer's Desk */}
+      <div className="px-4 md:px-6 pb-6">
+        <div className="bg-gray-50 p-5 md:p-6 rounded-lg shadow-sm">
+          <h3 className="text-xl font-semibold text-[#0d173b] mb-4">From the Programme Officer's Desk</h3>
+          <p className="text-gray-700 text-sm md:text-base mb-4 italic">
+            Dear Students,
+            <br /><br />
+            The National Service Scheme (NSS) is more than a volunteer programme—it is a platform for learning, leadership, and nation-building. It inspires students to step beyond academics, connect with society, and develop qualities such as responsibility, teamwork, discipline, and compassion.
+            <br /><br />
+            Through community service and social initiatives, NSS empowers young minds to become confident leaders and responsible citizens. Every activity is an opportunity to learn, serve, and create a meaningful impact.
+            <br /><br />
+            I invite every student to join this journey of service, personal growth, and social commitment. Together, let us work towards building a better society while shaping ourselves into responsible professionals and future leaders.
+          </p>
+          <p className="text-gray-800 font-semibold">Best Wishes,</p>
+          <p className="text-gray-700 font-medium">Mr. Shubham Chandrakar</p>
+          <p className="text-sm text-gray-600">Programme Officer</p>
+          <p className="text-sm text-gray-600">National Service Scheme (NSS)</p>
+          <a href="mailto:shubhamchandrakar@csitdurg.in" className="text-sm text-blue-600 hover:underline">shubhamchandrakar@csitdurg.in</a>
         </div>
       </div>
 
+      {/* NSS Structure Section */}
+      <div className="px-4 md:px-6 pb-6">
+        <h3 className="text-xl font-semibold text-[#0d173b] mb-4 flex items-center gap-2">
+          <span className="text-2xl">🏛️</span> NSS Structure
+        </h3>
+        <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+          <ul className="space-y-3">
+            {nssStructure.map((member, index) => (
+              <li key={index} className="flex items-center">
+                <span className="bg-blue-200 text-[#0d173b] rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 text-xs font-bold">
+                  {index + 1}
+                </span>
+                <span className="text-gray-700 text-sm md:text-base">{member}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

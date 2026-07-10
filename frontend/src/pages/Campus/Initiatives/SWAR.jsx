@@ -5,7 +5,7 @@ export default function SWARInitiative() {
 
   // Updated Committee Members
   const members = [
-    { id: 1, name: "Dr. Padmini Sharma", designation: "HOD(EEE)", role: "Chairperson" },
+    { id: 1, name: "Dr. Padmini Sharma", designation: "Dean – First Yera", role: "Chairperson" },
     { id: 2, name: "Mrs. Nalesh Banjare", designation: "Assistant Professor(CSE)", role: "Member" },
     { id: 3, name: "Miss. Aastha Yadav", designation: "Assistant Professor(Civil)", role: "Member" },
     { id: 4, name: "Miss. Radhika Shukla", designation: "Assistant Professor(Chemistry)", role: "Member" },
@@ -14,13 +14,13 @@ export default function SWARInitiative() {
 
   // Updated Student Representatives
   const studentReps = [
-    { id: 1, name: "Miss. Aditi Sharma", department: "CSE 7TH" },
-    { id: 2, name: "Miss. Komal Verma", department: "CSE 7TH" },
-    { id: 3, name: "Miss. Yemesh Sahu", department: "Civil 5TH" },
-    { id: 4, name: "Miss. Chhavi Deshmukh", department: "EEE 5TH" },
-    { id: 5, name: "Miss. Shail Sahu", department: "CSE 3RD" },
-    { id: 6, name: "Miss. Megha Sahu", department: "CSE 3RD" },
-    { id: 7, name: "Miss. Neelam Sahu", department: "CSE 3RD" }
+    { id: 1, name: "Miss. Aditi Sharma", department: "CSE 7TH", role: "Member" },
+    { id: 2, name: "Miss. Komal Verma", department: "CSE 7TH", role: "Member" },
+    { id: 3, name: "Miss. Yemesh Sahu", department: "Civil 5TH", role: "Member" },
+    { id: 4, name: "Miss. Chhavi Deshmukh", department: "EEE 5TH", role: "Member" },
+    { id: 5, name: "Miss. Shail Sahu", department: "CSE 3RD", role: "Member" },
+    { id: 6, name: "Miss. Megha Sahu", department: "CSE 3RD", role: "Member" },
+    { id: 7, name: "Miss. Neelam Sahu", department: "CSE 3RD", role: "Member" }
   ];
 
   // Updated Objectives
@@ -197,6 +197,7 @@ export default function SWARInitiative() {
                     <th className="py-3 px-4 text-left text-xs font-medium text-white">S.No</th>
                     <th className="py-3 px-4 text-left text-xs font-medium text-white">Name</th>
                     <th className="py-3 px-4 text-left text-xs font-medium text-white">Department & Semester</th>
+                    <th className="py-3 px-4 text-left text-xs font-medium text-white">Role</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -205,6 +206,7 @@ export default function SWARInitiative() {
                       <td className="py-3 px-4 text-sm text-gray-700">{student.id}</td>
                       <td className="py-3 px-4 text-sm text-gray-700">{student.name}</td>
                       <td className="py-3 px-4 text-sm text-gray-700">{student.department}</td>
+                      <td className="py-3 px-4 text-sm text-gray-700">{student.role}</td>
                     </tr>
                   ))}
                 </tbody>

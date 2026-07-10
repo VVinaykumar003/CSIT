@@ -79,6 +79,26 @@ export default function IncubationCentre() {
     "End-to-end support from ideation to commercialization"
   ];
 
+  const teamMembers = [
+    {
+      name: "Mr. Anil Kumar",
+      role: "Manager",
+      phone: "87701 96674",
+      email: "anilray926@gmail.com"
+    },
+    {
+      name: "Mr. Anmol Bhardwaj",
+      role: "Deputy Manager",
+      phone: "78983 10486",
+      email: "anmolbhardwaj@csitdurg.in"
+    },
+    {
+      name: "Vijay Kumar Bhonsle",
+      role: "Accounts Officer",
+      phone: "98261 24312",
+      email: "vijaybhonsle@csitdurg.in"
+    }
+  ];
   return (
     <div className="max-w-6xl mx-auto bg-white rounded-lg overflow-hidden">
       {/* Header Section */}
@@ -111,9 +131,9 @@ export default function IncubationCentre() {
           <p className="text-gray-700 text-sm md:text-base mb-4">
             Chhatrapati Shivaji Institute of Technology (CSIT), Durg has established the Incubation Centre as a significant step towards building a strong innovation and entrepreneurship ecosystem within the institute. Initiated under the visionary leadership of <strong>Ajay Prakash Verma</strong> (Chairman, CSIT), the Centre is dedicated to nurturing innovative ideas and transforming them into scalable and sustainable ventures that contribute to society and industry.
           </p>
-          <p className="text-gray-700 text-sm md:text-base mb-4">
+          {/* <p className="text-gray-700 text-sm md:text-base mb-4">
             The Centre is efficiently managed by <strong>Anil Kumar</strong> (Manager, Incubation Centre), supported by <strong>Anmol Bhardwaj</strong> (Deputy Manager) and <strong>Vijay Kumar Bhonsle</strong> (Accounts Officer), ensuring smooth operations, strategic growth, and effective support to start-ups and innovators.
-          </p>
+          </p> */}
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border-l-4 border-emerald-500 p-4 rounded-lg mb-4">
             <p className="text-sm text-gray-700">
               <span className="font-bold text-emerald-700">🏆 Recognition:</span> With immense pride, CSIT has been recognized as a <strong>Host Institution (HI)</strong> under the Ministry of Micro, Small and Medium Enterprises <strong>(MSME) in 2026</strong>, marking a significant milestone in its journey towards excellence in innovation and start-up development. This prestigious recognition strengthens the Centre's ability to support budding entrepreneurs through enhanced resources, funding opportunities, and government-backed incubation support.
@@ -250,29 +270,27 @@ export default function IncubationCentre() {
         </div>
       </div>
 
-      {/* Contact Us */}
+      {/* Team Members */}
       <div className="px-5 md:px-6 pb-6">
-        <div className="bg-gradient-to-r from-[#0d173b] to-[#1e305f] text-white p-5 md:p-6 rounded-lg">
-          <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+        <div className="bg-blue-50 p-5 md:p-6 rounded-lg shadow-sm">
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-4">Team Members</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <p className="text-sm text-blue-200">Name of the Centre:</p>
-              <p className="text-sm font-medium">Chhatrapati Shivaji Institute of Technology</p>
-              <p className="text-sm text-blue-200 mt-1">📞 9826199557 / 8966000102</p>
-              <p className="text-sm text-blue-200">✉️ registrar@csitdurg.in</p>
-            </div>
-            <div>
-              <p className="text-sm text-blue-200">Name of Manager:</p>
-              <p className="text-sm font-medium">Mr. Anil Kumar</p>
-              <p className="text-sm text-blue-200 mt-1">📞 8770196674</p>
-              <p className="text-sm text-blue-200">✉️ anilray926@gmail.com</p>
-            </div>
-            <div>
-              <p className="text-sm text-blue-200">Name of Deputy Manager:</p>
-              <p className="text-sm font-medium">Mr. Anmol Bhardwaj</p>
-              <p className="text-sm text-blue-200 mt-1">📞 7898310486</p>
-              <p className="text-sm text-blue-200">✉️ anmolbhardwaj@csitdurg.in</p>
-            </div>
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                <h4 className="font-semibold text-[#0d173b]">{member.name}</h4>
+                <p className="text-sm text-gray-500 mb-2">{member.role}</p>
+                <div className="text-sm text-gray-700 space-y-1">
+                  <p className="flex items-center gap-2">
+                    <span className="text-blue-600">📞</span>
+                    <span>{member.phone}</span>
+                  </p>
+                  <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-blue-600 hover:underline">
+                    <span className="text-blue-600">✉️</span>
+                    <span>{member.email}</span>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

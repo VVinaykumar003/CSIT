@@ -9,7 +9,7 @@ import CelebrationPage from '../More/Celebration';
 import GoverningBodyPage from './GoverningBody';
 import IntroductionPage from './Introduction';
 import MessagePage from './Message/MessageIndex';
-import ProfessionalBodiesPage from './ProfessionalBodies';
+import ProfessionalBodiesPage from '../More/ProfessionalBodies';
 import SocietyPage from './Society';
 
 
@@ -18,7 +18,7 @@ const sidebarLinks = [
   { name: 'Society', path: 'society' },
   { name: 'Aspiration', path: 'aspiration' },
   // { name: 'Achievement', path: 'achievement' },
-  { name: 'Professional Bodies', path: 'professional-bodies' },
+  
   { name: 'Messages', path: 'message' },
   { name: 'Governing Body', path: 'governing-body' },
  
@@ -73,7 +73,6 @@ export default function AboutPage() {
                 <Route path="society" element={<SocietyPage />} />
                 <Route path="aspiration" element={<AspirationPage />} />
                 <Route path="achievement" element={<AchievementPage />} />
-                <Route path="professional-bodies" element={<ProfessionalBodiesPage />} />
                 <Route path="message" element={<MessagePage />} />
                 <Route path="governing-body" element={<GoverningBodyPage />} />
                 <Route path="celebration" element={<CelebrationPage />} />

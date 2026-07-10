@@ -12,6 +12,7 @@ import TeamMembers from './TeamMembers';
 import PlacementStatistics from './PlacementStatistics';
 import TrainingProgramme from './TrainingProgramme';
 import CapacityDevelopment from './CapacityDevelopment'; // ✅ NEW IMPORT
+import Placement_Records from './Placement_Records';
 
 const sidebarLinks = [
   { name: 'About Cell', path: 'about-tnp-cell' },
@@ -19,7 +20,8 @@ const sidebarLinks = [
   { name: 'VT & Internship', path: 'internship' },
   { name: 'Capacity Development Program', path: 'capacity-development' }, // ✅ NEW
   { name: 'Placement Statistics', path: 'placement-statistics' },
-  { name: 'Training Programme', path: 'training-programme' },
+  { name: 'Placement Programme', path: 'placement-programme' },
+  { name: 'Training & Assessment', path: 'training-programme' },
   { name: 'Our Recruiters', path: 'our-recruiters' },
   // { name: 'MOUs', path: 'mous' },
   { name: 'Team Members', path: 'team-members' },
@@ -78,6 +80,7 @@ export default function PlacementPage() {
                 <Route path="placement-policies" element={<PlacementPolicy />} />
                 <Route path="team-members" element={<TeamMembers />} />
                 <Route path="placement-statistics" element={<PlacementStatistics />} />
+                <Route path="placement-programme" element={<Placement_Records />} />
                 <Route path="training-programme" element={<TrainingProgramme />} />
                 <Route path="capacity-development" element={<CapacityDevelopment />} /> {/* ✅ NEW ROUTE */}
                 <Route index element={<Navigate to="about-tnp-cell" replace />} />
