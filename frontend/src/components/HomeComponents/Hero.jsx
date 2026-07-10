@@ -124,7 +124,7 @@ const Hero = () => {
     { image: csitBanner4, alt: "College Campus Banner 4" },
     { image: csitBanner5, alt: "College Campus Banner 5" },
     { image: csitBanner6, alt: "College Campus Banner 6" },
-    { image: csitBanner7, alt: "College Campus Banner 7" },
+    // { image: csitBanner7, alt: "College Campus Banner 7" },
     { image: csitBanner8, alt: "College Campus Banner 8" },
   ];
 
@@ -135,7 +135,7 @@ const Hero = () => {
     { image: BannerPhone_D, alt: "College Campus Mobile Banner D" },
     { image: BannerPhone_E, alt: "College Campus Mobile Banner E" },
     { image: BannerPhone_F, alt: "College Campus Mobile Banner F" },
-    { image: BannerPhone_G, alt: "College Campus Mobile Banner G" },
+    // { image: BannerPhone_G, alt: "College Campus Mobile Banner G" },
     { image: BannerPhone_H, alt: "College Campus Mobile Banner H" },
 
   ];
