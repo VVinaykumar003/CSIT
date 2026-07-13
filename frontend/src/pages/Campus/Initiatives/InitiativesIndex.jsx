@@ -31,7 +31,7 @@ const tabMapping = {
   startups: "Startups",
   // clubs: "OtherClubs",
   coe: "Centre of Excellence",
-  incubation: "Incubation Centre",
+  incubation: "Incubation Cell",
   nptel: "NPTEL",
   mous: "MOUs",
   iqac: "IQAC",
@@ -46,7 +46,7 @@ const tabMapping = {
 // Main Tab Configuration
 const MAIN_TABS = [
   "Centre of Excellence",
-  "Incubation Centre",
+  "Incubation Cell",
   "NPTEL",
   "Startups",
   "MOUs",
@@ -76,8 +76,8 @@ export default function ModernDepartmentPage() {
       title: "Centre of Excellence",
       content: <CentreOfExcellence />,
     },
-    "Incubation Centre": {
-      title: "Incubation Centre",
+    "Incubation Cell": {
+      title: "Incubation Cell",
       content: <IncubationCentre />,
     },
     "NPTEL": {

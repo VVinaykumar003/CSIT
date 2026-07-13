@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdownMobile, setActiveDropdownMobile] = useState(null);
+  const [activeSubDropdownMobile, setActiveSubDropdownMobile] = useState(null);
   const [activeDropdownDesktop, setActiveDropdownDesktop] = useState(null);
+  const [facilitiesOpen, setFacilitiesOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   
   useEffect(() => {
@@ -24,9 +26,17 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  // Reset submenu when the main "More" dropdown closes
+useEffect(() => {
+  if (activeDropdownDesktop !== 9) setFacilitiesOpen(false);
+}, [activeDropdownDesktop]);
 
   const toggleMobileDropdown = (index) => {
     setActiveDropdownMobile(activeDropdownMobile === index ? null : index);
+    // Close sub-dropdown when main dropdown is toggled
+    if (activeDropdownMobile !== index) {
+      setActiveSubDropdownMobile(null);
+    }
   };
 
   const toggleDesktopDropdown = (index) => {
@@ -48,11 +58,12 @@ export default function Navbar() {
   // Initiatives sub-items
   const initiativesItems = [
     { name: "Centre of Excellence", path: "/campus/initiatives?tab=coe" },
-    { name: "Incubation Centre", path: "/campus/initiatives?tab=incubation" },
+    { name: "Incubation Cell", path: "/campus/initiatives?tab=incubation" },
     { name: "NPTEL", path: "/campus/initiatives?tab=nptel" },
     { name: "Startups", path: "/campus/initiatives?tab=startups" },
     { name: "MOUs", path: "/campus/initiatives?tab=mous" },
     { name: "IQAC", path: "/campus/initiatives?tab=iqac" },
+    { name: "IIC", path: "/campus/initiatives?tab=iic" },
     { name: "CSR", path: "/campus/initiatives?tab=csr" },
     { name: "NAAC Cycle", path: "/campus/initiatives?tab=naac-1" },
     { name: "NSS", path: "/campus/initiatives?tab=nss" },
@@ -76,7 +87,7 @@ export default function Navbar() {
             </div>
 
             {/* About */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(1)}>
               <button
                 onClick={() => toggleDesktopDropdown(1)}
                 onMouseEnter={() => openDesktopDropdown(1)}
@@ -94,9 +105,10 @@ export default function Navbar() {
                       <Link to="/about/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
                       <Link to="/about/society" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Society</Link>
                       <Link to="/about/aspiration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Aspiration</Link>
-                      <Link to="/about/governing-body" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Governing Body</Link>
+                      <Link to="/about/adminstration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Adminstration</Link>
                       <Link to="/about/message" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Message</Link>
-                      <Link to="/about/professional-bodies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Professional Bodies</Link>
+                      <Link to="/about/governing-body" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Governing Body</Link>
+                      {/* <Link to="/about/professional-bodies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Professional Bodies</Link> */}
                     </div>
                   </div>
                 </div>
@@ -104,7 +116,7 @@ export default function Navbar() {
             </div>
 
             {/* Academics */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(2)}>
               <button
                 onClick={() => toggleDesktopDropdown(2)}
                 onMouseEnter={() => openDesktopDropdown(2)}
@@ -134,7 +146,7 @@ export default function Navbar() {
             </div>
 
             {/* R&D Cells */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(3)}>
               <button
                 onClick={() => toggleDesktopDropdown(3)}
                 onMouseEnter={() => openDesktopDropdown(3)}
@@ -163,7 +175,7 @@ export default function Navbar() {
             </div>
 
             {/* Admission */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(4)}>
               <button
                 onClick={() => toggleDesktopDropdown(4)}
                 onMouseEnter={() => openDesktopDropdown(4)}
@@ -191,7 +203,7 @@ export default function Navbar() {
             </div>
 
             {/* Initiatives */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(5)}>
               <button
                 onClick={() => toggleDesktopDropdown(5)}
                 onMouseEnter={() => openDesktopDropdown(5)}
@@ -222,37 +234,37 @@ export default function Navbar() {
             </div>
 
             {/* T&P Cell */}
-<div className="group relative" onMouseLeave={closeDesktopDropdown}>
-  <button
-    onClick={() => toggleDesktopDropdown(6)}
-    onMouseEnter={() => openDesktopDropdown(6)}
-    className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
-  >
-    T&P Cell
-    <ChevronDown className="ml-1 h-4 w-4" />
-  </button>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(6)}>
+              <button
+                onClick={() => toggleDesktopDropdown(6)}
+                onMouseEnter={() => openDesktopDropdown(6)}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-[#1a2d5e] focus:outline-none cursor-pointer"
+              >
+                T&P Cell
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
 
-  {activeDropdownDesktop === 6 && (
-    <div className="absolute z-20 top-full pt-2 w-64">
-      <div className="absolute h-2 -top-2 inset-x-0"></div>
-      <div className="rounded-md shadow-lg bg-white">
-        <div className="py-1">
-          <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
-          <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
-          <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
-          <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link>  {/* ✅ NEW */}
-          <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
-          <Link to="/placement/training-programme" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Training Programme</Link>
-          <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
-          <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
-        </div>
-      </div>
-    </div>
-  )}
-</div>
+              {activeDropdownDesktop === 6 && (
+                <div className="absolute z-20 top-full pt-2 w-64">
+                  <div className="absolute h-2 -top-2 inset-x-0"></div>
+                  <div className="rounded-md shadow-lg bg-white">
+                    <div className="py-1">
+                      <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
+                      <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
+                      <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
+                      <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link>  {/* ✅ NEW */}
+                      <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
+                      <Link to="/placement/training-programme" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Training Programme</Link>
+                      <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>
+                      <Link to="/placement/team-members" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Team Members</Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Alumni */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(7)}>
               <button
                 onClick={() => toggleDesktopDropdown(7)}
                 onMouseEnter={() => openDesktopDropdown(7)}
@@ -279,7 +291,7 @@ export default function Navbar() {
             </div>
 
             {/* Students Clubs */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(8)}>
               <button
                 onClick={() => toggleDesktopDropdown(8)}
                 onMouseEnter={() => openDesktopDropdown(8)}
@@ -306,7 +318,7 @@ export default function Navbar() {
             </div>
 
             {/* More */}
-            <div className="group relative" onMouseLeave={closeDesktopDropdown}>
+            <div className="group relative" onMouseLeave={closeDesktopDropdown} onMouseEnter={() => openDesktopDropdown(9)}>
               <button
                 onClick={() => toggleDesktopDropdown(9)}
                 onMouseEnter={() => openDesktopDropdown(9)}
@@ -316,23 +328,58 @@ export default function Navbar() {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
 
-              {activeDropdownDesktop === 9 && (
+             {activeDropdownDesktop === 9 && (
                 <div className="absolute z-20 top-full right-0 pt-2 w-56">
                   <div className="absolute h-2 -top-2 inset-x-0"></div>
-                  <div className="rounded-md shadow-lg bg-white">
+                  <div className="rounded-md shadow-lg bg-white max-h-96 overflow-y-auto">
                     <div className="py-1">
-                      {/* <Link to="/more/student-affairs" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Student Affairs</Link> */}
                       <Link to="/more/calendar" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Calendar</Link>
                       <Link to="/more/feedback" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Feedback</Link>
                       <Link to="/more/gallery" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Gallery</Link>
                       <Link to="/more/grievances" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Grievances</Link>
-                      {/* <Link to="/more/iqac" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">IQAC</Link> */}
+
+                      {/* Facilities Sub-menu — click-based, works on touch */}
+                      <div>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setFacilitiesOpen((prev) => !prev);
+                          }}
+                          aria-expanded={facilitiesOpen}
+                          aria-haspopup="true"
+                          className="w-full text-left flex items-center justify-between px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                        >
+                          Facilities
+                          <ChevronDown
+                            className={`ml-1 h-4 w-4 transform transition-transform ${
+                              facilitiesOpen ? "rotate-0" : "-rotate-90"
+                            }`}
+                          />
+                        </button>
+
+                        {facilitiesOpen && (
+                          <div className="pl-4 bg-gray-50">
+                            <div className="py-1 border-l border-gray-200">
+                              <Link to="/more/library" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Library</Link>
+                              <Link to="/more/computer-centre" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Computer Centre</Link>
+                              <Link to="/more/workshop" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Central Workshop</Link>
+                              <Link to="/more/hostel" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Hostel</Link>
+                              <Link to="/more/medical-facilities" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Medical Facilities</Link>
+                              <Link to="/more/guest-room" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Guest Room</Link>
+                              <Link to="/more/conference-halls" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Conference & Seminar Halls</Link>
+                              <Link to="/more/security-services" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Security Services</Link>
+                              <Link to="/more/gymnasium" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Gymnasium</Link>
+                              <Link to="/more/canteen" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Canteen & Mess</Link>
+                              <Link to="/more/staff-quarters" className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Staff Quarters</Link>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                      <Link to="/more/achievements" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Achievements</Link>
+                      <Link to="/more/professional-bodies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Professional Bodies</Link>
                       <Link to="/more/sports" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Sports</Link>
                       <Link to="/more/anti-ragging" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Anti-Ragging</Link>
-                      {/* <Link to="/more/rti" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">RTI</Link> */}
-                      <Link to="/more/library" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Facilities</Link>
-                      {/* <Link to="/more/celebration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Celebration</Link> */}
-                      {/* <Link to="/more/achievement" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Achievement</Link> */}
                       <a
                         href="https://drive.google.com/drive/folders/17bERsF79PR7RLIc8k69I1wXJGbEJXyOL?usp=drive_link"
                         target="_blank"
@@ -411,14 +458,12 @@ export default function Navbar() {
               </button>
               {activeDropdownMobile === 1 && (
                 <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/introduction" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introduction</Link>
-                  <Link to="/society" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Society</Link>
-                  <Link to="/aspiration" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Aspiration</Link>
-                  <Link to="/achievement" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Achievement</Link>
-                  <Link to="/professional-bodies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Professional Bodies</Link>
-                  <Link to="/message" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Message</Link>
-                  <Link to="/governing-body" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Governing Body</Link>
-                  <Link to="/celebration" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Celebration</Link>
+                  <Link to="/about/introduction" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introduction</Link>
+                  <Link to="/about/society" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Society</Link>
+                  <Link to="/about/aspiration" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Aspiration</Link>
+                  <Link to="/about/adminstration" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Adminstration</Link>
+                  <Link to="/about/message" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Message</Link>
+                  <Link to="/about/governing-body" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Governing Body</Link>
                 </div>
               )}
             </div>
@@ -531,31 +576,31 @@ export default function Navbar() {
             </div>
 
            {/* T&P Cell */}
-<div>
-  <button
-    onClick={() => toggleMobileDropdown(6)}
-    className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
-  >
-    T&P Cell
-    <ChevronDown
-      className={`ml-1 h-4 w-4 transition-transform ${
-        activeDropdownMobile === 6 ? "rotate-180" : ""
-      }`}
-    />
-  </button>
-  {activeDropdownMobile === 6 && (
-    <div className="pl-4 space-y-1 mt-1">
-      <Link to="/placement/about-tnp-cell" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Cell</Link>
-      <Link to="/placement/placement-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Policies</Link>
-      <Link to="/placement/internship" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Vocational Training & Internship</Link>
-      <Link to="/placement/capacity-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Capacity Development Program</Link>  {/* ✅ NEW */}
-      <Link to="/placement/placement-statistics" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Statistics</Link>
-      <Link to="/placement/training-programme" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Training Programme</Link>
-      <Link to="/placement/our-recruiters" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Our Recruiters</Link>
-      <Link to="/placement/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
-    </div>
-  )}
-</div>
+              <div>
+                <button
+                  onClick={() => toggleMobileDropdown(6)}
+                  className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-white hover:bg-[#1a2d5e]"
+                >
+                  T&P Cell
+                  <ChevronDown
+                    className={`ml-1 h-4 w-4 transition-transform ${
+                      activeDropdownMobile === 6 ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {activeDropdownMobile === 6 && (
+                  <div className="pl-4 space-y-1 mt-1">
+                    <Link to="/placement/about-tnp-cell" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>About Cell</Link>
+                    <Link to="/placement/placement-policies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Policies</Link>
+                    <Link to="/placement/internship" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Vocational Training & Internship</Link>
+                    <Link to="/placement/capacity-development" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Capacity Development Program</Link>  {/* ✅ NEW */}
+                    <Link to="/placement/placement-statistics" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Placement Statistics</Link>
+                    <Link to="/placement/training-programme" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Training Programme</Link>
+                    <Link to="/placement/our-recruiters" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Our Recruiters</Link>
+                    <Link to="/placement/team-members" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Team Members</Link>
+                  </div>
+                )}
+              </div>
 
             {/* ✅ FIXED: Alumni - Same as Desktop */}
             <div>
@@ -622,11 +667,45 @@ export default function Navbar() {
                 <div className="pl-4 space-y-1 mt-1">
                   {/* <Link to="/more/student-affairs" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Student Affairs</Link> */}
                   <Link to="/more/calendar" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Calendar</Link>
+                  <Link to="/more/achievements" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Achievements</Link>
                   <Link to="/more/feedback" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Feedback</Link>
                   <Link to="/more/gallery" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Gallery</Link>
                   <Link to="/more/grievances" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Grievances</Link>
-                  <Link to="/more/iqac" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>IQAC</Link>
-                  {/* <Link to="/more/rti" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>RTI</Link> */}
+
+                  {/* Facilities Mobile Sub-menu */}
+                  <div>
+                    <button
+                      onClick={() => setActiveSubDropdownMobile(activeSubDropdownMobile === 'facilities' ? null : 'facilities')}
+                      className="flex items-center justify-between w-full px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white"
+                    >
+                      Facilities
+                      <ChevronDown
+                        className={`ml-1 h-4 w-4 transition-transform ${
+                          activeSubDropdownMobile === 'facilities' ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {activeSubDropdownMobile === 'facilities' && (
+                      <div className="pl-4 space-y-1 mt-1">
+                        <Link to="/more/library" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Library</Link>
+                        <Link to="/more/computer-centre" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Computer Centre</Link>
+                        <Link to="/more/workshop" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Central Workshop</Link>
+                        <Link to="/more/hostel" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Hostel</Link>
+                        <Link to="/more/medical-facilities" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Medical Facilities</Link>
+                        <Link to="/more/guest-room" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Guest Room</Link>
+                        <Link to="/more/conference-halls" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Conference & Seminar Halls</Link>
+                        <Link to="/more/security-services" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Security Services</Link>
+                        <Link to="/more/gymnasium" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Gymnasium</Link>
+                        <Link to="/more/canteen" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Canteen & Mess</Link>
+                        <Link to="/more/staff-quarters" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Staff Quarters</Link>
+                      </div>
+                    )}
+                  </div>
+
+                  <Link to="/more/professional-bodies" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Professional Bodies</Link>
+                  <Link to="/more/sports" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Sports</Link>
+                  <Link to="/more/anti-ragging" className="block px-3 py-2 rounded-md textbase font-medium text-gray-300 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Anti-Ragging</Link>
+
                   <a
                     href="https://drive.google.com/drive/folders/17bERsF79PR7RLIc8k69I1wXJGbEJXyOL?usp=drive_link"
                     target="_blank"

@@ -48,6 +48,7 @@ const MediaDashboard = () => {
         setArticles(articlesWithStatus);
       }
     } catch (err) {
+      console.error(err);
       setError("Failed to stream structural content artifacts.");
     } finally {
       setLoading(false);
@@ -142,7 +143,7 @@ const MediaDashboard = () => {
           }} 
           className="flex items-center gap-2 bg-yellow-400 text-[#0d173b] font-semibold px-4 py-2 rounded-lg hover:bg-yellow-500 shadow-sm transition-all text-xs"
         >
-          <PlusCircle size={15} /> Append Record
+          <PlusCircle size={15} /> Add Record
         </button>
       </div>
 

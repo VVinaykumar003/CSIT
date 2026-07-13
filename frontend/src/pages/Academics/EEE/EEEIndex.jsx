@@ -42,7 +42,7 @@ const HodDeskContent = () => (
 );
 
 export default function ModernDepartmentPage() {
-  const [activeTab, setActiveTab] = useState("hod");
+  const [activeTab, setActiveTab] = useState("aim");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Content data for tabs

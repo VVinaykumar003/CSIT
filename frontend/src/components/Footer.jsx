@@ -283,7 +283,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/funds"
+                  to="https://csvtu.ac.in/"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   CSVTU Link 
