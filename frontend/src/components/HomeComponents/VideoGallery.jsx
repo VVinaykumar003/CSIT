@@ -192,30 +192,28 @@ export default function VideoGallery() {
   };
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.addEventListener("play", () => setIsPlaying(true));
-      videoRef.current.addEventListener("pause", () => setIsPlaying(false));
-      videoRef.current.addEventListener("ended", () => setIsPlaying(false));
-      videoRef.current.addEventListener("loadeddata", () => setLoading(false));
-      videoRef.current.addEventListener("timeupdate", handleTimeUpdate);
-      videoRef.current.addEventListener("loadedmetadata", () => {
-        setDuration(videoRef.current.duration);
-      });
-    }
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    const onLoadedData = () => setLoading(false);
+    const onLoadedMetadata = () => setDuration(videoElement.duration);
+
+    videoElement.addEventListener("play", onPlay);
+    videoElement.addEventListener("pause", onPause);
+    videoElement.addEventListener("ended", onPause); // Also pause on ended
+    videoElement.addEventListener("loadeddata", onLoadedData);
+    videoElement.addEventListener("timeupdate", handleTimeUpdate);
+    videoElement.addEventListener("loadedmetadata", onLoadedMetadata);
+
     return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener("play", () => setIsPlaying(true));
-        videoRef.current.removeEventListener("pause", () =>
-          setIsPlaying(false)
-        );
-        videoRef.current.removeEventListener("ended", () =>
-          setIsPlaying(false)
-        );
-        videoRef.current.removeEventListener("loadeddata", () =>
-          setLoading(false)
-        );
-        videoRef.current.removeEventListener("timeupdate", handleTimeUpdate);
-      }
+      videoElement.removeEventListener("play", onPlay);
+      videoElement.removeEventListener("pause", onPause);
+      videoElement.removeEventListener("ended", onPause);
+      videoElement.removeEventListener("loadeddata", onLoadedData);
+      videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+      videoElement.removeEventListener("loadedmetadata", onLoadedMetadata);
     };
   }, [activeVideo]);
 

@@ -104,7 +104,7 @@ export default function IncubationCentre() {
       {/* Header Section */}
       <div className="bg-gradient-to-r from-[#0d173b] to-[#1e305f] text-white p-6 md:p-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold">Incubation Centre</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">Incubation Cell</h1>
           {/* <p className="text-sm md:text-base mt-1 text-blue-100">
             Chhatrapati Shivaji Institute of Technology (CSIT), Durg
           </p> */}
@@ -119,20 +119,20 @@ export default function IncubationCentre() {
       <div className="p-5 md:p-6">
         <div className="bg-blue-50 p-5 md:p-6 rounded-lg shadow-sm mb-6">
           <p className="text-gray-700 text-sm md:text-base mb-4">
-            The Incubation Centre at Chhatrapati Shivaji Institute of Technology is established to foster a culture of innovation, entrepreneurship, and technology-driven problem solving among students, faculty members, researchers, and aspiring entrepreneurs. The Centre serves as a dynamic platform where innovative ideas are nurtured, refined, and transformed into sustainable start-ups and impactful solutions for society and industry.
+            The Incubation Cell at Chhatrapati Shivaji Institute of Technology is established to foster a culture of innovation, entrepreneurship, and technology-driven problem solving among students, faculty members, researchers, and aspiring entrepreneurs. The Centre serves as a dynamic platform where innovative ideas are nurtured, refined, and transformed into sustainable start-ups and impactful solutions for society and industry.
           </p>
         </div>
       </div>
 
-      {/* About the Incubation Centre */}
+      {/* About the Incubation Cell */}
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-gray-50 p-5 md:p-6 rounded-lg shadow-sm">
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">About the Incubation Centre</h3>
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">About the Incubation Cell</h3>
           <p className="text-gray-700 text-sm md:text-base mb-4">
-            Chhatrapati Shivaji Institute of Technology (CSIT), Durg has established the Incubation Centre as a significant step towards building a strong innovation and entrepreneurship ecosystem within the institute. Initiated under the visionary leadership of <strong>Ajay Prakash Verma</strong> (Chairman, CSIT), the Centre is dedicated to nurturing innovative ideas and transforming them into scalable and sustainable ventures that contribute to society and industry.
+            Chhatrapati Shivaji Institute of Technology (CSIT), Durg has established the Incubation Cell as a significant step towards building a strong innovation and entrepreneurship ecosystem within the institute. Initiated under the visionary leadership of <strong>Ajay Prakash Verma</strong> (Chairman, CSIT), the Centre is dedicated to nurturing innovative ideas and transforming them into scalable and sustainable ventures that contribute to society and industry.
           </p>
           {/* <p className="text-gray-700 text-sm md:text-base mb-4">
-            The Centre is efficiently managed by <strong>Anil Kumar</strong> (Manager, Incubation Centre), supported by <strong>Anmol Bhardwaj</strong> (Deputy Manager) and <strong>Vijay Kumar Bhonsle</strong> (Accounts Officer), ensuring smooth operations, strategic growth, and effective support to start-ups and innovators.
+            The Centre is efficiently managed by <strong>Anil Kumar</strong> (Manager, Incubation Cell), supported by <strong>Anmol Bhardwaj</strong> (Deputy Manager) and <strong>Vijay Kumar Bhonsle</strong> (Accounts Officer), ensuring smooth operations, strategic growth, and effective support to start-ups and innovators.
           </p> */}
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border-l-4 border-emerald-500 p-4 rounded-lg mb-4">
             <p className="text-sm text-gray-700">
@@ -143,10 +143,10 @@ export default function IncubationCentre() {
             <span className="font-bold text-[#0d173b]">💡Under The  MSME Innovative Scheme:</span> Selected ideas and start-ups incubated at CSIT can receive financial assistance of up to <strong>₹15 lakh</strong> for prototype development and commercialization, providing a strong foundation for transforming innovative concepts into successful ventures.
           </p>
           <p className="text-gray-700 text-sm md:text-base mt-4">
-            The Incubation Centre is committed to creating a dynamic environment where start-ups can ideate, develop, and grow their businesses from conception to commercialization. It provides a supportive ecosystem with access to mentorship, technical resources, infrastructure, and industry collaboration, enabling entrepreneurs to establish their ventures with strong ethical and professional foundations.
+            The Incubation Cell is committed to creating a dynamic environment where start-ups can ideate, develop, and grow their businesses from conception to commercialization. It provides a supportive ecosystem with access to mentorship, technical resources, infrastructure, and industry collaboration, enabling entrepreneurs to establish their ventures with strong ethical and professional foundations.
           </p>
           <p className="text-gray-700 text-sm md:text-base mt-3">
-            CSIT Incubation Centre actively contributes to enhancing competitiveness, generating employment opportunities, and supporting start-ups and SMEs with high growth potential. It fosters strong linkages between academia, research institutions, and industry, facilitating knowledge transfer, innovation, and effective utilization of intellectual property.
+            CSIT Incubation Cell actively contributes to enhancing competitiveness, generating employment opportunities, and supporting start-ups and SMEs with high growth potential. It fosters strong linkages between academia, research institutions, and industry, facilitating knowledge transfer, innovation, and effective utilization of intellectual property.
           </p>
         </div>
       </div>
@@ -181,7 +181,7 @@ export default function IncubationCentre() {
             "Innovate • Incubate • Inspire"
           </p>
           <p className="text-sm text-gray-600 mt-2">
-            At CSIT, we believe that every innovative idea has the potential to create meaningful impact. The Incubation Centre is committed to empowering innovators and entrepreneurs to build solutions that shape the future and contribute to the vision of an Atmanirbhar Bharat.
+            At CSIT, we believe that every innovative idea has the potential to create meaningful impact. The Incubation Cell is committed to empowering innovators and entrepreneurs to build solutions that shape the future and contribute to the vision of an Atmanirbhar Bharat.
           </p>
         </div>
       </div>
@@ -243,7 +243,7 @@ export default function IncubationCentre() {
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-blue-50 p-5 md:p-6 rounded-lg shadow-sm">
           <h3 className="text-lg font-semibold text-[#0d173b] mb-4">Who Can Apply?</h3>
-          <p className="text-sm text-gray-600 mb-4">The Incubation Centre welcomes:</p>
+          <p className="text-sm text-gray-600 mb-4">The Incubation Cell welcomes:</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {whoCanApply.map((item, index) => (
               <div key={index} className="bg-white p-3 rounded-lg shadow-sm border border-gray-100 flex items-center gap-2">
@@ -255,10 +255,10 @@ export default function IncubationCentre() {
         </div>
       </div>
 
-      {/* Why Choose CSIT Incubation Centre */}
+      {/* Why Choose CSIT Incubation Cell */}
       <div className="px-5 md:px-6 mb-6">
         <div className="bg-gray-50 p-5 md:p-6 rounded-lg shadow-sm">
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-4">Why Choose CSIT Incubation Centre?</h3>
+          <h3 className="text-lg font-semibold text-[#0d173b] mb-4">Why Choose CSIT Incubation Cell?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {whyChoose.map((item, index) => (
               <div key={index} className="bg-white p-3 rounded-lg shadow-sm border border-gray-100 flex items-center gap-3">

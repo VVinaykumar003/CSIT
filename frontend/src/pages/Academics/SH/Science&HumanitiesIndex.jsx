@@ -45,17 +45,17 @@ const ScienceHumanitiesIndex = () => {
   const tabs = {
     physics: {
       title: "Physics",
-      icon: <BookOpen className="w-5 h-5" />,
+      // icon: <BookOpen className="w-5 h-5" />,
       content: <SubjectContent  sections={physicsSections} />,
     },
     chemistry: {
       title: "Chemistry",
-      icon: <FlaskConical className="w-5 h-5" />,
+      // icon: <FlaskConical className="w-5 h-5" />,
       content: <SubjectContent  sections={chemistrySections} />,
     },
     english: {
       title: "English (Communication Skill)",
-      icon: <Mic className="w-5 h-5" />,
+      // icon: <Mic className="w-5 h-5" />,
       content: <SubjectContent  sections={englishSections} />,
     },
   };
@@ -87,7 +87,7 @@ const ScienceHumanitiesIndex = () => {
                     : "border-b-2 border-transparent text-gray-500 hover:bg-gray-300 hover:text-gray-700"
                 }`}
               >
-                {tabs[tab].icon}
+                {/* {tabs[tab].icon} */}
                 <span className="text-xs lg:text-xs">{tabs[tab].title}</span>
               </button>
             ))}

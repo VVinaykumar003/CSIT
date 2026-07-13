@@ -219,7 +219,7 @@ function MediaForm({ onBack, onSuccess, editData }) {
           ) : (
             <>
               <Save size={18} />
-              <span>{editData ? "Apply Structural Changes" : "Push Array Live"}</span>
+              <span>{editData ? "Apply Structural Changes" : "Add  Media"}</span>
             </>
           )}
         </button>

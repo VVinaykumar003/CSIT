@@ -9,7 +9,7 @@ import CelebrationPage from '../More/Celebration';
 import GoverningBodyPage from './GoverningBody';
 import IntroductionPage from './Introduction';
 import MessagePage from './Message/MessageIndex';
-import ProfessionalBodiesPage from '../More/ProfessionalBodies';
+// import ProfessionalBodiesPage from '../More/ProfessionalBodies';
 import SocietyPage from './Society';
 
 
@@ -17,6 +17,7 @@ const sidebarLinks = [
   { name: 'Introduction', path: 'introduction' },
   { name: 'Society', path: 'society' },
   { name: 'Aspiration', path: 'aspiration' },
+  { name: 'Administrators', path: 'administrators' },
   // { name: 'Achievement', path: 'achievement' },
   
   { name: 'Messages', path: 'message' },

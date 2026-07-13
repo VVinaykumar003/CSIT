@@ -16,6 +16,7 @@ import IncubationCentre from './IncubationCentre';
 import NPTEL from './NPTEL';
 import MOUs from './MOUs';
 import IQAC from './IQAC';
+import IIC from './IIC';
 import CSR from './CSR';
 
 // NAAC Cycle individual files imported right here
@@ -34,6 +35,7 @@ const tabMapping = {
   nptel: "NPTEL",
   mous: "MOUs",
   iqac: "IQAC",
+  iic: "IIC",
   csr: "CSR",
   "naac-1": "NAAC Cycle 1",
   "naac-2": "NAAC Cycle 2",
@@ -49,6 +51,7 @@ const MAIN_TABS = [
   "Startups",
   "MOUs",
   "IQAC",
+  "IIC",
   "CSR"
 ];
 
@@ -92,6 +95,10 @@ export default function ModernDepartmentPage() {
     "IQAC": {
       title: "IQAC",
       content: <IQAC />,
+    },
+    "IIC": {
+      title: "IIC",
+      content: <IIC />,
     },
     // NAAC Sub Tabs
     "NAAC Cycle 1": {

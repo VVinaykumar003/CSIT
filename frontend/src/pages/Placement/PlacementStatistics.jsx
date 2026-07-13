@@ -1,16 +1,24 @@
-import React from "react";
+import {useState,useEffect} from "react";
 
 // Dynamically import all images using Vite's import.meta.glob
-const images = import.meta.glob(
+const imageModules = import.meta.glob(
   "../../assets/placementStat/*.{png,jpg,jpeg,svg}",
-  {
-    eager: true,
-  }
+  // {
+  //   eager: true,
+  // }
 );
 
-const placementStats = Object.values(images);
+// const placementStats = Object.values(images);
 
 const PlacementStatistics = () => {
+
+  const [placementStats, setPlacementStats] = useState([]);
+
+useEffect(() => {
+  Promise.all(
+    Object.values(imageModules).map((importFn) => importFn())
+  ).then((modules) => setPlacementStats(modules.map((m) => m.default)));
+}, []);
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden">
       {/* Header */}
@@ -56,11 +64,23 @@ const PlacementStatistics = () => {
               >
                 <img
                   src={image.default}
+                  loading="lazy"
+                  decoding="async"
                   alt={`Placement Statistics ${index + 1}`}
                   className="w-full h-auto object-contain"
                 />
               </div>
             ))}
+            {placementStats.length === 0 && (
+              <div className="col-span-1 sm:col-span-2 lg:col-span-3 text-center py-12">
+                <div className="inline-block bg-gray-100 p-6 rounded-lg border border-gray-200">
+                  <p className="text-gray-600 font-medium">
+                    No placement records available at the moment.
+                  </p>
+                  <p className="text-gray-500 text-sm mt-1">Please check back later.</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -249,7 +249,7 @@ const AboutSection = () => {
       </div> */}
 
       {/* Updated animations for better mobile performance */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInRight {
           from {
             opacity: 0;

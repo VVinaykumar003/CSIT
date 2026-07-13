@@ -166,7 +166,7 @@ function NotificationForm({ onClose, onSuccess, editData }) {
           ) : (
             <>
               <Save className="w-5 h-5" />
-              <span>{editData ? "Apply Structural Changes" : "Push Array Live"}</span>
+              <span>{editData ? "Apply Structural Changes" : "Add Notification "}</span>
             </>
           )}
         </button>

@@ -47,15 +47,16 @@ export default function ModernDepartmentPage() {
 
   // Content data for tabs
   const tabContent = {
-    hod: {
-      title: "HOD's Desk",
-      icon: <BookUser className="text-purple-500" />,
-      content: <HodDeskContent />,
-    },
+   
     aim: {
       title: "Our Aim",
       icon: <Target className="text-indigo-500" />,
       content: <AimContent />,
+    }, 
+    hod: {
+      title: "HOD's Desk",
+      icon: <BookUser className="text-purple-500" />,
+      content: <HodDeskContent />,
     },
     laboratories: {
       title: "Laboratories",

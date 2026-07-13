@@ -12,27 +12,27 @@ const Maths = () => {
   const tabContent = {
     about: {
       title: "Introduction",
-      icon: <Target className="text-indigo-500" />,
+      // icon: <Target className="text-indigo-500" />,
       content: <AboutMaths />,
     },
     courses: {
       title: "Course Objective",
-      icon: <BookMarked className="text-emerald-500" />,
+      // icon: <BookMarked className="text-emerald-500" />,
       content: <MathsCourseObjectives />,
     },
     coursesOutcome: {
       title: "Course Outcomes",
-      icon: <BookMarked className="text-emerald-500" />,
+      // icon: <BookMarked className="text-emerald-500" />,
       content: <MathsCourseOutcomes />,
     },
     faculty: {
       title: "Faculty ",
-      icon: <Users className="text-blue-500" />,
+      // icon: <Users className="text-blue-500" />,
       content: <ScienceHumanitiesFaculty />, // Using shared faculty for now
     },
     questionPaper: {
       title: "Question Paper [CT | University]",
-      icon: <FileText className="text-purple-500" />,
+      // icon: <FileText className="text-purple-500" />,
       content: <QuestionPaper />, // Using shared question paper for now
     },
   };
@@ -58,8 +58,8 @@ const Maths = () => {
                     : "border-b-2 border-transparent text-gray-500 hover:bg-gray-300 hover:text-gray-700"
                 }`}
               >
-                {tabContent[tab].icon}
-                <span className="text-xs lg:text-base">
+               
+                <span className="text-xs lg:text-xs">
                   {tabContent[tab].title}
                 </span>
               </button>

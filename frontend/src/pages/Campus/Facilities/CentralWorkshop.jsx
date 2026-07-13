@@ -122,7 +122,7 @@ export default function CentralWorkshop() {
         {/* Team Members & Facilities */}
         <div className="grid md:grid-cols-2 gap-8">
           <section className="bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-2xl font-bold text-[#0d173b] mb-4 flex items-center"><Users className="mr-2" />Team Members</h2>
+            <h2 className="text-2xl font-bold text-[#0d173b] mb-4 flex items-center"><User className="mr-2" />Team Members</h2>
             <div className="overflow-x-auto">
               <table className="min-w-full">
                 <thead className="bg-gray-100">

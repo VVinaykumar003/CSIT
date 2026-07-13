@@ -25,8 +25,8 @@ import ProfessionalBodiesPage from './ProfessionalBodies';
 import Canteen from './Canteen';
 import ComputerCentre from './ComputerCentre';
 import ConferenceHalls from './ConferenceHalls';
-import Hostel from './Hostel';
-import Workshop from './Workshop';
+import HostelAndOthers from './HostelAndOthers';
+import CentralWorkshop from './CentralWorkshop';
 import StaffQuarters from './StaffQuarters';
 
 
@@ -52,6 +52,7 @@ const sidebarLinks = [
       { name: 'Staff Quarters', path: 'staff-quarters' },
     ],
   },
+  {name : 'Achivements' , path : 'achievements'},
   { name: 'Professional Bodies', path: 'professional-bodies' },
   { name: 'Sports', path: 'sports' },
   { name: 'Anti-Ragging', path: 'anti-ragging' },
@@ -119,8 +120,8 @@ export default function MorePage() {
                 <Route path="grievances" element={<Grievances />} />
                 <Route path="library" element={<Library />} />
                 <Route path="computer-centre" element={<ComputerCentre />} />
-                <Route path="workshop" element={<Workshop />} />
-                <Route path="hostel" element={<Hostel />} />
+                <Route path="workshop" element={<CentralWorkshop />} />
+                <Route path="hostel" element={<HostelAndOthers />} />
                 <Route path="gymnasium" element={<Gymnasium />} />
                 <Route path="medical-facilities" element={<MedicalFacilities />} />
                 <Route path="guest-room" element={<GuestRoom />} />
@@ -130,8 +131,10 @@ export default function MorePage() {
                 <Route path="sports" element={<Sports />} />
                 <Route path="canteen" element={<Canteen />} />
                 <Route path="anti-ragging" element={<Anti_Raging />} />
+                <Route path="achievements" element={<Achievement />} />
                 <Route path="professional-bodies" element={<ProfessionalBodiesPage />} />
                 <Route index element={<Navigate to="calendar" replace />} />
+                <Route path="facilities" element={<Navigate to="library" replace />} />
                 <Route path="*" element={<Navigate to="calendar" replace />} />
               </Routes>
             </main>

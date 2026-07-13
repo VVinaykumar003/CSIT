@@ -2,7 +2,13 @@ import React from "react";
 
 const ScienceHumanitiesFaculty = () => {
   const members = [    
-    { id: 1, name: "Dr Chandra Shekhar Sharma", designation: "Associate Professor and Head", department: "Department of English", qualification: "MA English, MA Sociology, B.Ed and PhD [English Literature]", experience: "26 Years", email: "chandrashekhar@csitdurg.in" },
+    {  id: 1,
+       name: "Dr Chandra Shekhar Sharma",
+       designation: "Associate Professor and Head", 
+       department: "Department of English", 
+       qualification: "MA English, MA Sociology, B.Ed and PhD [English Literature]",
+       experience: "26 Years",
+       email: "chandrashekhar@csitdurg.in" },
   ]; 
 
   return (
@@ -23,8 +29,8 @@ const ScienceHumanitiesFaculty = () => {
       </div>
 
       {/* Table Section */}
-      <div className="p-6 overflow-x-auto">
-        <table className="min-w-full border border-gray-200 rounded-lg shadow-sm">
+      <div className="p-6 ">
+        <table className="min-w-full border border-gray-200 rounded-lg shadow-sm overflow-x-auto">
           <thead>
             <tr className="bg-[#0d173b] text-white text-left text-sm uppercase tracking-wider">
               <th className="px-6 py-3">S.No.</th>

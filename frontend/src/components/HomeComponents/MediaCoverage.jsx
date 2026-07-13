@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectCreative } from "swiper/modules";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-creative";
 
 const customStyles = `
+  /* ... existing styles ... */
   .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
@@ -24,6 +25,103 @@ const customStyles = `
     border-radius: 4px;
   }
 `;
+
+const MediaSlide = React.memo(({ item, onImageClick }) => (
+  <div
+    className="relative h-64 sm:h-[420px] lg:h-[480px] group cursor-pointer"
+    onClick={(e) => onImageClick(item.image?.url, e)}
+  >
+    <img
+      src={item.image?.url || "/placeholder-image.png"}
+      className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+      alt={item.title}
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+      <div className="flex flex-wrap items-center gap-2 mb-2 sm:mb-3">
+        <span className="px-2.5 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium uppercase tracking-wide">
+          {item.category || "General"}
+        </span>
+        <span className="text-white/60 text-xs">{item.date || ""}</span>
+      </div>
+      <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2 line-clamp-2">
+        {item.title}
+      </h3>
+      <p className="text-sm sm:text-base text-white/80 leading-relaxed line-clamp-2">
+        {item.description}
+      </p>
+    </div>
+  </div>
+));
+
+const SidebarUpdates = React.memo(
+  ({ items, activeSlide, onItemClick }) => (
+    <div className="lg:col-span-1">
+      <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-lg h-full border border-gray-100">
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
+          <h3 className="text-lg sm:text-xl font-bold text-[#0d173b]">
+            Latest Updates
+          </h3>
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="text-xs font-medium text-emerald-700">Live</span>
+          </div>
+        </div>
+        <div className="space-y-3 sm:space-y-4 max-h-[400px] overflow-y-auto pr-1">
+          {items.slice(0, 4).map((item, index) => (
+            <div
+              key={item._id}
+              className={`p-3 sm:p-4 rounded-xl transition-all duration-300 cursor-pointer ${
+                activeSlide === index
+                  ? "bg-[#0d173b] text-white shadow-lg"
+                  : "bg-gray-50 hover:bg-gray-100 border border-transparent hover:border-gray-200"
+              }`}
+              onClick={() => onItemClick(index)}
+            >
+              <div className="flex gap-3 items-start">
+                <img
+                  src={item.image?.url || "/placeholder-image.png"}
+                  alt={item.title}
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0"
+                  onError={(e) => {
+                    e.target.src = "/placeholder-image.png";
+                  }}
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-1.5 mb-1">
+                    <span
+                      className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${
+                        activeSlide === index
+                          ? "bg-white/20 text-white"
+                          : "bg-[#0d173b]/10 text-[#0d173b]"
+                      }`}
+                    >
+                      {item.category || "General"}
+                    </span>
+                    <span
+                      className={`text-[10px] ${
+                        activeSlide === index ? "text-white/60" : "text-gray-400"
+                      }`}
+                    >
+                      {item.date || ""}
+                    </span>
+                  </div>
+                  <h6
+                    className={`text-sm font-semibold line-clamp-2 ${
+                      activeSlide === index ? "text-white" : "text-[#0d173b]"
+                    }`}
+                  >
+                    {item.title}
+                  </h6>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+);
 
 const MediaCoverage = () => {
   const [mediaItems, setMediaItems] = useState([]);
@@ -82,23 +180,23 @@ const MediaCoverage = () => {
     }
   };
 
-  const openImageModal = (imageUrl, e) => {
+  const openImageModal = useCallback((imageUrl, e) => {
     e.stopPropagation();
     setModalImage(imageUrl);
     setShowModal(true);
     document.body.style.overflow = "hidden";
-  };
+  }, []);
 
-  const closeImageModal = () => {
+  const closeImageModal = useCallback(() => {
     setShowModal(false);
     setModalImage(null);
     document.body.style.overflow = "unset";
-  };
+  }, []);
 
   // ✅ Close modal on Escape key
   useEffect(() => {
     const handleEsc = (e) => {
-      if (e.key === "Escape") closeImageModal();
+      if (e.key === "Escape") closeImageModal(); // `closeImageModal` is now memoized
     };
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
@@ -207,30 +305,7 @@ const MediaCoverage = () => {
             >
               {mediaItems.map((item) => (
                 <SwiperSlide key={item._id}>
-                  <div
-                    className="relative h-64 sm:h-[420px] lg:h-[480px] group cursor-pointer"
-                    onClick={(e) => openImageModal(item.image?.url, e)}
-                  >
-                    <div
-                      className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105"
-                      style={{ backgroundImage: `url('${item.image?.url || "/placeholder-image.png"}')` }}
-                    ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                      <div className="flex flex-wrap items-center gap-2 mb-2 sm:mb-3">
-                        <span className="px-2.5 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium uppercase tracking-wide">
-                          {item.category || "General"}
-                        </span>
-                        <span className="text-white/60 text-xs">{item.date || ""}</span>
-                      </div>
-                      <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2 line-clamp-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-white/80 leading-relaxed line-clamp-2">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
+                  <MediaSlide item={item} onImageClick={openImageModal} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -255,72 +330,11 @@ const MediaCoverage = () => {
           </div>
 
           {/* Sidebar - Latest Updates */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-lg h-full border border-gray-100">
-              <div className="flex items-center justify-between mb-4 sm:mb-6">
-                <h3 className="text-lg sm:text-xl font-bold text-[#0d173b]">
-                  Latest Updates
-                </h3>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="text-xs font-medium text-emerald-700">
-                    Live
-                  </span>
-                </div>
-              </div>
-              <div className="space-y-3 sm:space-y-4 max-h-[400px] overflow-y-auto pr-1">
-                {mediaItems.slice(0, 4).map((item, index) => (
-                  <div
-                    key={item._id}
-                    className={`p-3 sm:p-4 rounded-xl transition-all duration-300 cursor-pointer ${
-                      activeSlide === index
-                        ? "bg-[#0d173b] text-white shadow-lg"
-                        : "bg-gray-50 hover:bg-gray-100 border border-transparent hover:border-gray-200"
-                    }`}
-                    onClick={() => handleSideItemClick(index)}
-                  >
-                    <div className="flex gap-3 items-start">
-                      <img
-                        src={item.image?.url || "/placeholder-image.png"}
-                        alt={item.title}
-                        className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0"
-                        onError={(e) => {
-                          e.target.src = "/placeholder-image.png";
-                        }}
-                      />
-                      <div className="flex-1 min-w-0">
-                        <div className="flex flex-wrap items-center gap-1.5 mb-1">
-                          <span
-                            className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${
-                              activeSlide === index
-                                ? "bg-white/20 text-white"
-                                : "bg-[#0d173b]/10 text-[#0d173b]"
-                            }`}
-                          >
-                            {item.category || "General"}
-                          </span>
-                          <span
-                            className={`text-[10px] ${
-                              activeSlide === index ? "text-white/60" : "text-gray-400"
-                            }`}
-                          >
-                            {item.date || ""}
-                          </span>
-                        </div>
-                        <h6
-                          className={`text-sm font-semibold line-clamp-2 ${
-                            activeSlide === index ? "text-white" : "text-[#0d173b]"
-                          }`}
-                        >
-                          {item.title}
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <SidebarUpdates
+            items={mediaItems}
+            activeSlide={activeSlide}
+            onItemClick={handleSideItemClick}
+          />
         </div>
 
         {/* View More Button */}

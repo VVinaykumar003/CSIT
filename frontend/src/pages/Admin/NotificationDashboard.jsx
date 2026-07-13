@@ -121,7 +121,7 @@ const NotificationDashboard = () => {
           onClick={() => setIsFormOpen(true)}
           className="flex items-center gap-2 bg-yellow-400 text-[#0d173b] font-semibold px-5 py-3 rounded-lg hover:bg-yellow-500 shadow-md transition-all duration-300 text-xs"
         >
-          <PlusCircle className="w-3 h-3" /> Push Notification
+          <PlusCircle className="w-3 h-3" /> Add New Notification
         </button>
       </div>
 

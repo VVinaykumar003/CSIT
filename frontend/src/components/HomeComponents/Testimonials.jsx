@@ -644,7 +644,7 @@ const Testimonials = () => {
       </div>
 
       {/* Custom Styles */}
-      <style jsx>{`
+      <style>{`
         .testimonials-swiper .swiper-pagination {
           bottom: 0 !important;
         }

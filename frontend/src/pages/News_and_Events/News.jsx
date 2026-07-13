@@ -6,7 +6,7 @@ import {
   MdAccessTime,
   MdArrowForward,
   MdClose,
-} from "react-icons/md";
+} from "react-icons/md"; // import { motion } from "framer-motion";
 import { motion } from "framer-motion";
 import api from "../../services/api";
 
@@ -58,7 +58,7 @@ const getCategoryColor = (category) => {
 };
 
 /* ── Infinite Circular Scroll Effect ──────────────────────────── */
-const AutoScrollTrack = ({ items, speed = 0.5, onProgressUpdate }) => {
+const AutoScrollTrack = React.memo(({ items, speed = 0.5, progressBarRef }) => {
   const wrapperRef = useRef(null);
   const trackRef = useRef(null);
   const frameRef = useRef(null);
@@ -66,6 +66,9 @@ const AutoScrollTrack = ({ items, speed = 0.5, onProgressUpdate }) => {
   const pausedRef = useRef(false);
   const [itemHeight, setItemHeight] = useState(0);
   const [totalHeight, setTotalHeight] = useState(0);
+  const speedRef = useRef(speed);
+
+  useEffect(() => { speedRef.current = speed; }, [speed]);
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
@@ -83,33 +86,28 @@ const AutoScrollTrack = ({ items, speed = 0.5, onProgressUpdate }) => {
     // Set initial position
     track.style.transform = "translateY(0px)";
 
-    const animate = () => {
-      if (!pausedRef.current) {
-        yRef.current -= speed;
-        // Reset when we've scrolled past one full set
-        if (Math.abs(yRef.current) >= total) {
-          yRef.current = 0;
-        }
-        track.style.transform = `translateY(${yRef.current}px)`;
+   const animate = () => {
+    if (!pausedRef.current) {
+      yRef.current -= speedRef.current;
+      track.style.transform = `translateY(${yRef.current}px)`;
 
-        // Update progress
-        if (onProgressUpdate && total > 0) {
-          const progress = (Math.abs(yRef.current) / total) * 100;
-          onProgressUpdate(Math.min(progress, 100));
-        }
+      if (progressBarRef?.current && total > 0) {
+        const progress = Math.min((Math.abs(yRef.current) / total) * 100, 100);
+        progressBarRef.current.style.width = `${progress}%`;
       }
-      frameRef.current = requestAnimationFrame(animate);
-    };
-
+    }
     frameRef.current = requestAnimationFrame(animate);
+  };
+
+    frameRef.current = requestAnimationFrame(animate); // Start animation
 
     return () => {
       if (frameRef.current) {
         cancelAnimationFrame(frameRef.current);
       }
     };
-  }, [items, speed, onProgressUpdate]);
-
+  }, [items, speed, progressBarRef ]);
+  
   if (items.length === 0) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center text-sm text-gray-400 bg-gray-50/50 select-none p-4">
@@ -134,10 +132,10 @@ const AutoScrollTrack = ({ items, speed = 0.5, onProgressUpdate }) => {
       </div>
     </div>
   );
-};
+});
 
 /* ── Single Broadcast Element Node ──────────────────────────── */
-const NoticeRow = ({ item }) => {
+const NoticeRow = React.memo(({ item }) => {
   const hasLink = item.link && item.link.trim() !== "";
   const handleClick = () => {
     if (hasLink) window.open(item.link, "_blank", "noopener,noreferrer");
@@ -199,13 +197,13 @@ const NoticeRow = ({ item }) => {
       )}
     </div>
   );
-};
+});
 
 /* ── Split Dual Category Board Matrix ────────────────────────── */
 const CategoryCard = ({ config, items, index }) => {
   const [showAllModal, setShowAllModal] = useState(false);
-  const [progress, setProgress] = useState(0);
   const [speed, setSpeed] = useState(0.5);
+  const progressBarRef = useRef(null);
 
   return (
     <>
@@ -249,14 +247,15 @@ const CategoryCard = ({ config, items, index }) => {
         )}
 
         {/* Rolling Body */}
-        <AutoScrollTrack items={items} speed={speed} onProgressUpdate={setProgress} />
+        <AutoScrollTrack items={items} speed={speed} progressBarRef={progressBarRef} />
 
         {/* Progress Bar */}
         {items.length > 1 && (
           <div className="h-0.5 bg-gray-100 w-full shrink-0">
             <div
-              className="h-full bg-gradient-to-r from-[#0d173b] to-[#1e305f] transition-all duration-300"
-              style={{ width: `${progress}%` }}
+              ref={progressBarRef}
+              className="h-full bg-gradient-to-r from-[#0d173b] to-[#1e305f]"
+              style={{ width: "0%" }}
             />
           </div>
         )}
@@ -309,7 +308,7 @@ const CategoryCard = ({ config, items, index }) => {
 const LoadingSkeleton = () => (
   <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      {COLUMN_CONFIG.map((c, i) => (
+      {COLUMN_CONFIG.map((c) => (
         <div
           key={c.id}
           className="h-[460px] rounded-xl border border-gray-200 bg-white overflow-hidden flex flex-col"
@@ -360,14 +359,16 @@ export default function NoticeBoard() {
     }
   };
 
-  if (loading) return <LoadingSkeleton />;
+  const grouped = React.useMemo(() => {
+    return {
+      notice: notifications.filter(
+        (x) => x.category === "notice" || x.category === "announcement" || x.category === "tender"
+      ),
+      event: notifications.filter((x) => x.category === "event"),
+    };
+  }, [notifications]);
 
-  const grouped = {
-    notice: notifications.filter(
-      (x) => x.category === "notice" || x.category === "announcement" || x.category === "tender"
-    ),
-    event: notifications.filter((x) => x.category === "event"),
-  };
+  if (loading) return <LoadingSkeleton />;
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8 border-y border-gray-200/60">

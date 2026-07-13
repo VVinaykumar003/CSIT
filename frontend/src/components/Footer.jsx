@@ -206,7 +206,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="campus/initiatives?tab=incubation"
+                  to="campus/initiatives?tab=iic"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Institutional Innovation Council
@@ -275,7 +275,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/funds"
+                  to="/funds/funds-grants"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   FUNDS & GRANTS
@@ -291,7 +291,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/funds"
+                  to="/more/achievements"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Achievements

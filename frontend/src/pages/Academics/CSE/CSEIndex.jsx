@@ -128,7 +128,7 @@ export default function ModernDepartmentPage() {
                     : "border-b-2 border-transparent text-gray-500 hover:bg-gray-300 hover:text-gray-700"
                 }`}
               >
-                <span className="text-xs lg:text-base">
+                <span className="text-xs lg:text-xs">
                   {tabContent[tab].title}
                 </span>
               </button>

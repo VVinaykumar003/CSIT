@@ -263,7 +263,7 @@ export default function Navbar() {
               </button>
 
               {activeDropdownDesktop === 7 && (
-                <div className="absolute z-20 top-full pt-2 w-56">
+                <div className="absolute z-20 top-full right-0 pt-2 w-56">
                   <div className="absolute h-2 -top-2 inset-x-0"></div>
                   <div className="rounded-md shadow-lg bg-white">
                     <div className="py-1">
@@ -290,7 +290,7 @@ export default function Navbar() {
               </button>
 
               {activeDropdownDesktop === 8 && (
-                <div className="absolute z-20 top-full pt-2 w-56">
+                <div className="absolute z-20 top-full right-0 pt-2 w-56">
                   <div className="absolute h-2 -top-2 inset-x-0"></div>
                   <div className="rounded-md shadow-lg bg-white">
                     <div className="py-1">
@@ -317,7 +317,7 @@ export default function Navbar() {
               </button>
 
               {activeDropdownDesktop === 9 && (
-                <div className="absolute z-20 top-full pt-2 w-56">
+                <div className="absolute z-20 top-full right-0 pt-2 w-56">
                   <div className="absolute h-2 -top-2 inset-x-0"></div>
                   <div className="rounded-md shadow-lg bg-white">
                     <div className="py-1">
@@ -326,11 +326,11 @@ export default function Navbar() {
                       <Link to="/more/feedback" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Feedback</Link>
                       <Link to="/more/gallery" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Gallery</Link>
                       <Link to="/more/grievances" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Grievances</Link>
-                      <Link to="/more/iqac" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">IQAC</Link>
+                      {/* <Link to="/more/iqac" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">IQAC</Link> */}
                       <Link to="/more/sports" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Sports</Link>
                       <Link to="/more/anti-ragging" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Anti-Ragging</Link>
                       {/* <Link to="/more/rti" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">RTI</Link> */}
-                      <Link to="/campus/facilities" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Facilities</Link>
+                      <Link to="/more/library" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Facilities</Link>
                       {/* <Link to="/more/celebration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Celebration</Link> */}
                       {/* <Link to="/more/achievement" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Achievement</Link> */}
                       <a
