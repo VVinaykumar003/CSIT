@@ -9,6 +9,7 @@ import CelebrationPage from '../More/Celebration';
 import GoverningBodyPage from './GoverningBody';
 import IntroductionPage from './Introduction';
 import MessagePage from './Message/MessageIndex';
+import Adminstration from './Adminstration';
 // import ProfessionalBodiesPage from '../More/ProfessionalBodies';
 import SocietyPage from './Society';
 
@@ -74,6 +75,7 @@ export default function AboutPage() {
                 <Route path="society" element={<SocietyPage />} />
                 <Route path="aspiration" element={<AspirationPage />} />
                 <Route path="achievement" element={<AchievementPage />} />
+                <Route path="administrators" element={<Adminstration />} />
                 <Route path="message" element={<MessagePage />} />
                 <Route path="governing-body" element={<GoverningBodyPage />} />
                 <Route path="celebration" element={<CelebrationPage />} />
