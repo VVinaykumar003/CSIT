@@ -1,5 +1,5 @@
 import React from 'react';
-import NPTELimg from "../../../assets/NPTEL/NPTEL_Congrats_image.jpeg";
+import NPTELimg from "../../../assets/NPTEL/NPTEL_Congrats_image.webp";
 
 export default function NPTEL() {
   const nptelInitiatives = [

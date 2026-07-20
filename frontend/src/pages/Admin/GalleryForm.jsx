@@ -31,7 +31,7 @@ function GalleryForm() {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      'image/*': ['.jpeg', '.jpg', '.png', '.gif', '.webp']
+      'image/*': ['.webp', '.webp', '.webp', '.gif', '.webp']
     },
     multiple: true
   });

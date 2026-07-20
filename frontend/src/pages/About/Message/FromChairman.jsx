@@ -1,5 +1,5 @@
 import React from "react";
-import chairmanImage from "../../../assets/chairman.png";
+import chairmanImage from "../../../assets/chairman.webp";
 const FromChairman = () => {
   return (
     <div className="bg-white shadow-xl rounded-lg overflow-hidden">

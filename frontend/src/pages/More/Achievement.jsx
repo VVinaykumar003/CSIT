@@ -6,9 +6,9 @@ const Achievement = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const achievements = {
-    Institute: Array.from({ length: 8 }, (_, i) => `/assets/Achievement/institute_${i + 1}.jpg`),
-    Faculties: Array.from({ length: 8 }, (_, i) => `/assets/Achievement/faculty_${i + 1}.jpg`),
-    Students: Array.from({ length: 8 }, (_, i) => `/assets/Achievement/student_${i + 1}.jpg`),
+    Institute: Array.from({ length: 8 }, (_, i) => `/assets/Achievement/institute_${i + 1}.webp`),
+    Faculties: Array.from({ length: 8 }, (_, i) => `/assets/Achievement/faculty_${i + 1}.webp`),
+    Students: Array.from({ length: 8 }, (_, i) => `/assets/Achievement/student_${i + 1}.webp`),
   };
 
   const handleTabClick = (tab) => {

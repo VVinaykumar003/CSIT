@@ -167,7 +167,7 @@ const MediaDashboard = () => {
                     alt={item.title} 
                     className="w-full h-full object-cover" 
                     onError={(e) => {
-                      e.target.src = '/placeholder-image.png';
+                      e.target.src = '/placeholder-image.webp';
                     }}
                   />
                   <span className="absolute top-2 left-2 bg-[#0d173b] text-white text-xs px-2 py-1 rounded-md font-medium">

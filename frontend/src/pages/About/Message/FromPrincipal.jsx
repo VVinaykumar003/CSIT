@@ -1,5 +1,5 @@
 import React from "react";
-import academicImage from "../../../assets/principal(academic).jpg";
+import academicImage from "../../../assets/principal(academic).webp";
 const FromAcademic = () => {
   return (
     <div className="bg-white shadow-xl rounded-lg overflow-hidden">

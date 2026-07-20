@@ -4,11 +4,11 @@
 // import { Quote, Star, GraduationCap } from "lucide-react";
 
 // // Import testimonial images
-// import Testimonials1 from "../../assets/Testimonials/CSIT/ID-1.jpeg";
-// import Testimonials2 from "../../assets/Testimonials/CSIT/ID-2.jpeg";
-// import Testimonials3 from "../../assets/Testimonials/CSIT/ID-3.jpeg";
-// import Testimonials4 from "../../assets/Testimonials/CSIT/ID-4.jpeg";
-// import Testimonials5 from "../../assets/Testimonials/CSIT/ID-5.jpeg";
+// import Testimonials1 from "../../assets/Testimonials/CSIT/ID-1.webp";
+// import Testimonials2 from "../../assets/Testimonials/CSIT/ID-2.webp";
+// import Testimonials3 from "../../assets/Testimonials/CSIT/ID-3.webp";
+// import Testimonials4 from "../../assets/Testimonials/CSIT/ID-4.webp";
+// import Testimonials5 from "../../assets/Testimonials/CSIT/ID-5.webp";
 
 // import "swiper/css";
 // import "swiper/css/effect-coverflow";

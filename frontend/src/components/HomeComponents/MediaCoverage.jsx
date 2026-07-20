@@ -32,7 +32,7 @@ const MediaSlide = React.memo(({ item, onImageClick }) => (
     onClick={(e) => onImageClick(item.image?.url, e)}
   >
     <img
-      src={item.image?.url || "/placeholder-image.png"}
+      src={item.image?.url || "/placeholder-image.webp"}
       className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
       alt={item.title}
     />
@@ -80,11 +80,11 @@ const SidebarUpdates = React.memo(
             >
               <div className="flex gap-3 items-start">
                 <img
-                  src={item.image?.url || "/placeholder-image.png"}
+                  src={item.image?.url || "/placeholder-image.webp"}
                   alt={item.title}
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0"
                   onError={(e) => {
-                    e.target.src = "/placeholder-image.png";
+                    e.target.src = "/placeholder-image.webp";
                   }}
                 />
                 <div className="flex-1 min-w-0">
