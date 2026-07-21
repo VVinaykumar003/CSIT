@@ -15,12 +15,12 @@ import { Link } from "react-router-dom";
 
 // Update local video and poster imports
 import Local_csit_video from "../../assets/VideoGallery/Local_csit_video.mp4";
-import Local_Poster from "../../assets/VideoGallery/Local_Poster.jpg";
+import Local_Poster from "../../assets/VideoGallery/Local_Poster.webp";
 
 const getYoutubeThumbnail = (url) => {
   const videoId = url.split("embed/")[1]?.split("?")[0];
   return videoId
-    ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+    ? `https://img.youtube.com/vi/${videoId}/maxresdefault.webp`
     : "/api/placeholder/640/360";
 };
 

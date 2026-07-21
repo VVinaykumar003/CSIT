@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { User } from "lucide-react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/csitlogo.png";
-import Image1 from "../assets/Aicte-logo.png";
-import Image2 from "../assets/Institutions innovation council.png";
-import Image3 from "../assets/ISO_logo.png";
-import Image4 from "../assets/CSVTU.png";
-import Image5 from "../assets/dataquest.png";
-import NAAC from "../assets/NAAC_LOGO.png"
+import Logo from "../assets/csitlogo.webp";
+import Image1 from "../assets/Aicte-logo.webp";
+import Image2 from "../assets/Institutions innovation council.webp";
+import Image3 from "../assets/ISO_logo.webp";
+import Image4 from "../assets/CSVTU.webp";
+import Image5 from "../assets/dataquest.webp";
+import NAAC from "../assets/NAAC_LOGO.webp"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import administratorImage from "../../../assets/directoradmin.jpg";
+import administratorImage from "../../../assets/directoradmin.webp";
 const FromAdministrator = () => {
   return (
     <div className="bg-white shadow-xl rounded-lg overflow-hidden">

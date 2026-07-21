@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import api from "../../services/api";
-import FormImage from "../../assets/FormImage.png";
+import FormImage from "../../assets/FormImage.webp";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import { trackLead } from "../../utils/fbPixel";
