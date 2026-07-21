@@ -4,9 +4,8 @@ import {
   antiRaggingIntro,
   objectives,
   whatIsRagging,
-  committeeMembers,
-  squadMembers,
-  helplineInfo
+  helplineInfo,
+  antiRaggingCommittee 
 } from '../../data/antiRaggingData';
 
 const Anti_Raging = () => {
@@ -66,7 +65,7 @@ const Anti_Raging = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {committeeMembers.map((member) => (
+                  {antiRaggingCommittee.committeeMembers.map((member) => (
                     <tr key={member.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{member.id}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.name}</td>
@@ -93,11 +92,69 @@ const Anti_Raging = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {squadMembers.map((member) => (
+                  {antiRaggingCommittee.squadMembers.map((member) => (
                     <tr key={member.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{member.id}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.role}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.contact}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Vigilant Team */}
+          <section className="bg-white rounded-lg shadow-md overflow-hidden">
+            <h2 className="text-2xl font-bold text-[#0d173b] mb-4 p-6 flex items-center"><Users className="mr-2" />Vigilant Team</h2>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-[#0d173b] text-white">
+                  <tr>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">S.No</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Name</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Designation</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Responsibility</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Contact Number</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {antiRaggingCommittee.vigilantTeam.map((member) => (
+                    <tr key={member.id} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{member.id}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.name}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.designation}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.responsibility}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.contact}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Flying Squad */}
+          <section className="bg-white rounded-lg shadow-md overflow-hidden">
+            <h2 className="text-2xl font-bold text-[#0d173b] mb-4 p-6 flex items-center"><Users className="mr-2" />Flying Squad</h2>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-[#0d173b] text-white">
+                  <tr>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">S.No</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Name</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Designation</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Responsibility</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Contact Number</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {antiRaggingCommittee.flyingSquad.map((member) => (
+                    <tr key={member.id} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{member.id}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.name}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.designation}</td>
+                      <td className="px-6 py-4 whitespace-normal text-sm text-gray-900">{member.responsibility}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{member.contact}</td>
                     </tr>
                   ))}

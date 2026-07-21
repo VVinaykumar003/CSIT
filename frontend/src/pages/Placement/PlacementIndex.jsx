@@ -18,7 +18,7 @@ const sidebarLinks = [
   { name: 'About Cell', path: 'about-tnp-cell' },
   { name: 'Placement Policies', path: 'placement-policies' },
   { name: 'VT & Internship', path: 'internship' },
-  { name: 'Capacity Development Program', path: 'capacity-development' }, // ✅ NEW
+  // { name: 'Capacity Development Program', path: 'capacity-development' }, 
   { name: 'Placement Statistics', path: 'placement-statistics' },
   { name: 'Placement Programme', path: 'placement-programme' },
   { name: 'Training & Assessment', path: 'training-programme' },
@@ -82,7 +82,7 @@ export default function PlacementPage() {
                 <Route path="placement-statistics" element={<PlacementStatistics />} />
                 <Route path="placement-programme" element={<Placement_Records />} />
                 <Route path="training-programme" element={<TrainingProgramme />} />
-                <Route path="capacity-development" element={<CapacityDevelopment />} /> {/* ✅ NEW ROUTE */}
+                {/* <Route path="capacity-development" element={<CapacityDevelopment />} /> ✅ NEW ROUTE */}
                 <Route index element={<Navigate to="about-tnp-cell" replace />} />
                 <Route path="*" element={<Navigate to="about-tnp-cell" replace />} />
               </Routes>

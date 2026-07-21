@@ -252,7 +252,7 @@ useEffect(() => {
                       <Link to="/placement/about-tnp-cell" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">About Cell</Link>
                       <Link to="/placement/placement-policies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Policies</Link>
                       <Link to="/placement/internship" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Vocational Training & Internship</Link>
-                      <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link>  {/* ✅ NEW */}
+                      {/* <Link to="/placement/capacity-development" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Capacity Development Program</Link>  ✅ NEW */}
                       <Link to="/placement/placement-statistics" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Placement Statistics</Link>
                       <Link to="/placement/training-programme" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Training Programme</Link>
                       <Link to="/placement/our-recruiters" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Our Recruiters</Link>

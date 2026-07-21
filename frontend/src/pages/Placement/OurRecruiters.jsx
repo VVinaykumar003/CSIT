@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import companyLogos from "../../assets/Compaines/assets.js";
 
 const OurRecruiters = () => {
   return (
@@ -26,125 +27,39 @@ const OurRecruiters = () => {
 
       <div className="p-4 sm:p-6">
         {/* Introduction */}
-        <div className="mb-6">
+        <div className="mb-8">
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-            CSIT has built strong and long-standing relationships with leading organizations across diverse industry sectors. The Training &amp; Placement Cell actively collaborates with these companies to create meaningful career opportunities for students and ensure successful campus recruitment outcomes.
+            CSIT has built strong and long-standing relationships with leading
+            organizations across diverse industry sectors. The Training &amp;
+            Placement Cell actively collaborates with these companies to create
+            meaningful career opportunities for students and ensure successful
+            campus recruitment outcomes.
           </p>
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-3">
-            With a focus on quality placements and industry alignment, the institute continues to strengthen its network of recruiters year after year.
+            With a focus on quality placements and industry alignment, the
+            institute continues to strengthen its network of recruiters year after
+            year.
           </p>
         </div>
 
-        {/* Our Recruiting Partners - Sectors */}
-        <div className="mb-6">
+        {/* Recruiter Logos Grid */}
+        <div>
           <h3 className="text-lg font-semibold text-[#0d173b] mb-3">
             Our Recruiting Partners
           </h3>
-          <p className="text-sm text-gray-600 mb-3">
-            A wide range of reputed companies regularly participate in our campus recruitment drives, representing sectors such as:
-          </p>
-          <ul className="space-y-1.5 mb-3">
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Core Engineering Industries
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              IT &amp; IT-Enabled Services
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Manufacturing &amp; Production
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Consultancy Firms
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Finance &amp; Banking
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Pharmaceutical &amp; Healthcare
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Research &amp; Development Organizations
-            </li>
-          </ul>
-          <p className="text-sm text-gray-600">
-            These organizations provide students with excellent platforms to begin their professional journeys and achieve long-term career growth.
-          </p>
-        </div>
-
-        {/* Our Commitment */}
-        <div className="mb-6">
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-3">
-            Our Commitment
-          </h3>
-          <ul className="space-y-1.5">
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Maintaining strong industry relationships
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Understanding recruiter expectations and requirements
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Preparing students as per current industry standards
-            </li>
-            <li className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="text-[#0d173b] font-bold mt-0.5"></span>
-              Ensuring smooth and professional recruitment processes
-            </li>
-          </ul>
-        </div>
-
-        {/* Recruitment Process */}
-        <div>
-          <h3 className="text-lg font-semibold text-[#0d173b] mb-2">
-            Recruitment Process
-          </h3>
-          <p className="text-sm text-gray-600 mb-2 italic">
-            "Prepare – Perform – Get Placed: A structured pathway to career success."
-          </p>
-          <p className="text-sm text-gray-600 mb-4">
-            The Recruitment Process at CSIT is designed to ensure a smooth, transparent, and efficient interaction between recruiters and students. The Training &amp; Placement Cell coordinates every stage of the process, enabling companies to identify and recruit the most suitable candidates while providing students with the best career opportunities.
-          </p>
-          <div className="space-y-3">
-            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#0d173b]">
-              <h4 className="font-semibold text-[#0d173b] text-sm">1. Company Engagement</h4>
-              <p className="text-sm text-gray-600 mt-1">Reputed companies are invited to the campus for recruitment drives. The T&amp;P Cell maintains continuous interaction with recruiters to understand their requirements and expectations.</p>
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#1e305f]">
-              <h4 className="font-semibold text-[#0d173b] text-sm">2. Student Preparation</h4>
-              <p className="text-sm text-gray-600 mt-1">Students undergo structured pre-placement training, including aptitude tests, technical sessions, group discussions, and mock interviews to enhance their readiness for the selection process.</p>
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#0d173b]">
-              <h4 className="font-semibold text-[#0d173b] text-sm">3. Pre-Placement Activities</h4>
-              <p className="text-sm text-gray-600 mt-1">Companies may conduct:</p>
-              <ul className="list-disc pl-5 mt-1 text-sm text-gray-600">
-                <li>Pre-Placement Talks (PPTs)</li>
-                <li>Written/Aptitude Tests</li>
-                <li>Group Discussions</li>
-                <li>Technical &amp; HR Interviews</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#1e305f]">
-              <h4 className="font-semibold text-[#0d173b] text-sm">4. Recruitment Drive Execution</h4>
-              <p className="text-sm text-gray-600 mt-1">The Placement Cell provides complete logistical and infrastructural support to ensure smooth conduct of all recruitment activities on campus.</p>
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#0d173b]">
-              <h4 className="font-semibold text-[#0d173b] text-sm">5. Selection &amp; Offer</h4>
-              <p className="text-sm text-gray-600 mt-1">Based on performance, shortlisted candidates receive offer letters from the recruiting organizations.</p>
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg border-l-4 border-[#1e305f]">
-              <h4 className="font-semibold text-[#0d173b] text-sm">6. Feedback &amp; Improvement</h4>
-              <p className="text-sm text-gray-600 mt-1">Regular feedback from recruiters and students is collected to continuously improve training programs and placement outcomes.</p>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {companyLogos.map((logo, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center"
+              >
+                <img
+                  src={logo}
+                  alt={`Company Logo ${index + 1}`}
+                  className="max-h-16 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

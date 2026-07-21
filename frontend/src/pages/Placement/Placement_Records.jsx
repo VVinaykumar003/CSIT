@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { placement2024Companies } from '../../data/placement2024'; // Assumed path
 import { placement2025Companies } from '../../data/placement2025'; // Assumed path
 import { placement2025BranchStats,placement2025Summary } from '../../data/placementStats'; // Assumed path
+import { placementStatistics } from '../../data/placementStatistic';
 
 // Mock data until actual files are created
 // const placement2024 = [

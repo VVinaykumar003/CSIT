@@ -90,11 +90,11 @@ const Header = () => {
                   alt="CSVTU Logo"
                   className="h-8 w-8 rounded-md object-contain hover:scale-105 transition-transform flex-shrink-0"
                 />
-                <img
+                {/* <img
                   src={Image5}
                   alt="DataQuest Logo"
                   className="h-8 w-8 rounded-md object-contain hover:scale-105 transition-transform flex-shrink-0"
-                />
+                /> */}
                 <img
                   src={NAAC}
                   alt="NAAC_Logo"
@@ -151,11 +151,11 @@ const Header = () => {
                     alt="CSVTU Logo"
                     className="h-10 w-10 rounded-md object-contain hover:scale-105 transition-transform"
                   />
-                  <img
+                  {/* <img
                     src={Image5}
                     alt="DataQuest Logo"
                     className="h-10 w-10 rounded-md object-contain hover:scale-105 transition-transform"
-                  />
+                  /> */}
                   <img
                     src={NAAC}
                     alt="NAAC_Logo"
@@ -226,11 +226,11 @@ const Header = () => {
                     alt="CSVTU Logo"
                     className="h-16 w-16 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
                   />
-                  <img
+                  {/* <img
                     src={Image5}
                     alt="DataQuest Logo"
                     className="h-16 w-16 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
-                  />
+                  /> */}
                   <img
                     src={NAAC}
                     alt="NAAC Logo"
