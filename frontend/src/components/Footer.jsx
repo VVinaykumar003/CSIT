@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import Logo from "../assets/csitlogo.png";
+import Logo from "../assets/csitlogo.webp";
 const MandatoryDisclosure = "https://drive.google.com/file/d/15vPDhJU1cn8VdzTpXYMTZlp0LtAfPbfR/view?usp=sharing";
 
 // import AboutPage from '../pages/About/Introduction';
