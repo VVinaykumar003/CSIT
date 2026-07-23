@@ -105,7 +105,7 @@ useEffect(() => {
                       <Link to="/about/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
                       <Link to="/about/society" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Society</Link>
                       <Link to="/about/aspiration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Aspiration</Link>
-                      <Link to="/about/adminstration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Adminstration</Link>
+                      <Link to="/about/administrators" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Adminstration</Link> 
                       <Link to="/about/message" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Message</Link>
                       <Link to="/about/governing-body" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Governing Body</Link>
                       {/* <Link to="/about/professional-bodies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Professional Bodies</Link> */}

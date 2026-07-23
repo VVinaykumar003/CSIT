@@ -33,6 +33,7 @@ import Header from "./components/Header";
 import PixelTracker from "./components/PixelTracker";
 import NotificationForm from "./pages/Admin/NotificationForm";  
 import NotificationDashboard from "./pages/Admin/NotificationDashboard";
+import Adminstration from "./pages/About/Adminstration";
 
 import ResearchDevelopment from "./pages/R&D/R&DSidebar";
 import Anti_Raging from "./pages/More/Anti_Raging";
@@ -58,6 +59,7 @@ function App() {
             <Route path="/external/:type" element={<ExternalRedirect />} />
             <Route path="/external/:type/:param" element={<ExternalRedirect />} />
             <Route path="/about/*" element={<AboutPage />} />
+            
             <Route path="/admission/*" element={<AdmissionPage />} />
             <Route path="/enquiry-form" element={<EnquiryForm />} />
             <Route path="/alumni/*" element={<AlumniPage />} />
@@ -119,6 +121,7 @@ function App() {
 
             {/* Redirects */}
             <Route path="/introduction" element={<Navigate to="/about/introduction" replace />} />
+            <Route path="/administrators" element={<Navigate to="/about/administrators" replace />} />
             <Route path="/society" element={<Navigate to="/about/society" replace />} />
             <Route path="/aspiration" element={<Navigate to="/about/aspiration" replace />} />
             <Route path="/achievement" element={<Navigate to="/about/achievement" replace />} />
