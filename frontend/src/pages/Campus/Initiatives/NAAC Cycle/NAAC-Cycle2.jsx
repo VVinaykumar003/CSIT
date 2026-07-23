@@ -63,22 +63,22 @@ const NaacCycle2 = () => {
         {
           title:
             "Extended 1.1 - Number of students year wise during the last five years",
-          pdf: "/csit-accrediation/EP 1.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1AVmgxcmnzD7XbbhKGPgxJfYN_rMhx3Qy/view?usp=sharing",
         },
         {
           title:
             "Extended 2.1 - Number of Full time teachers during the last five years",
-          pdf: "/csit-accrediation/EP 2.1 Faculty List without Repeat Count.pdf",
+          pdf: "https://drive.google.com/file/d/1oHuJv453tak6qRKsgc9MTFvOCWOmZ8ji/view?usp=sharing",
         },
         {
           title:
             "Extended 2.2 NUMBER OF TEACHING STAFF / FULL TIME TEACHERS YEAR WISE DURING THE LAST FIVE YEARS",
-          pdf: "/csit-accrediation/EP 2.2 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1uQ_9BhprW8ifE6cCrRXK-4ZGgpynn0_T/view?usp=sharing",
         },
         {
           title:
             "Extended 3.1 EXPENDITURE EXCLUDING SALARY COMPONENT YEAR WISE DURING THE LAST FIVE YEARS",
-          pdf: "/csit-accrediation/EP 3.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1Vkki8Ea7b3GqCMlbNfEf6gIzjL-X2EAR/view?usp=sharing",
         },
       ],
     },
@@ -87,78 +87,78 @@ const NaacCycle2 = () => {
       items: [
         {
           title: "1.1 – Curriculum Design and Developments",
-          pdf: "/csit-accrediation/1.1.1.pdf",
+          pdf: "https://drive.google.com/file/d/1fg8XzJ19CJdCXiuQ0rKLYa7C8VoBRh7m/view?usp=sharing",
           subItems: [
             {
               title:
                 "1.1.1 The Institution ensures effective curriculum planning and delivery...",
-              pdf: "/csit-accrediation/1.1.1.pdf",
+              pdf: "https://drive.google.com/file/d/1fg8XzJ19CJdCXiuQ0rKLYa7C8VoBRh7m/view?usp=sharing",
             },
           ],
         },
         {
           title: "1.2 - Academic Flexibility",
-          pdf: "/csit-accrediation/1.2.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1RY32zFOfJrgRgdX2D6-qox97JOH1mvFs/view?usp=sharing",
           subItems: [
             {
               title:
                 "1.2.1 Number of Add on/Certificate/Value added programs...",
-              pdf: "/csit-accrediation/1.2.1 Summary.pdf",
+              pdf: "https://drive.google.com/file/d/1RY32zFOfJrgRgdX2D6-qox97JOH1mvFs/view?usp=sharing",
               yearWiseData: [
                 {
                   year: "2018-19",
-                  pdf: "/csit-accrediation/1.2.1 2018-19_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1j9L-qrj6fj1RzTc0ZyxB8Jp4Fgh-u0KS/view?usp=sharing",
                 },
                 {
                   year: "2019-20",
-                  pdf: "/csit-accrediation/1.2.1 2019-20_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1tJ78nWl-ih01VYTqgQ9-ds9eaxCeDWki/view?usp=sharing",
                 },
                 {
                   year: "2020-21",
-                  pdf: "/csit-accrediation/1.2.1 2020-21_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1n4ediLW4x9YE7CGplTQl4BYd3x1IYLnu/view?usp=sharing",
                 },
                 {
                   year: "2021-22",
-                  pdf: "/csit-accrediation/1.2.1 2021-22_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1uupbXwUQMd36hru96ThulHXBPrqR_kUn/view?usp=sharing",
                 },
                 {
                   year: "2022-23",
-                  pdf: "/csit-accrediation/1.2.1 2022-23_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1skxiYE7zm_hznQIL5xJO5sDCQVWvHxae/view?usp=sharing",
                 },
                 {
                   title: "Certificate",
-                  pdf: "/csit-accrediation/1.2.1 certificate of HOI.pdf",
+                  pdf: "https://drive.google.com/file/d/1J1-qF8NDCEIqFFNGbc9xCl845pEkcORz/view?usp=sharing",
                 },
               ],
             },
             {
               title:
                 "1.2.2 Percentage of students enrolled in Certificate/Add-on programs...",
-              pdf: "/csit-accrediation/1.2.2 Summary.pdf",
+              pdf: "https://drive.google.com/file/d/1cMfgaBC6c0grZk3LKy7Tkk-N0EKb2Omp/view?usp=sharing",
               yearWiseData: [
                 {
                   year: "2018-19",
-                  pdf: "/csit-accrediation/1.2.2_2018-19_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1_YTRhnTEfmiQZ4yKsCw5Urr1zE-lFTLB/view?usp=sharing",
                 },
                 {
                   year: "2019-20",
-                  pdf: "/csit-accrediation/1.2.2_2019-20_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/16Ui5e-gxWWLqY-Fv5DIFEF0lMiCAsDnw/view?usp=sharing",
                 },
                 {
                   year: "2020-21",
-                  pdf: "/csit-accrediation/1.2.2_2020-21_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1zfZe7PB3B8ehH5rzPomEh8P2C9JZXQSs/view?usp=sharing",
                 },
                 {
                   year: "2021-22",
-                  pdf: "/csit-accrediation/1.2.2_2021-22_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1VYD35HvZNwDeBcXCTop0WNCIn-ebEn7r/view?usp=sharing",
                 },
                 {
                   year: "2022-23",
-                  pdf: "/csit-accrediation/1.2.2_2022-23_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1qdRw8BwlRcym0o3DD83lE1MQmjSEmlZV/view?usp=sharing",
                 },
                 {
                   title: "Certificate",
-                  pdf: "/csit-accrediation/1.2.2 CERTIFICATE_signed.pdf",
+                  pdf: "https://drive.google.com/file/d/1LmItjJLvdUrFZtx5JSnytwVYdUJuVcQ0/view?usp=sharing",
                 },
               ],
             },
@@ -166,26 +166,26 @@ const NaacCycle2 = () => {
         },
         {
           title: "1.3 – Curriculum Enrichment",
-          pdf: "/csit-accrediation/1.3.1.pdf",
+          pdf: "https://drive.google.com/file/d/1RBI6D6o0Tw3Eism4-tSUT2cCxkxIbgtN/view?usp=sharing",
           subItems: [
             {
               title: "1.3.1 Institution integrates crosscutting issues...",
-              pdf: "/csit-accrediation/1.3.1.pdf",
+              pdf: "https://drive.google.com/file/d/1RBI6D6o0Tw3Eism4-tSUT2cCxkxIbgtN/view?usp=sharing",
             },
             {
               title: "1.3.2 Percentage of students undertaking project work...",
-              pdf: "/csit-accrediation/1.3.2.pdf",
+              pdf: "https://drive.google.com/file/d/1dxuDjTUq1ek9uSb5HMymgcQaqUafb-6i/view?usp=sharing",
             },
           ],
         },
         {
           title: "1.4 – Feedback System",
-          pdf: "",
+          pdf: "https://drive.google.com/file/d/1bVpH6AMrc1RmEDQDwhiWjSfEFWF1zlLU/view?usp=sharing",
           subItems: [
             {
               title:
                 "1.4.1 Institution obtains feedback on the academic performance...",
-              pdf: "",
+              pdf: "https://drive.google.com/file/d/1bVpH6AMrc1RmEDQDwhiWjSfEFWF1zlLU/view?usp=sharing",
             },
           ],
         },
@@ -196,47 +196,47 @@ const NaacCycle2 = () => {
       items: [
         {
           title: "2.1.1 Enrolment percentage",
-          pdf: "/csit-accrediation/2.1.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1SFAopNmG_Rp6w302rpsXimqWzEwBcinD/view?usp=sharing",
         },
         {
           title:
             "2.1.2 Percentage of seats filled against seats reserved for various categories...",
-          pdf: "/csit-accrediation/2.1.2 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1mFAw-6_3nYoaUKfia8iml54FIXXH0ei-/view?usp=sharing",
         },
         {
           title: "2.2.1 Student–Full time Teacher Ratio",
-          pdf: "/csit-accrediation/2.2.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1T4RNEbzD6ROwKfGtNlS9o_Z4SKf9ld0F/view?usp=sharing",
         },
         {
           title:
             "2.3.1 Student centric methods, such as experiential learning...",
-          pdf: "/csit-accrediation/2.3.1.pdf",
+          pdf: "https://drive.google.com/file/d/1Fb0pRUzwq5hudUKuuxVxDTssWrCiabAF/view?usp=sharing",
         },
         {
           title:
             "2.4.1 Percentage of full-time teachers against sanctioned posts...",
-          pdf: "/csit-accrediation/2.4.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1TCAd8bv_jMcPlqZGKKykXU0wSrW2Oyd_/view?usp=sharing",
         },
         {
           title:
             "2.4.2 Percentage of full time teachers with NET/SET/SLET/Ph.D...",
-          pdf: "/csit-accrediation/2.4.2 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1swCJHO1TnzW_VuweQxGRdf5KffiU4SQe/view?usp=sharing",
         },
         {
           title: "2.5.1 Mechanism of internal/external assessment...",
-          pdf: "/csit-accrediation/2.5.1.pdf",
+          pdf: "https://drive.google.com/file/d/1y-mRsGpKXDQJGu8X9TTbc3JyFQneHaWV/view?usp=sharing",
         },
         {
           title: "2.6.1 Programme Outcomes (POs) and Course Outcomes (COs)...",
-          pdf: "/csit-accrediation/2.6.1.pdf",
+          pdf: "https://drive.google.com/file/d/1mMQJdsm2UrHcA2of9oA4PAzz3rmb5w_i/view?usp=sharing",
         },
         {
           title: "2.6.2 Attainment of POs and COs are evaluated",
-          pdf: "/csit-accrediation/2.6.2.pdf",
+          pdf: "https://drive.google.com/file/d/1HqVX8U-aOm7xOgBH20fXl72QqsBJX4g6/view?usp=sharing",
         },
         {
           title: "2.6.3 Pass percentage of Students during last five years",
-          pdf: "/csit-accrediation/2.6.3 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1kveSNswIW4P0EUGuQrhLf2rxioOP_UCX/view?usp=sharing",
         },
         {
           title:
@@ -251,43 +251,43 @@ const NaacCycle2 = () => {
         {
           title:
             "3.1.1 Grants received from Government and non-governmental agencies...",
-          pdf: "/csit-accrediation/3.1.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1V7FFzQBAkLGtXwLdqMHm9L76LEyhAEUL/view?usp=sharing",
         },
         {
           title:
             "3.2.1 Institution has created an ecosystem for innovations...",
-          pdf: "/csit-accrediation/3.2.1.pdf",
+          pdf: "https://drive.google.com/file/d/12vp5tRNnGMp3mlImE4gx8dmEfmXfoFWl/view?usp=sharing",
         },
         {
           title: "3.2.2 Number of workshops/seminars/conferences...",
-          pdf: "/csit-accrediation/3.2.2_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1__gYvCT8ltmpDxl9RTraXoeGCEaWKWj6/view?usp=sharing",
         },
         {
           title: "3.3.1 Number of research papers published per teacher...",
-          pdf: "/csit-accrediation/3.3.1 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1kg5zbALn3WOpBkHt-8bP30y4U7kkXD-B/view?usp=sharing",
         },
         {
           title:
             "3.3.2 Number of books and chapters in edited volumes/books...",
-          pdf: "/csit-accrediation/3.3.2 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1dYAUG_jBcRVWZTXCmSRLs_o_aDBYv3lo/view?usp=sharing",
         },
         {
           title:
             "3.4.1 Extension activities are carried out in the neighborhood community...",
-          pdf: "/csit-accrediation/3.4.1.pdf",
+          pdf: "https://drive.google.com/file/d/1vG8qWAvntrdWhcJsuBq6vFoBxlgHDW3-/view?usp=sharing",
         },
         {
           title:
             "3.4.2 Awards and recognitions received for extension activities...",
-          pdf: "/csit-accrediation/3.4.2.pdf",
+          pdf: "https://drive.google.com/file/d/1KSKJsZoAjZ7SlUylSEc-MTnvYHWphY2J/view?usp=sharing",
         },
         {
           title: "3.4.3 Number of extension and outreach programs...",
-          pdf: "/csit-accrediation/3.4.3 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1nWlJlsKDozgWLfPHA-z9CIQoiEIQVHkv/view?usp=sharing",
         },
         {
           title: "3.5.1 Number of MoUs, collaborations/linkages...",
-          pdf: "/csit-accrediation/3.5.1_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1Ep4vq8Df_mWBr1nwLTjJO6_DltSiD3Jv/view?usp=sharing",
         },
       ],
     },
@@ -300,12 +300,12 @@ const NaacCycle2 = () => {
             {
               title:
                 "4.1.1 Availability of adequate infrastructure and physical facilities...",
-              pdf: "/csit-accrediation/4.1.1.pdf",
+              pdf: "https://drive.google.com/file/d/1O-usrgNPVNxuH1aYLruRKwgEPQ3SrJUU/view?usp=sharing",
             },
             {
               title:
                 "4.1.2 Percentage of expenditure, excluding salary for infrastructure...",
-              pdf: "/csit-accrediation/4.1.2 Summary.pdf",
+              pdf: "https://drive.google.com/file/d/1Icjz_agcukUjDndgCTzkdhsXU4sIM4Ff/view?usp=sharing",
             },
           ],
         },
@@ -315,7 +315,7 @@ const NaacCycle2 = () => {
             {
               title:
                 "4.2.1 Library is automated using Integrated Library Management System...",
-              pdf: "/csit-accrediation/4.2.1.pdf",
+              pdf: "https://drive.google.com/file/d/1TZgOnxHTDocnNnJN80oIqDVqDEvJeNU_/view?usp=sharing",
             },
           ],
         },
@@ -325,11 +325,11 @@ const NaacCycle2 = () => {
             {
               title:
                 "4.3.1 Institution frequently updates its IT facilities...",
-              pdf: "/csit-accrediation/4.3.1.pdf",
+              pdf: "https://drive.google.com/file/d/1YuwMYAva_2kHou8Dz9hIqLGDQNgPuvyh/view?usp=sharing",
             },
             {
               title: "4.3.2 Student–Computer ratio",
-              pdf: "/csit-accrediation/4.3.2 Summary.pdf",
+              pdf: "https://drive.google.com/file/d/1n7IEj5ljVah_QnNBeRUFqiiqOc76L8Yd/view?usp=sharing",
             },
           ],
         },
@@ -339,7 +339,7 @@ const NaacCycle2 = () => {
             {
               title:
                 "4.4.1 Percentage of expenditure incurred on maintenance of infrastructure...",
-              pdf: "/csit-accrediation/4.4.1 Summary.pdf",
+              pdf: "https://drive.google.com/file/d/1x0qGWR5Yz3KCUtico_yfeizK6BBahuX5/view?usp=sharing",
             },
           ],
         },
@@ -350,40 +350,40 @@ const NaacCycle2 = () => {
       items: [
         {
           title: "5.1.1 Percentage of students benefited by scholarships...",
-          pdf: "/csit-accrediation/5.1.1_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1DglmxTijezNkZYrKTAmdaHSMk-3pDPnz/view?usp=sharing",
         },
         {
           title:
             "5.1.2 Capacity building and skills enhancement initiatives...",
-          pdf: "/csit-accrediation/5.1.2_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1cZcVTYnKP6uIn91AwpgfrfmiETVN5SWy/view?usp=sharing",
         },
         {
           title: "5.1.3 Percentage of students benefitted by guidance...",
-          pdf: "/csit-accrediation/5.1.3_Summary sheet.pdf",
+          pdf: "https://drive.google.com/file/d/1IjdmaAeNGhi-JeiDePrpjQcL8PkwD4IK/view?usp=sharing",
         },
         {
           title: "5.1.4 The Institution has a transparent mechanism...",
-          pdf: "/csit-accrediation/5.1.4_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/19t8Y_bh0or4METa_uu5z8mU5LlpXORHB/view?usp=sharing",
         },
         {
           title: "5.2.1 Percentage of placement of outgoing students...",
-          pdf: "/csit-accrediation/5.2.1_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/18R_MxJH6m6f970qaqZbo0M-4E4bgyWPF/view?usp=sharing",
         },
         {
           title: "5.2.2 Percentage of students qualifying in state/national...",
-          pdf: "/csit-accrediation/5.2.2_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1OrP0g3mTG8_AWStSteR38J7hXDupE2f9/view?usp=sharing",
         },
         {
           title: "5.3.1 Number of awards/medals for outstanding performance...",
-          pdf: "/csit-accrediation/5.3.1_summary.pdf",
+          pdf: "https://drive.google.com/file/d/13BZLsqsBSW_7Mq9XP-G7GAl4aiKQTQuF/view?usp=sharing",
         },
         {
           title: "5.3.2 Average number of sports and cultural programs...",
-          pdf: "/csit-accrediation/5.3.2_summary final.pdf",
+          pdf: "https://drive.google.com/file/d/1CAPXXWvcKX9ArB0uoRzZMev_i8b71V3E/view?usp=sharing",
         },
         {
           title: "5.4.1 There is a registered Alumni Association...",
-          pdf: "/csit-accrediation/5.4.1.pdf",
+          pdf: "https://drive.google.com/file/d/1dsGiCHPIl34vBUBCbqnnX4C7UI8CfG36/view?usp=sharing",
         },
       ],
     },
@@ -393,34 +393,34 @@ const NaacCycle2 = () => {
         {
           title:
             "6.1.1 The governance and leadership is in accordance with vision...",
-          pdf: "/csit-accrediation/6.1.1.pdf",
+          pdf: "https://drive.google.com/file/d/1Up6MFZLtOJ-4bJQ9oWA3YbDr9wj0cKpD/view?usp=sharing",
         },
         {
           title:
             "6.2.1 The functioning of the institutional bodies is effective...",
-          pdf: "/csit-accrediation/6.2.1.pdf",
+          pdf: "https://drive.google.com/file/d/1rAeS3owp7PnPM2oFeoZ7xgOe6Ngd6DIB/view?usp=sharing",
         },
         {
           title: "6.2.2 Implementation of e-governance in areas of operation",
-          pdf: "/csit-accrediation/6.2.2_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1At4Sc0UuqrFXVnFgeLugBIW1l4rcwEBD/view?usp=sharing",
         },
         {
           title: "6.3.1 The institution has effective welfare measures...",
-          pdf: "/csit-accrediation/6.3.1.pdf",
+          pdf: "https://drive.google.com/file/d/1CWh6OrjwlnX3nyLw8W9svKXocx1LwhDb/view?usp=sharing",
         },
         {
           title:
             "6.3.2 Percentage of teachers provided with financial support...",
-          pdf: "/csit-accrediation/6.3.2_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1OlRvm51cO5m1ILAHpTCMPMY8ZX1cR3G6/view?usp=sharing",
         },
         {
           title:
             "6.3.3 Percentage of teaching and non-teaching staff participating...",
-          pdf: "/csit-accrediation/Summary-6.3.3.pdf",
+          pdf: "https://drive.google.com/file/d/1iTD1mGvyr1P3zWnFeBf7bFDSBYYrXDDi/view?usp=sharing",
         },
         {
           title: "6.4.1 Institution has strategies for mobilization...",
-          pdf: "/csit-accrediation/6.4.1.pdf",
+          pdf: "https://drive.google.com/file/d/1sHgkyhtITFC6ognuVYQLf5z_zs8YAChT/view?usp=sharing",
         },
         {
           title: "6.5.1 Internal Quality Assurance Cell (IQAC)...",
@@ -428,7 +428,7 @@ const NaacCycle2 = () => {
         },
         {
           title: "6.5.2 Quality assurance initiatives of the institution",
-          pdf: "/csit-accrediation/6.5.2_Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1HqDb9oVWhaITx9NOqwxCSUjT8eCHrBCu/view?usp=sharing",
         },
       ],
     },
@@ -438,34 +438,34 @@ const NaacCycle2 = () => {
         {
           title:
             "7.1.1 Measures initiated by the Institution for the promotion of gender equity...",
-          pdf: "/csit-accrediation/7.1.1.pdf",
+          pdf: "https://drive.google.com/file/d/11m--BIntVyg2doRudyntpoXXctTZu_1r/view?usp=sharing",
         },
         {
           title: "7.1.2 The Institution has facilities and initiatives for...",
-          pdf: "/csit-accrediation/7.1.2 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1uzvwU01zFTQC5Xkmm1SSIdT8xGkAgtVv/view?usp=sharing",
         },
         {
           title: "7.1.3 Quality audits on environment and energy...",
-          pdf: "/csit-accrediation/7.1.3 Summary.pdf",
+          pdf: "https://drive.google.com/file/d/1Xyxaif8zHm2fOlxKu1DLr_ZnVIoXQzhR/view?usp=sharing",
         },
         {
           title: "7.1.4 Describe the Institutional efforts/initiatives...",
-          pdf: "/csit-accrediation/7.1.4.pdf",
+          pdf: "https://drive.google.com/file/d/1KZdr0oaVF4imDJJEkiS3Au3PUuzbzoJm/view?usp=sharing",
         },
         {
           title:
             "7.2.1 Describe two best practices successfully implemented...",
-          pdf: "/csit-accrediation/7.2.1.pdf",
+          pdf: "https://drive.google.com/file/d/1-WWmqGgjf_FkXyTpFfpAGy5SfJ-gpSwA/view?usp=sharing",
         },
         {
           title: "7.3.1 Portray the performance of the Institution...",
-          pdf: "/csit-accrediation/7.3.1.pdf",
+          pdf: "https://drive.google.com/file/d/1mVFAJ7GGwENBuqfMj4h65UsmpImIFDM1/view?usp=sharing",
         },
       ],
     },
     {
       title: "SSR (Self Study Report)",
-      pdf: "/NAAC2/SSR/CGCOGN21243.pdf",
+      pdf: "https://drive.google.com/file/d/1yjhRna4-Ku1tgP1bp4GyNJy63vxVSkgI/view?usp=sharing",
       directLink: true,
     },
     // Update the DVV Clarification object in criteriaData

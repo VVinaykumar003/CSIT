@@ -1,7 +1,7 @@
 import React from "react";
-import pdf1 from "../../../../assets/NAAC_CYCLE_1/NAAC Self-Study-Report.pdf";
-import pdf2 from "../../../../assets/NAAC_CYCLE_1/Cycle1_Certificate.pdf";
-import pdf3 from "../../../../assets/NAAC_CYCLE_1/Peer_Team_Report_Cycle1.pdf";
+const pdf1 = "https://drive.google.com/file/d/1u4Et3tdEpjxYGkh3l74i5YL1UbRW2CQN/view?usp=sharing";
+const pdf2 = "https://drive.google.com/file/d/1HwAcpC6xd2BoaihzZP7lWjNlNVk7MGxE/view?usp=sharing";
+const pdf3 = "https://drive.google.com/file/d/1-msywW2WeVM1rb9l2HLZNZXdC6qr823L/view?usp=sharing";
 
 
 const NaacCycle1 = () => {

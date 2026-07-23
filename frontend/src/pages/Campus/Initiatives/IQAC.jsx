@@ -1,21 +1,22 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
 // IQAC composition
-import iqac2018_19 from '../../../assets/IQAC_composition/IQAC_2018-19_composition.pdf';
-import iqac2019_20 from '../../../assets/IQAC_composition/IQAC_2019-20_Composition.pdf';
-import iqac2020_21 from '../../../assets/IQAC_composition/IQAC_2020-21_Composition.pdf';
-import iqac2021_22 from '../../../assets/IQAC_composition/IQAC_2021-22_Composition.pdf';
-import iqac2022_23 from '../../../assets/IQAC_composition/IQAC_2022-23_Composition.pdf';
-import iqac2023_24 from '../../../assets/IQAC_composition/IQAC_2023-24_Composition.pdf';
-import iqac2024_25 from '../../../assets/IQAC_composition/IQAC_2024-25_Composition.pdf';
+const iqac2018_19 = 'https://drive.google.com/file/d/1F4GWD3Xt8LJapFvkLUGUhMfbMYU-oTXZ/view?usp=sharing';
+const iqac2019_20 = 'https://drive.google.com/file/d/1oWqRBvWusgVpliI35WW9MsAUIi91T8yq/view?usp=sharing'; 
+const iqac2020_21 = 'https://drive.google.com/file/d/1wEiaOF-YNiFNTxsWPTqdobNfZDwSj05M/view?usp=sharing'; 
+const iqac2021_22 = 'https://drive.google.com/file/d/1LpGlxiMF_66T47KUdN1a3WYboKgubIE8/view?usp=sharing'; 
+const iqac2022_23 = 'https://drive.google.com/file/d/1CLth1Ueeh_oGk9zdGwhleLJzRD3bxRtI/view?usp=sharing'; 
+const iqac2023_24 = 'https://drive.google.com/file/d/1FnALJtFEk6eEkoRG7OGNufwW6aXvnsNe/view?usp=sharing'; 
+const iqac2024_25 = 'https://drive.google.com/file/d/10aLSKSmo45kHi0sZVjH_ZljY8H5gZfRb/view?usp=sharing';
+
 
 // IQAC MOM
-import iqacMom2018_19 from '../../../assets/IQAC_mom/IQAC 2018-19 Meeting 1, 2 ,3.pdf';
-import iqacMom2019_20 from '../../../assets/IQAC_mom/IQAC 2019-20 Minutes 1 2 3 4.pdf';
-import iqacMom2020_21 from '../../../assets/IQAC_mom/IQAC 2020-21 Meeting 1 2 3.pdf';
-import iqacMom2021_22 from '../../../assets/IQAC_mom/IQAC 2021-22 Meeting 1 ,2.pdf';
-import iqacMom2022_23 from '../../../assets/IQAC_mom/IQAC 2022-23 Meeting 1 ,2 ,3.pdf';
-import iqacMom2023_24 from '../../../assets/IQAC_mom/IQAC 2023-24 Meeting 1, 2, 3.pdf';
+const iqacMom2018_19 = 'https://drive.google.com/file/d/1IhxBvNJQowQasy480LMIm59azHMPgNjc/view?usp=sharing'; 
+const iqacMom2019_20 = 'https://drive.google.com/file/d/16gvkmen7P7MM7k3fsnZfMUY09ipqBUNi/view?usp=sharing'; 
+const iqacMom2020_21 = 'https://drive.google.com/file/d/1ZzP2GqD4-ikHWWZEgUY5IuBxLSEiflke/view?usp=sharing'; 
+const iqacMom2021_22 = 'https://drive.google.com/file/d/1QAp_nyYZV-B-onz6CQde_sad1prfV98o/view?usp=sharing'; 
+const iqacMom2022_23 = 'https://drive.google.com/file/d/1dlFcvL0XmDPKDytpOM9RXHQg0ahPKPdp/view?usp=sharing'; 
+const iqacMom2023_24 = 'https://drive.google.com/file/d/1attXI47EEj2mlQfiQI1n7D9qAikQayqM/view?usp=sharing';
 
 const IQAC = () => {
   // Data for the composition and minutes of meeting table with actual PDF links
