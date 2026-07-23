@@ -20,19 +20,19 @@ const AQAR = () => {
   const aqarData = [
     {
       year: "2018-2019",
-      pdf: "/AQAR/AQAR 2018-19.pdf",
+      pdf: "https://drive.google.com/file/d/1y9nd9jDks5r1FFeZNEpwMw8aGENtlsrH/view?usp=sharing",
     },
     {
       year: "2019-2020",
-      pdf: "/AQAR/AQAR 2019-20.pdf",
+      pdf: "https://drive.google.com/file/d/1iRPDv4u-odFe5qj_s33SBsTFdk9z5_Ea/view?usp=sharing",
     },
     {
       year: "2020-2021",
-      pdf: "/AQAR/AQAR 2020-21.pdf",
+      pdf: "https://drive.google.com/file/d/1bh6k49tXof_vKeIGtCREXzori1E6aqyD/view?usp=sharing",
     },
     {
       year: "2021-2022",
-      pdf: "/AQAR/AQAR 2021-22.pdf",
+      pdf: "https://drive.google.com/file/d/1kW6myKBB5J2hOf3JIPFjUDuQo7CWohTD/view?usp=sharing",
     },
   ];
 

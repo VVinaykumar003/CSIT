@@ -1,11 +1,14 @@
-import third from "../../../assets/Ai&Ds/AIDS3rdsem.pdf";
-import fourth from "../../../assets/Ai&Ds/AIDS4thsem.pdf";
-import fifth from "../../../assets/Ai&Ds/AIDS5thsem.pdf";
-import sixth from "../../../assets/Ai&Ds/AIDS6thsem.pdf";
-import seventh from "../../../assets/Ai&Ds/AIDS7thSem.pdf";
-import eighth from "../../../assets/Ai&Ds/AIDS8thSem.pdf";
 
 const CSECourseOutcomes = () => {
+
+
+  const third = "https://drive.google.com/file/d/14JCbR0gzvH54NP1tPobykLP3-myHiF9f/view?usp=sharing";
+const fourth = "https://drive.google.com/file/d/1-y-4BkiPbsBeASS-SGlD2xrR4duHpuW2/view?usp=sharing";
+const fifth = "https://drive.google.com/file/d/1-y-4BkiPbsBeASS-SGlD2xrR4duHpuW2/view?usp=sharing";
+const sixth = "https://drive.google.com/file/d/1vqdNbIm0fEmhiqRNOGyR3yVBLIOarN2P/view?usp=sharing";
+const seventh = "https://drive.google.com/file/d/1i5t5DarM6ljRjb2oPY1lPlUqjIYQteYU/view?usp=sharing";
+const eighth = "https://drive.google.com/file/d/17esmy1x7uYseP0Dt2HpfSdz9nevLtnYv/view?usp=sharing";
+
   // Data for semesters with syllabus paths
   const semesters = [
     { id: "sem3", name: "3rd Semester", syllabus: third },

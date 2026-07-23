@@ -1,10 +1,11 @@
 // import { useState } from "react";
-import third   from "../../../assets/ME/mech3rdsem.pdf";
-import fourth  from "../../../assets/ME/mech4thsem.pdf";
-import fifth   from "../../../assets/ME/mech5thsem.pdf";
-import sixth   from "../../../assets/ME/mech6thsem.pdf";
-import seventh from "../../../assets/ME/mech7thsem.pdf";
-import eighth  from "../../../assets/ME/mech8thsem.pdf";
+const third = "https://drive.google.com/file/d/11S2q6rNT2Ci8euucJiYru7zKIOTIPFmH/view?usp=sharing";
+const fourth = "https://drive.google.com/file/d/1hCshXsQeLb6rawFwhuZzHFkk1Z8WvnDE/view?usp=sharing";
+const fifth = "https://drive.google.com/file/d/17AfoMKzqwxyKbflA7NQWRmRnIztOglB4/view?usp=sharing";
+const sixth = "https://drive.google.com/file/d/1NafWktLhbjF6UFzQ55xMgG1hHWW1Q0hO/view?usp=sharing";
+const seventh = "https://drive.google.com/file/d/1cV1e-NwC-aCR4wSfkAUxGrSIFp42DbGw/view?usp=sharing";
+const eighth = "https://drive.google.com/file/d/1OHW8R2sCCvDYsA99798MjZs8CvQvF7Aj/view?usp=sharing";
+
 
 const CSECourseOutcomes = () => {
   // Data for semesters with syllabus paths

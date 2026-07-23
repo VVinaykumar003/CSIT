@@ -1,9 +1,9 @@
-import third from "../../../assets/Mechatronics/mex3rdsem.pdf";
-import fourth from "../../../assets/Mechatronics/mex4thsem.pdf";
-import fifth from "../../../assets/Mechatronics/mex5thsem.pdf";
-import sixth from "../../../assets/Mechatronics/mex6thsem.pdf";
-import seventh from "../../../assets/Mechatronics/mex7thsem.pdf";
-import eighth from "../../../assets/Mechatronics/mex8thsem.pdf";
+const third = "https://drive.google.com/file/d/1kkaVGA_ytCDflEk4lfReuAhosImt2ORv/view?usp=sharing";
+const fourth = "https://drive.google.com/file/d/1_Fx68cILIvphCXoz1VPD-j0ndvRhjFKg/view?usp=sharing";
+const fifth = "https://drive.google.com/file/d/11uYySlhzgJhstdnhPP-CumxLoWOaQuRl/view?usp=sharing";
+const sixth = "https://drive.google.com/file/d/1opAupA-C_syqmZsNPgoOmacQOda1_g1j/view?usp=sharing";
+const seventh = "https://drive.google.com/file/d/1cB9pZD5nkzMo28uxxwySCH1ZenHC2dQW/view?usp=sharing";
+const eighth = "https://drive.google.com/file/d/1v5eDL9YhJbzVRtMXZRJ7bwxdvLZcKXqv/view?usp=sharing";
 
 
 const CSECourseOutcomes = () => {

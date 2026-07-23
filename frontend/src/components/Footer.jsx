@@ -8,8 +8,8 @@ import {
 } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import Logo from "../assets/csitlogo.webp";
-import MandatoryDisclosure from "../assets/Mandatory_Disclosures_2026-27.pdf";
+import Logo from "../assets/csitlogo.png";
+const MandatoryDisclosure = "https://drive.google.com/file/d/15vPDhJU1cn8VdzTpXYMTZlp0LtAfPbfR/view?usp=sharing";
 
 // import AboutPage from '../pages/About/Introduction';
 
@@ -132,7 +132,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/campus/initiatives?tab=iqac"
+                  to="/more/iqac"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   IQAC
@@ -156,7 +156,7 @@ const SchoolFooter = () => {
               </li> */}
               <li>
                 <Link
-                  to="/more/professional-bodies"
+                  to="/campus/initiatives?tab=swar"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Professional Bodies 
@@ -206,23 +206,23 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="campus/initiatives?tab=iic"
+                  to="/admission/admission-process"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  Institutional Innovation Council
+                  IIC
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/campus/initiatives?tab=incubation"
+                  to="/admission/admission-process"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  Incubation Cell
+                  Incubation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/campus/initiatives?tab=nptel"
+                  to="/campus/NPTEL"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   NPTEL
@@ -259,10 +259,10 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/more/gallery"
+                  to="/more/rti"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                Gallery
+                  RTI
                 </Link>
               </li>
               <li>
@@ -275,7 +275,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/funds/funds-grants"
+                  to="/funds"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   FUNDS & GRANTS
@@ -283,7 +283,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="https://csvtu.ac.in/"
+                  to="/funds"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   CSVTU Link 
@@ -291,7 +291,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/more/achievements"
+                  to="/funds"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Achievements
