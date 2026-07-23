@@ -35,13 +35,13 @@ const sidebarLinks = [
     path: "artificial-intelligence-and-data-science-engineering",
   },
   {
-    name: "Science & Humanities - Physics , Chemistry ,English",
+    name: "Science & Humanities - Physics , Chemistry ,English ,Maths",
     path: "science-and-humanities",
   },
-  {
-    name: "Maths",
-    path: "maths",
-  },
+  // {
+  //   name: "Maths",
+  //   path: "maths",
+  // },
 ];
 
 export default function AcademicPage() {
@@ -117,7 +117,7 @@ export default function AcademicPage() {
                   path="science-and-humanities"
                   element={<ScienceHumanities />}
                 />
-               <Route path="maths" element={<Maths />} />
+               {/* <Route path="maths" element={<Maths />} /> */}
                 <Route
                   path="/"
                   element={
