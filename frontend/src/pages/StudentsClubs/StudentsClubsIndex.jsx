@@ -8,6 +8,7 @@ import VariousClubs from "./VariousClubs";
 import DevelopmentProgram from "./DevelopmentProgram";
 import IndustryInteraction from "./IndustryInteraction";
 import ExtracurricularActivities from "./ExtracurricularActivities";
+import Activities from "./Activities"; // Import the new Activities component
 
 const sidebarLinks = [
   { name: "Introduction", path: "introduction" },
@@ -15,6 +16,7 @@ const sidebarLinks = [
   { name: "Development Program", path: "development-program" },
   { name: "Industry Interaction", path: "industry-interaction" },
   { name: "Extracurricular Activities", path: "extracurricular-activities" },
+  { name: "All Activities", path: "all-activities" }, // Updated path for clarity
 ];
 
 export default function StudentsClubsIndex() {
@@ -61,6 +63,7 @@ export default function StudentsClubsIndex() {
                 <Route path="development-program" element={<DevelopmentProgram />} />
                 <Route path="industry-interaction" element={<IndustryInteraction />} />
                 <Route path="extracurricular-activities" element={<ExtracurricularActivities />} />
+                <Route path="all-activities" element={<Activities />} /> {/* New route for Activities */}
                 <Route index element={<Navigate to="introduction" replace />} />
                 <Route path="*" element={<Navigate to="introduction" replace />} />
               </Routes>

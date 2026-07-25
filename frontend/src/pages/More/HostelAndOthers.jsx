@@ -1,5 +1,5 @@
 import React from 'react';
-import { BedDouble, DollarSign, HeartPulse, ShieldCheck, Clock, Users, ListChecks } from 'lucide-react';
+import { BedDouble, DollarSign, HeartPulse, ShieldCheck, Clock, Users, ListChecks,IndianRupee } from 'lucide-react';
 
 export default function HostelAndOthers() {
   const hostelFees = [
@@ -11,7 +11,7 @@ export default function HostelAndOthers() {
   return (
     <div className="min-h-screen w-full bg-gray-50 font-sans">
       <div className="bg-[#0d173b] text-white p-6 rounded-t-lg">
-        <h1 className="text-3xl font-bold">Hostel & Medical Facilities</h1>
+        <h1 className="text-3xl font-bold">Hostel </h1>
         <p className="text-sm mt-1">CSIT | Student Welfare</p>
         <hr className="w-16 border-t-2 border-white mt-2 mb-0" />
       </div>
@@ -79,7 +79,7 @@ export default function HostelAndOthers() {
 
         {/* Hostel Fees & Admission */}
         <section className="bg-white p-6 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold text-[#0d173b] mb-4 flex items-center"><DollarSign className="mr-2" />Hostel Fees & Admission Process</h2>
+          <h2 className="text-2xl font-bold text-[#0d173b] mb-4 flex items-center"><IndianRupee className="mr-2" />Hostel Fees & Admission Process</h2>
           <div className="space-y-4">
             <div className="overflow-x-auto">
               <table className="min-w-full border">

@@ -14,7 +14,7 @@ import {
 import { Link } from "react-router-dom";
 
 // Update local video and poster imports
-import Local_csit_video from "../../assets/VideoGallery/Local_csit_video.mp4";
+import Local_csit_video from "../../assets/VideoGallery/Local_csit_video.mp4"; // Keep import for now, but remove usage
 import Local_Poster from "../../assets/VideoGallery/Local_Poster.webp";
 
 const getYoutubeThumbnail = (url) => {
@@ -65,16 +65,16 @@ const videos = [
     description:
       "Our distinguished faculty share insights about their research and teaching philosophies.",
   },
-  {
-    type: "local",
-    src: Local_csit_video,
-    poster: Local_Poster,
-    title: "Annual Festival",
-    duration: "7:45",
-    date: "February 8, 2025",
-    description:
-      "Highlights from our biggest cultural festival of the year with performances and activities.",
-  },
+  // {
+  //   type: "local",
+  //   src: Local_csit_video,
+  //   poster: Local_Poster,
+  //   title: "Annual Festival",
+  //   duration: "7:45",
+  //   date: "February 8, 2025",
+  //   description:
+  //     "Highlights from our biggest cultural festival of the year with performances and activities.",
+  // },
   {
     type: "youtube",
     src: "https://www.youtube.com/embed/_tFRUefZKWo",
@@ -86,9 +86,10 @@ const videos = [
       "Tour our state-of-the-art laboratories and research facilities available to students.",
   },
 ];
-
+// Filter out local videos from the initial array
+const initialVideos = videos.filter(video => video.type !== 'local');
 export default function VideoGallery() {
-  const [activeVideo, setActiveVideo] = useState(videos[0]);
+  const [activeVideo, setActiveVideo] = useState(initialVideos[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
   const [volume, setVolume] = useState(1);
@@ -99,10 +100,11 @@ export default function VideoGallery() {
   const videoRef = useRef(null);
   const controlsTimeout = useRef(null);
 
-  const filteredVideos =
-    activeCategory === "all"
-      ? videos
-      : videos.filter((video) => video.type === activeCategory);
+  const filteredVideos = videos.filter((video) => {
+    if (video.type === 'local') return false; // Exclude local videos
+    return activeCategory === "all" || video.type === activeCategory;
+  });
+
 
   const handleVideoSelect = (video) => {
     setLoading(true);
@@ -245,16 +247,6 @@ export default function VideoGallery() {
             onClick={() => setActiveCategory("all")}
           >
             All Videos
-          </button>
-          <button
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              activeCategory === "local"
-                ? "bg-[#0d173b] text-white"
-                : "bg-gray-100 text-[#0d173b] hover:bg-gray-200"
-            }`}
-            onClick={() => setActiveCategory("local")}
-          >
-            Campus Videos
           </button>
           <button
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${

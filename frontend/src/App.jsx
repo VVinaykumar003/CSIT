@@ -72,7 +72,7 @@ function App() {
             <Route path="/funds/*" element={<FundsPage />} />
             <Route path="/campus/facilities" element={<FacilitiesIndex />} />
             <Route path="/campus/initiatives" element={<InitiativesIndex />} />
-            <Route path="/campus/NPTEL" element={<NPTEL />} />
+            <Route path="/campus/NPTEL" element={<Navigate to="/campus/initiatives?tab=nptel" replace />}/>
             <Route path="/campus/NIRF24" element={<NIRF24 />} />
             <Route path="/students-clubs/*" element={<StudentsClubsIndex />} />
             <Route path="/R-D/*" element={<ResearchDevelopment />} />
@@ -176,6 +176,8 @@ function App() {
             <Route path="/iqac" element={<Navigate to="/more/iqac" replace />} />
             <Route path="/rti" element={<Navigate to="/more/rti" replace />} />
             <Route path="/naac-cycle/dvv-details" element={<DvvDetails />} />
+            <Route path="/iic" element={<Navigate to="/campus/initiatives?tab=iic" replace />} />
+
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

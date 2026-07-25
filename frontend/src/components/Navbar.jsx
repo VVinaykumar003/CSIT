@@ -63,7 +63,7 @@ useEffect(() => {
     { name: "Startups", path: "/campus/initiatives?tab=startups" },
     { name: "MOUs", path: "/campus/initiatives?tab=mous" },
     { name: "IQAC", path: "/campus/initiatives?tab=iqac" },
-    { name: "IIC", path: "/campus/initiatives?tab=iic" },
+    { name: "Institutional Innovation Council", path: "/campus/initiatives?tab=iic" },
     { name: "CSR", path: "/campus/initiatives?tab=csr" },
     { name: "NAAC Cycle", path: "/campus/initiatives?tab=naac-1" },
     { name: "NSS", path: "/campus/initiatives?tab=nss" },
@@ -105,7 +105,7 @@ useEffect(() => {
                       <Link to="/about/introduction" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Introduction</Link>
                       <Link to="/about/society" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Society</Link>
                       <Link to="/about/aspiration" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Aspiration</Link>
-                      <Link to="/about/administrators" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Adminstration</Link> 
+                      <Link to="/about/administrators" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Administrator</Link> 
                       <Link to="/about/message" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Message</Link>
                       <Link to="/about/governing-body" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Governing Body</Link>
                       {/* <Link to="/about/professional-bodies" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Professional Bodies</Link> */}

@@ -35,7 +35,7 @@ const tabMapping = {
   nptel: "NPTEL",
   mous: "MOUs",
   iqac: "IQAC",
-  iic: "IIC",
+  iic: "Institutional Innovation Council",
   csr: "CSR",
   "naac-1": "NAAC Cycle 1",
   "naac-2": "NAAC Cycle 2",
@@ -251,7 +251,7 @@ export default function ModernDepartmentPage() {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1">
+            <div className="flex-1 overflow-scroll">
               <div className="bg-white rounded-lg shadow-md p-6 min-h-[500px]">
                 <div className="prose prose-indigo max-w-none">
                   {tabContent[activeTab]?.content || <div>Select a tab to view content</div>}

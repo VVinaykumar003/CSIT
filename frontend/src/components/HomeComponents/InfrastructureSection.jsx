@@ -38,7 +38,7 @@ const InfrastructureSection = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-gray-100 py-1 ">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Heading */}
         <div className="text-center mb-12">

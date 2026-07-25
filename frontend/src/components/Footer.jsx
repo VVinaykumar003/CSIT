@@ -3,14 +3,12 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Logo from "../assets/csitlogo.webp";
 const MandatoryDisclosure = "https://drive.google.com/file/d/15vPDhJU1cn8VdzTpXYMTZlp0LtAfPbfR/view?usp=sharing";
-
 // import AboutPage from '../pages/About/Introduction';
 
 const SchoolFooter = () => {
@@ -85,15 +83,13 @@ const SchoolFooter = () => {
             </Link>
             <Link
               to="/external/twitter"
-              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition duration-300"
+              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-2 rounded-full transition duration-300"
               aria-label="Twitter"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter
-                className="h-5 w-5 text-white"
-                style={{ fontSize: "1.25rem" }}
-              />
+              <img src="/x.svg" alt="Twitter " class="h-7 w-7 text-white"/> 
+              {/* <XTwitterIcon className="h-5 w-5 text-white" /> */}
             </Link>
           </div>
         </div>
@@ -132,7 +128,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/more/iqac"
+                  to="/campus/initiatives?tab=iqac" 
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   IQAC
@@ -156,7 +152,7 @@ const SchoolFooter = () => {
               </li> */}
               <li>
                 <Link
-                  to="/campus/initiatives?tab=swar"
+                  to="/more/professional-bodies"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Professional Bodies 
@@ -206,23 +202,23 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/admission/admission-process"
+                  to="/campus/initiatives?tab=iic"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  IIC
+                 Institutional Innovation Council
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/admission/admission-process"
+                  to="/campus/initiatives?tab=incubation"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  Incubation
+                  Incubation Cell
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/campus/NPTEL"
+                  to="/campus/initiatives?tab=nptel"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   NPTEL
@@ -259,10 +255,10 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/more/rti"
+                  to="/more/gallery"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
-                  RTI
+                  Gallary
                 </Link>
               </li>
               <li>
@@ -275,7 +271,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/funds"
+                  to="/funds/funds-grants"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   FUNDS & GRANTS
@@ -291,7 +287,7 @@ const SchoolFooter = () => {
               </li>
               <li>
                 <Link
-                  to="/funds"
+                  to="/more/achievements"
                   className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
                 >
                   Achievements
@@ -393,10 +389,10 @@ const SchoolFooter = () => {
       <div className="bg-black bg-opacity-30">
         <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="text-gray-400 mb-2 md:mb-0">
-            Copyright © 2025 All rights reserved By CSIT
+            Copyright © 2026 All rights reserved By CSIT
           </div>
-          <div className="flex space-x-8">
-            <Link
+          <div className="flex space-x-8 justify-end">
+            {/* <Link
               to="/privacy-policy"
               className="text-gray-400 hover:text-gray-200 transition duration-300"
             >
@@ -413,7 +409,7 @@ const SchoolFooter = () => {
               className="text-gray-400 hover:text-gray-200 transition duration-300"
             >
               Sitemap
-            </Link>
+            </Link>  */}
             <Link
               to="/admin-login"
               className="text-gray-400 hover:text-gray-200 transition duration-300"

@@ -100,9 +100,11 @@ app.use(errorHandler);
 // MongoDB Connection & Server Start
 const PORT = process.env.PORT || 5000;
 const mongoURI =
-  process.env.NODE_ENV === "production"
+  process.env.NODE_ENV === "production" 
     ? process.env.MONGO_ATLAS_URI
     : process.env.MONGO_LOCAL_URI;
+
+    console.log(mongoURI)
 
 const mongooseOptions = {
   useNewUrlParser: true,
