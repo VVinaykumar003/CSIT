@@ -151,7 +151,7 @@ const dvvData = [
       },
       {
         title: "3.3.2 Number of books and chapters in edited volumes/books...",
-        pdf: "https://drive.google.com/file/d/1A-Zzsz2_P_3BpSdsqPUxWIZr5z9vLXlp/view?usp=sharing",
+        pdf: "https://drive.google.com/file/d/11SZnO4xmyN8vYmQH1MllUzulBziWNT3Z/view?usp=sharing",
       },
       {
         title:
@@ -165,11 +165,11 @@ const dvvData = [
       },
       {
         title: "3.4.3 Number of extension and outreach programs...",
-        pdf: "https://drive.google.com/file/d/1N0gFeZOl2TZqy2iDEhe6Ee9L2IU7WMz2/view?usp=sharing",
+        pdf: "https://drive.google.com/file/d/1b23PKggXadMy1rkd5n5EG36IalrWhs0H/view?usp=sharing",
       },
       {
         title: "3.5.1 Number of MoUs, collaborations/linkages...",
-        pdf: "https://drive.google.com/file/d/1Y42w7R4NXSGZ_z1hh6TlipHdWbwk5YaK/view?usp=sharing",
+        pdf: "https://drive.google.com/file/d/1ctOQ0JcsU0V1OOWFAQqZ-PDLzdAJd7vY/view?usp=sharing",
       },
     ],
   },
