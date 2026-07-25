@@ -35,7 +35,7 @@ const tabMapping = {
   nptel: "NPTEL",
   mous: "MOUs",
   iqac: "IQAC",
-  iic: "Institutional Innovation Council",
+  iic: "IIC",
   csr: "CSR",
   "naac-1": "NAAC Cycle 1",
   "naac-2": "NAAC Cycle 2",
