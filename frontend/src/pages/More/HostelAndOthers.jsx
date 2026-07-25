@@ -114,34 +114,7 @@ export default function HostelAndOthers() {
           </div>
         </section>
 
-        {/* Medical Facilities */}
-        <section className="bg-white p-6 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold text-[#0d173b] mb-4 flex items-center"><HeartPulse className="mr-2" />Medical Facilities</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">The Institute provides basic medical facilities to ensure the health, safety, and well-being of all students. Immediate medical assistance is available for minor illnesses, injuries, and health emergencies.</p>
-          <div className="space-y-4">
-            <div>
-              <h4 className="font-semibold text-lg text-gray-800 mb-2">Facilities</h4>
-              <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
-                <li>First-aid facility available in the hostel.</li>
-                <li>Tie-up with nearby hospitals and clinics for emergency medical treatment.</li>
-                <li>Ambulance facility available in case of emergencies.</li>
-                <li>Regular health check-up camps organized periodically.</li>
-                <li>Medical consultation support through empanelled doctors.</li>
-                <li>Emergency contact numbers displayed prominently in the hostel.</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg text-gray-800 mb-2">Rules & Regulations</h4>
-              <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
-                <li>Students must report any serious illness or contagious disease to the Hostel Warden.</li>
-                <li>Self-medication is discouraged.</li>
-                <li>Medical expenses beyond the Institute's facilities shall be borne by the student/parent.</li>
-                <li>Students must carry their Institute ID card during medical consultations.</li>
-                <li>Misuse of medical facilities will invite disciplinary action.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+      
       </div>
     </div>
   );

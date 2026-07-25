@@ -461,7 +461,7 @@ useEffect(() => {
                   <Link to="/about/introduction" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Introduction</Link>
                   <Link to="/about/society" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Society</Link>
                   <Link to="/about/aspiration" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Aspiration</Link>
-                  <Link to="/about/adminstration" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Adminstration</Link>
+                  <Link to="/about/administrators" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Administrator</Link>
                   <Link to="/about/message" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Message</Link>
                   <Link to="/about/governing-body" className="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-[#1a2d5e] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Governing Body</Link>
                 </div>
