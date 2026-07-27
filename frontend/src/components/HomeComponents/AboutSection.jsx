@@ -216,7 +216,7 @@ const AboutSection = () => {
             </div>
 
            
-            <div
+            {/* <div
               className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg md:shadow-xl border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 md:hover:-translate-y-2"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -243,8 +243,10 @@ const AboutSection = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
+            
           </div> 
+
         </div>
     
 
