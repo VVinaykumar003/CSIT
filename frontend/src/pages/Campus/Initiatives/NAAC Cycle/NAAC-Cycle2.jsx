@@ -63,7 +63,7 @@ const NaacCycle2 = () => {
         {
           title:
             "Extended 1.1 - Number of students year wise during the last five years",
-          pdf: "https://drive.google.com/file/d/1AVmgxcmnzD7XbbhKGPgxJfYN_rMhx3Qy/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/11Dq9SQ7u7ys3IW-CJBbxoIRw1R_bWkre/view?usp=sharing",
         },
         {
           title:
@@ -73,12 +73,12 @@ const NaacCycle2 = () => {
         {
           title:
             "Extended 2.2 NUMBER OF TEACHING STAFF / FULL TIME TEACHERS YEAR WISE DURING THE LAST FIVE YEARS",
-          pdf: "https://drive.google.com/file/d/1uQ_9BhprW8ifE6cCrRXK-4ZGgpynn0_T/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1F5_k1t477g2lhBt_q6OpGBq_175xqSsC/view?usp=sharing",
         },
         {
           title:
             "Extended 3.1 EXPENDITURE EXCLUDING SALARY COMPONENT YEAR WISE DURING THE LAST FIVE YEARS",
-          pdf: "https://drive.google.com/file/d/1Vkki8Ea7b3GqCMlbNfEf6gIzjL-X2EAR/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1oJNF4hTNUFio3znwNiqYDPo6qoA9u20U/view?usp=sharing",
         },
       ],
     },
@@ -103,7 +103,7 @@ const NaacCycle2 = () => {
             {
               title:
                 "1.2.1 Number of Add on/Certificate/Value added programs...",
-              pdf: "https://drive.google.com/file/d/1RY32zFOfJrgRgdX2D6-qox97JOH1mvFs/view?usp=sharing",
+              pdf: "https://drive.google.com/file/d/1mzY9WTrXTprQcmzu_X6VF9sNjLlOcziR/view?usp=sharing",
               yearWiseData: [
                 {
                   year: "2018-19",
@@ -134,7 +134,7 @@ const NaacCycle2 = () => {
             {
               title:
                 "1.2.2 Percentage of students enrolled in Certificate/Add-on programs...",
-              pdf: "https://drive.google.com/file/d/1cMfgaBC6c0grZk3LKy7Tkk-N0EKb2Omp/view?usp=sharing",
+              pdf: "https://drive.google.com/file/d/1AT-24wCa1Gug-4pjw5v1MijEZjqPxbpG/view?usp=sharing",
               yearWiseData: [
                 {
                   year: "2018-19",
@@ -174,7 +174,7 @@ const NaacCycle2 = () => {
             },
             {
               title: "1.3.2 Percentage of students undertaking project work...",
-              pdf: "https://drive.google.com/file/d/1dxuDjTUq1ek9uSb5HMymgcQaqUafb-6i/view?usp=sharing",
+              pdf: "https://drive.google.com/file/d/12rqkhqEyhH8Yh8KQGy-v68JKNt0VK859/view?usp=sharing",
             },
           ],
         },
@@ -185,7 +185,7 @@ const NaacCycle2 = () => {
             {
               title:
                 "1.4.1 Institution obtains feedback on the academic performance...",
-              pdf: "https://drive.google.com/file/d/1bVpH6AMrc1RmEDQDwhiWjSfEFWF1zlLU/view?usp=sharing",
+              pdf: "https://drive.google.com/file/d/1cMgHRh6xqEW8A8YC4-4zpHUa_pkdij7P/view?usp=sharing",
             },
           ],
         },
@@ -196,7 +196,7 @@ const NaacCycle2 = () => {
       items: [
         {
           title: "2.1.1 Enrolment percentage",
-          pdf: "https://drive.google.com/file/d/1SFAopNmG_Rp6w302rpsXimqWzEwBcinD/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1ZRn54-iH3dfjbb5lwbFJWwvg7e48iFvy/view?usp=sharing",
         },
         {
           title:
@@ -442,11 +442,11 @@ const NaacCycle2 = () => {
         },
         {
           title: "7.1.2 The Institution has facilities and initiatives for...",
-          pdf: "https://drive.google.com/file/d/1uzvwU01zFTQC5Xkmm1SSIdT8xGkAgtVv/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1AGD5OOfoFHS389ri5ivZXS3myUWEnEGA/view?usp=sharing",
         },
         {
           title: "7.1.3 Quality audits on environment and energy...",
-          pdf: "https://drive.google.com/file/d/1Xyxaif8zHm2fOlxKu1DLr_ZnVIoXQzhR/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1qOJFSvQQQyXoK0IQSrgzq6rnWO65mkQh/view?usp=sharing",
         },
         {
           title: "7.1.4 Describe the Institutional efforts/initiatives...",
