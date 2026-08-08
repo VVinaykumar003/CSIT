@@ -17,6 +17,7 @@ const iqacMom2020_21 = 'https://drive.google.com/file/d/1ZzP2GqD4-ikHWWZEgUY5IuB
 const iqacMom2021_22 = 'https://drive.google.com/file/d/1QAp_nyYZV-B-onz6CQde_sad1prfV98o/view?usp=sharing'; 
 const iqacMom2022_23 = 'https://drive.google.com/file/d/1dlFcvL0XmDPKDytpOM9RXHQg0ahPKPdp/view?usp=sharing'; 
 const iqacMom2023_24 = 'https://drive.google.com/file/d/1attXI47EEj2mlQfiQI1n7D9qAikQayqM/view?usp=sharing';
+const iqacMom2024_25 = 'https://drive.google.com/file/d/1y7U_HAy9n_ue5NcR5PV_yY77ml0aG3hU/view?usp=sharing';
 
 const IQAC = () => {
   // Data for the composition and minutes of meeting table with actual PDF links
@@ -54,7 +55,7 @@ const IQAC = () => {
     { 
       year: '2024-2025', 
       composition: { text: 'View', link: iqac2024_25 }, 
-      mom: { text: 'Not Available', link: null } 
+      mom: { text: 'View ', link: iqacMom2024_25 }
     },
   ];
 
